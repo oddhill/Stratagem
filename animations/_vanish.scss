@@ -1,5 +1,14 @@
-@mixin vanishKey{
-  @at-root (without: all) {
+$vanishSelector: () !global;
+
+@mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  @include animation(vanish, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $vanishSelector: append($wiggleSelector, true) !global;
+}
+
+@mixin vanishKey {
+  
+  @if length($vanishSelector) >= 1 {
+
     @-moz-keyframes vanish {
       0% {
         opacity: 0;
@@ -16,22 +25,6 @@
       }
     }
     @-webkit-keyframes vanish {
-      0% {
-        opacity: 0;
-        -webkit-transform-origin: 50% 50%;
-        -webkit-transform: scale(2, 2);
-        -webkit-filter: blur(90px);
-      }
-
-      100% {
-        opacity: 1;
-        -webkit-transform-origin: 50% 50%;
-        -webkit-transform: scale(1, 1);
-        -webkit-filter: blur(0px);
-      }
-    }
-
-    @-o-keyframes vanish {
       0% {
         opacity: 0;
         -webkit-transform-origin: 50% 50%;
@@ -64,9 +57,3 @@
     }
   }
 }
-
-@mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include vanishKey();
-  @include animation(vanish, $transition-time, $delay, $timing, $iteration-count, $direction);
-}
-
