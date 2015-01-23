@@ -1,0 +1,4448 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+
+<title>SassDoc - v0.0.1</title>
+<link rel="stylesheet" href="./assets/css/main.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,500,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width">
+<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Thanks to Sass-lang.com for the icons -->
+
+<link href="http://sass-lang.com/favicon.ico" rel="shortcut icon">
+
+
+</head>
+<body>
+
+  
+  <aside class="sidebar" role="nav">
+    
+  <div class="sidebar__header">
+  <h1 class="sidebar__title">
+    
+      SassDoc - 0.0.1
+    
+  </h1>
+</div>
+
+<div class="sidebar__body">
+  
+  
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
+
+    
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="regular animations"><a href="#regular animations">regular animations</a></p>
+
+      
+      
+        <div>
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="regular animations-mixin"><a href="#regular animations-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="fade" data-type="mixin">
+              <a href="#mixin-fade">fade
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="fadeInTop" data-type="mixin">
+              <a href="#mixin-fadeInTop">fadeInTop
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="fadeInBottom" data-type="mixin">
+              <a href="#mixin-fadeInBottom">fadeInBottom
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="fadeInLeft" data-type="mixin">
+              <a href="#mixin-fadeInLeft">fadeInLeft
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="fadeInRight" data-type="mixin">
+              <a href="#mixin-fadeInRight">fadeInRight
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="pulse" data-type="mixin">
+              <a href="#mixin-pulse">pulse
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="rubberBand" data-type="mixin">
+              <a href="#mixin-rubberBand">rubberBand
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="slideInLeft" data-type="mixin">
+              <a href="#mixin-slideInLeft">slideInLeft
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="slideInRight" data-type="mixin">
+              <a href="#mixin-slideInRight">slideInRight
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="slideInTop" data-type="mixin">
+              <a href="#mixin-slideInTop">slideInTop
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="slideInBottom" data-type="mixin">
+              <a href="#mixin-slideInBottom">slideInBottom
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="spin" data-type="mixin">
+              <a href="#mixin-spin">spin
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="tada" data-type="mixin">
+              <a href="#mixin-tada">tada
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="vanish" data-type="mixin">
+              <a href="#mixin-vanish">vanish
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="wiggle" data-type="mixin">
+              <a href="#mixin-wiggle">wiggle
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+  
+</div>
+
+
+  </aside>
+
+  
+  <article class="main" role="main">
+
+    
+    <header class="header" role="banner">
+  <div class="container">
+  
+
+    <div class="sassdoc__searchbar  searchbar">
+       <label for="js-search-input" class="visually-hidden">Search</label>
+       <div class="searchbar__form" id="js-search">
+         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+       </div>
+     </div>
+  </div>
+</header>
+
+
+    
+
+  
+  
+
+    
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="regular animations">
+          <div class="container">
+            regular animations
+          </div>
+        </h1>
+
+        
+        
+
+          
+          
+            <section class="main__sub-section" id="regular animations-mixin">
+              <h2 class="main__heading--secondary">
+                <div class="container">
+                  mixins
+                </div>
+              </h2>
+
+              
+              
+                <section class="main__item  container  item" id="mixin-fade">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-fade">fade</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin fade($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { 
+  @include animation(fade, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $fadeSelector: append($fadeSelector, true) !global;
+ }"
+    data-collapsed="@mixin fade($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }"><code>@mixin fade($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a fade effect.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-fadeInTop">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-fadeInTop">fadeInTop</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { 
+  @include animation(fade-in-up, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $fadeInTopSelector: append($fadeInTopSelector, true) !global;
+ }"
+    data-collapsed="@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }"><code>@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a fade effect and comes down from north.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <div class="example__description"><p>fadeInTop();</p>
+</div>
+    
+    <pre class="example__code  language-include"><code></code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-fadeInBottom">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-fadeInBottom">fadeInBottom</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin fadeInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { 
+  @include animation(fade-in-down, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $fadeInBottomSelector: append($fadeInBottomSelector, true) !global;
+ }"
+    data-collapsed="@mixin fadeInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }"><code>@mixin fadeInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a fade effect and comes down from south.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-fadeInLeft">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-fadeInLeft">fadeInLeft</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin fadeInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { 
+  @include animation(fade-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $fadeInLeftSelector: append($fadeInLeftSelector, true) !global;
+ }"
+    data-collapsed="@mixin fadeInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }"><code>@mixin fadeInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a fade effect and comes down from west.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-fadeInRight">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-fadeInRight">fadeInRight</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin fadeInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(fade-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $fadeInRightSelector: append($fadeInRightSelector, true) !global;
+ }"
+    data-collapsed="@mixin fadeInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin fadeInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a fade effect and comes down from east.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-pulse">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-pulse">pulse</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin pulse($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(pulse, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $pulseSelector: append($fadeSelector, true) !global;
+ }"
+    data-collapsed="@mixin pulse($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin pulse($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a pulsing effect.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Animation done by Nick Pettit with documentation by Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-rubberBand">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-rubberBand">rubberBand</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin rubberBand($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { 
+  @include animation(rubberBand, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $rubberSelector: append($rubberSelector, true) !global;
+ }"
+    data-collapsed="@mixin rubberBand($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }"><code>@mixin rubberBand($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a rubberband like a effect entrance.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>1</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Animation done by Dan Eden documentation by Anton Ranestam.</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-slideInLeft">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-slideInLeft">slideInLeft</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin slideInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(slide-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInLeftSelector: append($slideInLeftSelector, true) !global;
+ }"
+    data-collapsed="@mixin slideInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin slideInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a slide effect and comes in from west.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-slideInRight">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-slideInRight">slideInRight</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin slideInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(slide-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInRightSelector: append($slideInRightSelector, true) !global;
+ }"
+    data-collapsed="@mixin slideInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin slideInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a slide effect and comes in from east.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-slideInTop">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-slideInTop">slideInTop</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin slideInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(slide-in-top, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInTopSelector: append($slideInTopSelector, true) !global;
+ }"
+    data-collapsed="@mixin slideInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin slideInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a slide effect and comes in from from north.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-slideInBottom">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-slideInBottom">slideInBottom</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin slideInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(slide-in-bottom, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInBottomSelector: append($slideInBottomSelector, true) !global;
+ }"
+    data-collapsed="@mixin slideInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin slideInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a slide effect and comes in from south.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-spin">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-spin">spin</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin spin($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(spin, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $spinSelector: append($spinSelector, true) !global;
+ }"
+    data-collapsed="@mixin spin($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin spin($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a spinning effect.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam.</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-tada">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-tada">tada</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin tada($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(tada, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $tadaSelector: append($tadaSelector, true) !global;
+ }"
+    data-collapsed="@mixin tada($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin tada($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object and tadaa entrance or exit.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Animation by Dan eden documentation by Anton Ranestam.</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-vanish">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-vanish">vanish</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(vanish, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $vanishSelector: append($wiggleSelector, true) !global;
+ }"
+    data-collapsed="@mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a vanish effect. Used as entrance or exit. $direction variable can be used to decide.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+                <section class="main__item  container  item" id="mixin-wiggle">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-wiggle">wiggle</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="item__code-wrapper">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin wiggle($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { 
+  @include animation(wiggle, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $wiggleSelector: append($wiggleSelector, true) !global;
+ }"
+    data-collapsed="@mixin wiggle($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }"><code>@mixin wiggle($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+  <div class="item__description"><p>Gives an object a wiggle effect.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$transition-time</code></th>
+          <td data-label="desc"><p>Time the animation should take in seconds.</p>
+</td>
+          <td data-label="type">
+          
+            Transition-time
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0.3s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$delay</code></th>
+          <td data-label="desc"><p>Delay given to a animation.</p>
+</td>
+          <td data-label="type">
+          
+            Delay
+          
+          </td>
+          <td data-label="default">
+          
+            <code>0s</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$timing</code></th>
+          <td data-label="desc"><p>What kind of easing.</p>
+</td>
+          <td data-label="type">
+          
+            Timing
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$easeInOut</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$iteration-count</code></th>
+          <td data-label="desc"><p>How many times the animations should iterate.</p>
+</td>
+          <td data-label="type">
+          
+            Iteration-count
+          
+          </td>
+          <td data-label="default">
+          
+            <code>infinite</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$direction</code></th>
+          <td data-label="desc"><p>If the animation should be done once, do it backwards, or both at the same time.</p>
+</td>
+          <td data-label="type">
+          
+            Direction
+          
+          </td>
+          <td data-label="default">
+          
+            <code>normal</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Animation by Dan Eden documentation by Anton Ranestam</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+
+              
+            </section>
+          
+        
+
+      </section>
+    
+
+  
+
+
+
+    
+    
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+        <div class="footer__project-info  project-info">
+          <!-- Name and URL -->
+          
+            <span class="project-info__name">SassDoc</span>
+          
+
+          <!-- Version -->
+          <span class="project-info__version"> - v0.0.1</span>
+
+          <!-- License -->
+          
+        </div>
+      
+
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
+      
+    </div>
+  </footer>
+
+
+  </article>
+
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+
+<script src="./assets/js/main.min.js"></script>
+
+</body>
+</html>
