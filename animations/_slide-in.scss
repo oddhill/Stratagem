@@ -1,6 +1,19 @@
 // Slide in left
 $slideInLeftSelector: () !global;
 
+/**
+ * Gives an object a slide effect and comes in from west.
+ *
+ * @author Anton Ranestam
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
 @mixin slideInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(slide-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInLeftSelector: append($slideInLeftSelector, true) !global;
@@ -42,6 +55,19 @@ $slideInLeftSelector: () !global;
 // Slide in right
 $slideInRightSelector: () !global;
 
+/**
+ * Gives an object a slide effect and comes in from east.
+ *
+ * @author Anton Ranestam
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
 @mixin slideInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(slide-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInRightSelector: append($slideInRightSelector, true) !global;
@@ -83,6 +109,19 @@ $slideInRightSelector: () !global;
 // Slide in top
 $slideInTopSelector: () !global;
 
+/**
+ * Gives an object a slide effect and comes in from from north.
+ *
+ * @author Anton Ranestam
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
 @mixin slideInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(slide-in-top, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInTopSelector: append($slideInTopSelector, true) !global;
@@ -124,6 +163,19 @@ $slideInTopSelector: () !global;
 // Slide in Bottom
 $slideInBottomSelector: () !global;
 
+/**
+ * Gives an object a slide effect and comes in from south.
+ *
+ * @author Anton Ranestam
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
 @mixin slideInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(slide-in-bottom, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInBottomSelector: append($slideInBottomSelector, true) !global;

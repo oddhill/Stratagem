@@ -1,6 +1,19 @@
-// Slide in top
+// RubberBand
 $rubberSelector: () !global;
 
+/**
+ * Gives an object a rubberband like a effect entrance.
+ *
+ * @author Animation done by Dan Eden documentation by Anton Ranestam.
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (1) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
 @mixin rubberBand($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(rubberBand, $transition-time, $delay, $timing, $iteration-count, $direction);
   $rubberSelector: append($rubberSelector, true) !global;
