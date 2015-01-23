@@ -1,0 +1,72 @@
+$vanishSelector: () !global;
+
+/**
+ * Gives an object a vanish effect. Used as entrance or exit. $direction variable can be used to decide.
+ *
+ * @author Anton Ranestam
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
+@mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  @include animation(vanish, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $vanishSelector: append($wiggleSelector, true) !global;
+}
+
+@mixin vanishKey {
+  
+  @if length($vanishSelector) >= 1 {
+
+    @-moz-keyframes vanish {
+      0% {
+        opacity: 0;
+        -moz-transform-origin: 50% 50%;
+        -moz-transform: scale(2, 2);
+        -webkit-filter: blur(90px);
+      }
+
+      100% {
+        opacity: 1;
+        -moz-transform-origin: 50% 50%;
+        -moz-transform: scale(1, 1);
+        -webkit-filter: blur(0px);
+      }
+    }
+    @-webkit-keyframes vanish {
+      0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(2, 2);
+        -webkit-filter: blur(90px);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        -webkit-filter: blur(0px);
+      }
+    }
+
+    @keyframes vanish {
+      0% {
+        opacity: 0;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(2, 2);
+        -webkit-filter: blur(90px);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform-origin: 50% 50%;
+        -webkit-transform: scale(1, 1);
+        -webkit-filter: blur(0px);
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$pulseSelector: () !global;
+
+/**
+ * Gives an object a pulsing effect.
+ *
+ * @author Animation done by Nick Pettit with documentation by Anton Ranestam
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
+@mixin pulse($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) {
+  @include animation(pulse, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $pulseSelector: append($fadeSelector, true) !global;
+}
+
+@mixin pulseKey {
+
+  @if length($pulseSelector) >= 1 {
+
+    // Originally written by Nick Pettit - https://github.com/nickpettit/glide
+    @-webkit-keyframes pulse {
+      0% { -webkit-transform: scale(1); }
+      50% { -webkit-transform: scale(1.1); }
+      100% { -webkit-transform: scale(1); }
+    }
+
+    @-moz-keyframes pulse {
+      0% { -moz-transform: scale(1); }
+      50% { -moz-transform: scale(1.1); }
+      100% { -moz-transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  }
+}

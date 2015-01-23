@@ -1,0 +1,62 @@
+// Slide in left
+$spinSelector: () !global;
+
+/**
+ * Gives an object a spinning effect.
+ *
+ * @author Anton Ranestam.
+ * 
+ * @group Regular animations
+ * 
+ * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
+ * @param {delay} $delay (0s) - Delay given to a animation.
+ * @param {timing} $timing ($easeInOut) - What kind of easing.
+ * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
+ * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
+ */
+@mixin spin($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) {
+  @include animation(spin, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $spinSelector: append($spinSelector, true) !global;
+}
+
+@mixin spinKey() {
+
+  @if length($spinSelector) >= 1 {
+    
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @-moz-keyframes spin {
+      0% {
+        -moz-transform: rotate(0deg);
+      }
+      100% {
+        -moz-transform: rotate(360deg);
+      }
+    }
+
+    @-o-keyframes spin {
+      0% {
+        -o-transform: rotate(0deg);
+      }
+      100% {
+        -o-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
