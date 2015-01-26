@@ -1,18 +1,5 @@
 $fadeSelector: () !global;
 
-/**
- * Gives an object a fade effect.
- *
- * @author Anton Ranestam
- * 
- * @group Regular animations
- * 
- * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
- * @param {delay} $delay (0s) - Delay given to a animation.
- * @param {timing} $timing ($easeInOut) - What kind of easing.
- * @param {iteration-count} $iteration-count (1) - How many times the animations should iterate.
- * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
- */
 @mixin fade($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(fade, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeSelector: append($fadeSelector, true) !global;
@@ -54,20 +41,6 @@ $fadeSelector: () !global;
 // Fade in Top
 $fadeInTopSelector: () !global;
 
-/**
- * Gives an object a fade effect and comes down from north.
- *
- * @author Anton Ranestam
- * @example @include fadeInTop();
- * 
- * @group Regular animations
- * 
- * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
- * @param {delay} $delay (0s) - Delay given to a animation.
- * @param {timing} $timing ($easeInOut) - What kind of easing.
- * @param {iteration-count} $iteration-count (1) - How many times the animations should iterate.
- * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
- */
 @mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(fade-in-up, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInTopSelector: append($fadeInTopSelector, true) !global;
@@ -119,19 +92,6 @@ $fadeInTopSelector: () !global;
 // Fade in Bottom
 $fadeInBottomSelector: () !global;
 
-/**
- * Gives an object a fade effect and comes down from south.
- *
- * @author Anton Ranestam
- * 
- * @group Regular animations
- * 
- * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
- * @param {delay} $delay (0s) - Delay given to a animation.
- * @param {timing} $timing ($easeInOut) - What kind of easing.
- * @param {iteration-count} $iteration-count (1) - How many times the animations should iterate.
- * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
- */
 @mixin fadeInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(fade-in-down, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInBottomSelector: append($fadeInBottomSelector, true) !global;
@@ -183,19 +143,6 @@ $fadeInBottomSelector: () !global;
 // Fade in Left
 $fadeInLeftSelector: () !global;
 
-/**
- * Gives an object a fade effect and comes down from west.
- *
- * @author Anton Ranestam
- * 
- * @group Regular animations
- * 
- * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
- * @param {delay} $delay (0s) - Delay given to a animation.
- * @param {timing} $timing ($easeInOut) - What kind of easing.
- * @param {iteration-count} $iteration-count (1) - How many times the animations should iterate.
- * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
- */
 @mixin fadeInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(fade-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInLeftSelector: append($fadeInLeftSelector, true) !global;
@@ -247,19 +194,6 @@ $fadeInLeftSelector: () !global;
 // Fade in right
 $fadeInRightSelector: () !global;
 
-/**
- * Gives an object a fade effect and comes down from east.
- *
- * @author Anton Ranestam
- * 
- * @group Regular animations
- * 
- * @param {transition-time} $transition-time (0.3s) - Time the animation should take in seconds.
- * @param {delay} $delay (0s) - Delay given to a animation.
- * @param {timing} $timing ($easeInOut) - What kind of easing.
- * @param {iteration-count} $iteration-count (infinite) - How many times the animations should iterate.
- * @param {direction} $direction (normal) - If the animation should be done once, do it backwards, or both at the same time.
- */
 @mixin fadeInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
   @include animation(fade-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInRightSelector: append($fadeInRightSelector, true) !global;
