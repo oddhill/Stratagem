@@ -1,0 +1,21 @@
+// Helper mixins that can be useful for every project
+
+// Reset omega for bourbon on given element.
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+// Font-size with rem + line-height, fallback to px.
+// Line-height is calculated by taking font-size value and multiplying it by $base-line-height
+@mixin font-size($sizeValue: $base-font-size, $lineValue: $base-line-height) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+  line-height: ($sizeValue * 10)*($lineValue) + px;
+}
+
+// Mixin for using SVGs, always fallbacks to a png file with the same name.
+@mixin svg-bg($name, $background-color: transparent, $background-position: 0 0) {
+  background: url('../graphics/#{$name}.png') $background-color $background-position no-repeat;
+  background: none, url('../graphics/#{$name}.svg') $background-color $background-position no-repeat;
+}

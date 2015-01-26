@@ -1,0 +1,51 @@
+// Import Bourbon mixin lib
+@import "../assets/bourbon/dist/bourbon";
+
+// Import our variables, mixins & helpers
+@import "variables", "mixins", "helpers";
+
+// Neat should be imported after variable, reset and mixin declaration.
+// Otherwise neat overrides our variables.
+@import "../assets/neat/app/assets/stylesheets/neat";
+
+// General resets
+// Remove subpixels from webkit browsers and FF
+// Remove tap highlight color for webkit touch browsers.
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Set HTML to 62.5% to make it easier setting REM/EM values
+// Now it calculates from 10 instead of regular 16.
+// Example 1rem = 10px
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+// Remove subpixels from webkit browsers and FF
+// Remove webkit standard input, form, select & button styling on smartdevices
+input,
+form,
+select,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: none;
+  border-radius: 0px;
+  border: 0px;
+  outline: none;
+}
+
+// Remove standard border on button & input on smart devices
+button,
+input[type=submit] {
+  border: 0px;
+}
+
+body {
+  background: url(../graphics/bg.png);
+  background-size: cover;
+}

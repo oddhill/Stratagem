@@ -1,0 +1,17 @@
+// Import neat helpers - this gives us visual grid which can be useful, also
+// gives us media mixin which is useful when making responsive layouts.
+@import "../assets/neat/app/assets/stylesheets/neat-helpers";
+
+// Our grid variables
+$grid-columns: 12;
+$column: golden-ratio(20px, 3);
+$gutter: golden-ratio(20px, 1);
+$max-width: 1180px;
+
+// Base font-size and line-height
+$base-font-size: 1.6;
+$base-line-height: 1.5;
+
+// Visual grid that can be used if neat helpers is activated
+// $visual-grid : true;
+// $visual-grid-color: #e0eef7;

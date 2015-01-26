@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       },
       style: {
         files: {
-          "css/main.css": "stratagem.scss"
+          "css/main.css": "sass/main.scss"
         }
       }
     },
