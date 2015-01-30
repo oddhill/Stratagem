@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Stratagem by oddhill</title>
-
+    <link href="favicon.ico" rel="shortcut icon">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
 <!--     <link rel="stylesheet" href="css/main.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -43,7 +43,7 @@
       border: 0px; }
 
     body {
-      background: url(graphics/bg.png);
+      background: url(../graphics/bg.png);
       background-size: cover;
       color: #fff;
       font-family: 'Lato', sans-serif;
@@ -74,7 +74,8 @@
       line-height: 63px;
       text-transform: uppercase;
       margin: 0px;
-      text-shadow: 0px 2px 1px #4F36C3; }
+      text-shadow: 0px 2px 1px #4F36C3;
+      letter-spacing: 1px; }
 
     h2 {
       font-size: 24px;
@@ -82,7 +83,8 @@
       line-height: 36px;
       text-transform: uppercase;
       margin: 0px;
-      text-shadow: 0px 2px 1px #4F36C3; }
+      text-shadow: 0px 2px 1px #4F36C3;
+      letter-spacing: 0.7px; }
 
     p {
       margin: 0px;
@@ -99,8 +101,8 @@
         border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
 
     .logo {
-      background: url("graphics/logo.png") transparent 0 0 no-repeat;
-      background: none, url("graphics/logo.svg") transparent 0 0 no-repeat;
+      background: url("../graphics/logo.png") transparent 0 0 no-repeat;
+      background: none, url("../graphics/logo.svg") transparent 0 0 no-repeat;
       width: 200px;
       height: 200px;
       margin: 25px auto 15px auto; }
@@ -123,10 +125,13 @@
       list-style: none;
       font-size: 16px;
       font-size: 1.6rem;
-      line-height: 24px; }
+      line-height: 24px;
+      padding: 0px; }
       ul li {
         float: left;
         margin: 0 15px 0 0; }
+        ul li:last-child {
+          margin: 0px; }
 
     footer {
       position: fixed;
@@ -145,11 +150,13 @@
       <figure class="logo"></figure>
       <h1>Stratagem</h1>
       <h2>Lightweight Sass animation library</h2>
-
+      
       <ul>
         <li><a href="https://github.com/oddhill/Stratagem/zipball/master">Download <strong>ZIP File</strong></a></li>
         <li><a href="https://github.com/oddhill/Stratagem/tarball/master">Download <strong>TAR Ball</strong></a></li>
-        <li><a href="https://github.com/oddhill/Stratagem">View On <strong>GitHub</strong></a></li>
+        <li><a href="https://github.com/oddhill/Stratagem">View on <strong>GitHub</strong></a></li>
+        <li><a href="#example">View <strong>Examples</strong></a></li>
+        <li><a href="http://oddhill.github.io/Stratagem/documentation/">View <strong>Documentation</strong></a></li>
       </ul>
     </header>
 
@@ -158,7 +165,7 @@
       </section>
       
       <footer>
-        <p>This project is maintained by <a href="https://github.com/oddhill" target="_blank">Odd Hill</a></p>
+        <p>This project is maintained by <a href="https://github.com/oddhill" target="_blank"><strong>Odd Hill</strong></a></p>
       </footer>
     </div>
   </body>
