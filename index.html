@@ -5,51 +5,161 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Stratagem by oddhill</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+<!--     <link rel="stylesheet" href="css/main.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
+    <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent; }
+
+    html {
+      font-size: 62.5%;
+      min-height: 100%; }
+
+    input,
+    form,
+    select,
+    button {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      border: 0px;
+      outline: none; }
+
+    button,
+    input[type=submit] {
+      border: 0px; }
+
+    body {
+      background: url(../graphics/bg.png);
+      background-size: cover;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      margin: 0px;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 24px; }
+
+    a {
+      color: #fff;
+      text-decoration: underline; }
+
+    main {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto; }
+      main:after {
+        content: "";
+        display: table;
+        clear: both; }
+
+    header {
+      text-align: center; }
+
+    h1 {
+      font-size: 42px;
+      font-size: 4.2rem;
+      line-height: 63px;
+      text-transform: uppercase;
+      margin: 0px;
+      text-shadow: 0px 2px 1px #4F36C3; }
+
+    h2 {
+      font-size: 24px;
+      font-size: 2.4rem;
+      line-height: 36px;
+      text-transform: uppercase;
+      margin: 0px;
+      text-shadow: 0px 2px 1px #4F36C3; }
+
+    p {
+      margin: 0px;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 24px; }
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 24px; }
+      a:hover {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+
+    .logo {
+      background: url("../graphics/logo.png") transparent 0 0 no-repeat;
+      background: none, url("../graphics/logo.svg") transparent 0 0 no-repeat;
+      width: 200px;
+      height: 200px;
+      margin: 25px auto 15px auto; }
+
+    header {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+      -moz-transform: translateY(-50%) translateX(-50%);
+      -ms-transform: translateY(-50%) translateX(-50%);
+      -o-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%); }
+      header h2 {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+
+    ul {
+      list-style: none;
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 24px; }
+      ul li {
+        float: left;
+        margin: 0 15px 0 0; }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      height: 45px;
+      background: rgba(0, 0, 0, 0.1);
+      text-align: right;
+      left: 0;
+      right: 0;
+      padding: 10px 25px; }
+
+    </style>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Stratagem</h1>
-        <p>Lightweight animation library</p>
+    <header>
+      <figure class="logo"></figure>
+      <h1>Stratagem</h1>
+      <h2>Lightweight Sass animation library</h2>
 
-        <p class="view"><a href="https://github.com/oddhill/Stratagem">View the Project on GitHub <small>oddhill/Stratagem</small></a></p>
+      <ul>
+        <li><a href="https://github.com/oddhill/Stratagem/zipball/master">Download <strong>ZIP File</strong></a></li>
+        <li><a href="https://github.com/oddhill/Stratagem/tarball/master">Download <strong>TAR Ball</strong></a></li>
+        <li><a href="https://github.com/oddhill/Stratagem">View On <strong>GitHub</strong></a></li>
+      </ul>
+    </header>
 
-
-        <ul>
-          <li><a href="https://github.com/oddhill/Stratagem/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/oddhill/Stratagem/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/oddhill/Stratagem">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
       <section>
-        <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+      
       </section>
+      
       <footer>
-        <p>This project is maintained by <a href="https://github.com/oddhill">oddhill</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p>This project is maintained by <a href="https://github.com/oddhill" target="_blank">Odd Hill</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>

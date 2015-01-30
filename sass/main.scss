@@ -48,4 +48,90 @@ input[type=submit] {
 body {
   background: url(../graphics/bg.png);
   background-size: cover;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+  @include font-size();
+}
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+main {
+  @include outer-container();
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  @include font-size(4.2);
+  text-transform: uppercase;
+  margin: 0px;
+  text-shadow: 0px 2px 1px #4F36C3;
+}
+
+h2 {
+  @include font-size(2.4);
+  text-transform: uppercase;
+  margin: 0px;
+  text-shadow: 0px 2px 1px #4F36C3;
+}
+
+p {
+  margin: 0px;
+  @include font-size();
+}
+
+a {
+  text-decoration: none;
+  @include font-size();
+
+  &:hover {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+  }
+}
+
+.logo {
+  @include svg-bg(logo);
+  width: 200px;
+  height: 200px;
+  margin: 25px auto 15px auto;
+}
+
+header {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  @include transform(translateY(-50%) translateX(-50%));
+
+  h2 {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+  }
+}
+
+ul {
+  list-style: none;
+  @include font-size();
+
+  li {
+    float: left;
+    margin: 0 15px 0 0;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 45px;
+  background: rgba(0,0,0,0.1);
+  text-align: right;
+  left: 0;
+  right: 0;
+  padding: 10px 25px;
 }
