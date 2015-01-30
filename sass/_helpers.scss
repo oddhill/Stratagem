@@ -16,6 +16,6 @@
 
 // Mixin for using SVGs, always fallbacks to a png file with the same name.
 @mixin svg-bg($name, $background-color: transparent, $background-position: 0 0) {
-  background: url('../graphics/#{$name}.png') $background-color $background-position no-repeat;
-  background: none, url('../graphics/#{$name}.svg') $background-color $background-position no-repeat;
+  background: url('graphics/#{$name}.png') $background-color $background-position no-repeat;
+  background: none, url('graphics/#{$name}.svg') $background-color $background-position no-repeat;
 }
