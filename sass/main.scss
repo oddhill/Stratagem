@@ -4,6 +4,8 @@
 // Import our variables, mixins & helpers
 @import "variables", "mixins", "helpers";
 
+@import "stratagem";
+
 // Neat should be imported after variable, reset and mixin declaration.
 // Otherwise neat overrides our variables.
 @import "../assets/neat/app/assets/stylesheets/neat";
@@ -109,6 +111,11 @@ header {
   left: 50%;
   top: 40%;
   @include transform(translateY(-50%) translateX(-50%));
+  width: 580px;
+
+  .documenation & {
+    @include fade($direction: reverse);
+  }
 
   h2 {
     margin-bottom: 15px;
@@ -125,10 +132,38 @@ ul {
   li {
     float: left;
     margin: 0 15px 0 0;
+    cursor: pointer;
     
     &:last-child {
       margin: 0px;
     }
+  }
+}
+
+.docu {
+  z-index: -1;
+  background: #fff;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 45px;
+  top: 45px;
+  overflow-y: scroll;
+  @include transform(translateY(100%));
+  opacity: 0;
+  padding: 25px;
+
+  h2 {
+    @extend h1;
+    text-align: center;
+    color: #8f63e4;
+    text-shadow: none;
+  }
+
+  .documenation & {
+    @include slideInLeft(0.5s);
+    z-index: 1;
+    opacity: 1;
   }
 }
 
@@ -142,3 +177,5 @@ footer {
   right: 0;
   padding: 10px 25px;
 }
+
+@import "stratagem-two";
