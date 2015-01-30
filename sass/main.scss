@@ -48,7 +48,7 @@ input[type=submit] {
 }
 
 body {
-  background: url(../graphics/bg.png);
+  @include linear-gradient(-140deg, #c56aff, #0389a3);
   background-size: cover;
   color: #fff;
   font-family: 'Lato', sans-serif;
@@ -69,12 +69,31 @@ header {
   text-align: center;
 }
 
+span {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.side-note {
+  margin: 10px 0 0 0;
+  opacity: 0;
+
+  .go & {
+    @include fade($delay: 0.3s);
+  }
+}
+
 h1 {
   @include font-size(4.2);
   text-transform: uppercase;
   margin: 0px;
   text-shadow: 0px 2px 1px #4F36C3;
   letter-spacing: 1px;
+  margin-bottom: 5px;
+
+  .go & {
+    @include fadeInLeft($direction: reverse);
+  }
 }
 
 h2 {
@@ -83,6 +102,10 @@ h2 {
   margin: 0px;
   text-shadow: 0px 2px 1px #4F36C3;
   letter-spacing: 0.7px;
+
+  .go & {
+    @include fadeInRight($direction: reverse);
+  }
 }
 
 p {
@@ -99,35 +122,59 @@ a {
   }
 }
 
-.logo {
+#logo {
   @include svg-bg(logo);
   width: 200px;
   height: 200px;
-  margin: 25px auto 15px auto;
+  margin: 25px auto 45px auto;
+
+  .go & {
+    margin-bottom: 0px;
+  }
 }
 
 header {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  @include transform(translateY(-50%) translateX(-50%));
-  width: 580px;
-
-  .documenation & {
-    @include fade($direction: reverse);
-  }
+  margin: 65px auto;
+  width: 705px;
+  overflow: hidden;
 
   h2 {
     margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.4);
   }
 }
 
-ul {
+select {
+  width: 150px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  @include font-size();
+  color: #fff;
+  font-weight: bold;
+  @include svg-bg(arrow-down);
+  background-color: rgba(255,255,255,0.3);
+  background-position: 90% 17px;
+  opacity: 0;
+  @include animate();
+
+  .go & {
+    @include pulse(0.6s, $delay: 0.5s, $iteration-count: 1);
+    opacity: 1;
+  }
+}
+
+nav {
   list-style: none;
   @include font-size();
-  padding: 0px;
+  padding: 15px 0 0 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.4);
+  margin-top: -45px;
+  z-index: 10;
+  position: relative;
+
+  .go & {
+    margin-top: 20px;
+  }
 
   li {
     float: left;
@@ -140,33 +187,6 @@ ul {
   }
 }
 
-.docu {
-  z-index: -1;
-  background: #fff;
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 45px;
-  top: 45px;
-  overflow-y: scroll;
-  @include transform(translateY(100%));
-  opacity: 0;
-  padding: 25px;
-
-  h2 {
-    @extend h1;
-    text-align: center;
-    color: #8f63e4;
-    text-shadow: none;
-  }
-
-  .documenation & {
-    @include slideInLeft(0.5s);
-    z-index: 1;
-    opacity: 1;
-  }
-}
-
 footer {
   position: fixed;
   bottom: 0;
@@ -176,6 +196,70 @@ footer {
   left: 0;
   right: 0;
   padding: 10px 25px;
+}
+
+#logo.fade {
+  @include fade(0.5s);
+}
+
+#logo.fadeInTop {
+  @include fadeInTop(0.5s);
+}
+
+#logo.fadeInBottom {
+  @include fadeInBottom(0.5s);
+}
+
+#logo.fadeInLeft {
+  @include fadeInLeft(0.5s);
+}
+
+#logo.fadeInRight {
+  @include fadeInRight(0.5s);
+}
+
+#logo.pulse {
+  @include pulse(0.5s);
+}
+
+#logo.rubberBand {
+  @include rubberBand(0.5s);
+}
+
+#logo.rubberBand {
+  @include rubberBand(0.5s);
+}
+
+#logo.slideInLeft {
+  @include slideInLeft(0.5s);
+}
+
+#logo.slideInRight {
+  @include slideInRight(0.5s);
+}
+
+#logo.slideInTop {
+  @include slideInTop(0.5s);
+}
+
+#logo.slideInBottom {
+  @include slideInBottom(0.5s);
+}
+
+#logo.spin {
+  @include spin(0.5s);
+}
+
+#logo.tada {
+  @include tada(0.5s);
+}
+
+#logo.vanish {
+  @include vanish(0.5s);
+}
+
+#logo.wiggle {
+  @include wiggle(0.5s);
 }
 
 @import "stratagem-two";

@@ -16,225 +16,42 @@
     <![endif]-->
 
     <style>
-    * {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-
-    * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-tap-highlight-color: transparent; }
-
-    html {
-      font-size: 62.5%;
-      min-height: 100%; }
-
-    input,
-    form,
-    select,
-    button {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-appearance: none;
-      border-radius: 0px;
-      border: 0px;
-      outline: none; }
-
-    button,
-    input[type=submit] {
-      border: 0px; }
-
-    body {
-      background: url(graphics/bg.png);
-      background-size: cover;
-      color: #fff;
-      font-family: 'Lato', sans-serif;
-      margin: 0px;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 24px; }
-
-    a {
-      color: #fff;
-      text-decoration: underline; }
-
-    main {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto; }
-      main:after {
-        content: "";
-        display: table;
-        clear: both; }
-
-    header {
-      text-align: center; }
-
-    h1, .docu h2 {
-      font-size: 42px;
-      font-size: 4.2rem;
-      line-height: 63px;
-      text-transform: uppercase;
-      margin: 0px;
-      text-shadow: 0px 2px 1px #4F36C3;
-      letter-spacing: 1px; }
-
-    h2 {
-      font-size: 24px;
-      font-size: 2.4rem;
-      line-height: 36px;
-      text-transform: uppercase;
-      margin: 0px;
-      text-shadow: 0px 2px 1px #4F36C3;
-      letter-spacing: 0.7px; }
-
-    p {
-      margin: 0px;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 24px; }
-
-    a {
-      text-decoration: none;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 24px; }
-      a:hover {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-
-    .logo {
-      background: url("graphics/logo.png") transparent 0 0 no-repeat;
-      background: none, url("graphics/logo.svg") transparent 0 0 no-repeat;
-      width: 200px;
-      height: 200px;
-      margin: 25px auto 15px auto; }
-
-    header {
-      position: absolute;
-      left: 50%;
-      top: 40%;
-      -webkit-transform: translateY(-50%) translateX(-50%);
-      -moz-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-      -o-transform: translateY(-50%) translateX(-50%);
-      transform: translateY(-50%) translateX(-50%);
-      width: 580px; }
-      .documenation header {
-        -webkit-animation: fade 0.3s 0s ease-in-out 1 reverse;
-        -moz-animation: fade 0.3s 0s ease-in-out 1 reverse;
-        -o-animation: fade 0.3s 0s ease-in-out 1 reverse;
-        animation: fade 0.3s 0s ease-in-out 1 reverse;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards; }
-      header h2 {
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-
-    ul {
-      list-style: none;
-      font-size: 16px;
-      font-size: 1.6rem;
-      line-height: 24px;
-      padding: 0px; }
-      ul li {
-        float: left;
-        margin: 0 15px 0 0;
-        cursor: pointer; }
-        ul li:last-child {
-          margin: 0px; }
-
-    .docu {
-      z-index: -1;
-      background: #fff;
-      position: fixed;
-      right: 0;
-      left: 0;
-      bottom: 45px;
-      top: 45px;
-      overflow-y: scroll;
-      -webkit-transform: translateY(100%);
-      -moz-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-      -o-transform: translateY(100%);
-      transform: translateY(100%);
-      opacity: 0;
-      padding: 25px; }
-      .docu h2 {
-        text-align: center;
-        color: #8f63e4;
-        text-shadow: none; }
-      .documenation .docu {
-        -webkit-animation: slide-in-left 0.5s 0s ease-in-out 1 normal;
-        -moz-animation: slide-in-left 0.5s 0s ease-in-out 1 normal;
-        -o-animation: slide-in-left 0.5s 0s ease-in-out 1 normal;
-        animation: slide-in-left 0.5s 0s ease-in-out 1 normal;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-        z-index: 1;
-        opacity: 1; }
-
-    footer {
-      position: fixed;
-      bottom: 0;
-      height: 45px;
-      background: rgba(0, 0, 0, 0.1);
-      text-align: right;
-      left: 0;
-      right: 0;
-      padding: 10px 25px; }
-
-    @keyframes fade {
-      0% {
-        opacity: 0; }
-      100% {
-        opacity: 100; } }
-    @-webkit-keyframes fade {
-      0% {
-        opacity: 0; }
-      100% {
-        opacity: 100; } }
-    @-moz-keyframes fade {
-      0% {
-        opacity: 0; }
-      100% {
-        opacity: 100; } }
-    @-webkit-keyframes slide-in-left {
-      0% {
-        -webkit-transform: translateX(-100%); }
-      100% {
-        -webkit-transform: translateX(0%); } }
-    @-moz-keyframes slide-in-left {
-      0% {
-        -moz-transform: translateX(-100%); }
-      100% {
-        -moz-transform: translateX(0%); } }
-    @keyframes slide-in-left {
-      0% {
-        transform: translateX(-100%); }
-      100% {
-        transform: translateX(0%); } }
+   
     </style>
   </head>
   <body>
     <header>
-      <figure class="logo"></figure>
+      <figure id="logo"></figure>
       <h1>Stratagem</h1>
       <h2>Lightweight Sass animation library</h2>
 
-      <ul>
+      <select>
+        <option class="fade">Fade</option>
+        <option class="fadeInTop">Fade in top</option>
+        <option class="fadeInBottom">Fade in bottom</option>
+        <option class="fadeInLeft">Fade in left</option>
+        <option class="fadeInRight">Fade in right</option>
+        <option class="pulse">Pulse</option>
+        <option class="rubberBand">Rubber band</option>
+        <option class="slideInLeft">Slide in left</option>
+        <option class="slideInRight">Slide in right</option>
+        <option class="slideInTop">Slide in top</option>
+        <option class="slideInBottom">Slide in bottom</option>
+        <option class="spin">Spin</option>
+        <option class="tada">Tada</option>
+        <option class="vanish">Vanish</option>
+        <option class="wiggle">Wiggle</option>
+      </select>
+      <p class="side-note">All animations can be done in reverse</p>
+
+      <nav>
         <li><a href="https://github.com/oddhill/Stratagem/zipball/master">Download <strong>ZIP File</strong></a></li>
         <li><a href="https://github.com/oddhill/Stratagem/tarball/master">Download <strong>TAR Ball</strong></a></li>
         <li><a href="https://github.com/oddhill/Stratagem">View on <strong>GitHub</strong></a></li>
-       <!--  <li><a class="example">View <strong>Examples</strong></a></li> -->
+        <li><a class="example">View <strong>Examples</strong></a></li>
         <li><a href="http://oddhill.github.io/Stratagem/documentation/">View <strong>Documentation</strong></a></li>
-      </ul>
+      </nav>
     </header>
-
-<!--       <section class="docu">
-        <h2>asdasd</h2>
-      </section> -->
       
       <footer>
         <p>This project is maintained by <a href="https://github.com/oddhill" target="_blank"><strong>Odd Hill</strong></a></p>
