@@ -33,7 +33,7 @@ So your main import file should look something like this.
 
 @import {filepath}/stratagem-two;
 ```
-### Why is needed to import Stratagem two times? 
+### Why is it needed to import Stratagem two times? 
 First we import Stratagems helper functions and all keyframes. Since Stratagem uses a "guard" function to prevent duplicate/unused code to be printed we need to split them up so the "guard" function can work properly.
 
 ******
