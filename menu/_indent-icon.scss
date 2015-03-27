@@ -1,0 +1,29 @@
+@mixin indentIcon($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $openClass: '.open', $color: #fff) {
+  cursor: pointer;
+
+  .menu-icon,
+  &:before,
+  &:after  {
+    background: $color;
+    content:'';
+    display:block;
+    height:3px;
+    margin:6px 0;
+    width:100%;
+    border-radius: 4px;
+    @include animate($transition-time, $delay, $timing);
+  }
+
+  #{$openClass} & {
+
+    .menu-icon {
+      width: 100%;
+      border-radius: 100%;
+    }
+
+    .line,
+    &:after {
+      width: 70%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@mixin arrowRightIcon($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $openClass: '.open', $color: #fff) {
+  cursor: pointer;
+
+  .menu-icon,
+  &:before,
+  &:after  {
+    background: $color;
+    content:'';
+    display:block;
+    height:3px;
+    margin:6px 0;
+    width:100%;
+    border-radius: 4px;
+    @include animate();
+  }
+
+  #{$openClass} & {
+
+    .menu-icon {
+      margin: 14px -9px;
+    }
+
+    &:before {
+      -webkit-transform: rotate(45deg);
+    }
+
+    &:after {
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+}
