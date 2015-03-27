@@ -6,7 +6,7 @@ $vanishSelector: () !global;
 }
 
 @mixin vanishKey {
-  
+
   @if length($vanishSelector) >= 1 {
 
     @-moz-keyframes vanish {
