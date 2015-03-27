@@ -36,4 +36,13 @@
 @import "general/helpers";
 
 // Animations
-@import "animations/fade", "animations/vanish", "animations/spin", "animations/pulse", "animations/slide-in", "animations/tada", "animations/wiggle", "animations/rubber";
+@import "animations/fade", "animations/vanish", "animations/spin", "animations/pulse", "animations/slide-in", "animations/tada", "animations/wiggle", "animations/rubber", "animations/hatch", "animations/hanging";
+
+// Modals
+@import "modals/scale-in", "modals/slide-in-right", "modals/slide-in-bottom", "modals/slide-in-top", "modals/slide-in-left", "modals/rotateIn", "modals/attention", "modals/grow", "modals/blur-modal", "modals/fade-modal";
+
+// Menu icons
+@import "menu/swingy-icon", "menu/spinning-icon", "menu/rotate-icon", "menu/one-line-icon", "menu/indent-icon", "menu/arrow-left-icon", "menu/arrow-right-icon", "menu/arrow-bottom-icon", "menu/arrow-top-icon", "menu/bush-icon";
+
+// Loaders
+@import "loaders/circle-line", "loaders/circle-fade";

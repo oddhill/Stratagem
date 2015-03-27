@@ -1,3 +1,4 @@
+// Import general animations
 @include fadeKey();
 @include pulseKey();
 @include tadaKey();
@@ -13,3 +14,17 @@
 @include fadeInRightKey();
 @include spinKey();
 @include vanishKey();
+@include hatchKey();
+@include hangKey();
+
+// Import modal animations
+@include scaleInModalKey();
+@include slideInRightModalKey();
+@include slideInBottomModalKey();
+@include slideInTopModalKey();
+@include slideInLeftModalKey();
+@include rotateInModalKey();
+@include attentionModalKey();
+@include growModalKey();
+@include blurModalKey();
+@include fadeModalKey();
