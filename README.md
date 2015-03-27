@@ -15,6 +15,12 @@ This plugin is released under the MIT license.
 
 ## Installation
 
+Install using Bower
+
+```
+bower install stratagem
+```
+
 In your main import file (main.scss perhaps?) before importing your variables, helpers etc.
 ```
 @import {filepath}/stratagem;
