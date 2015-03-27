@@ -1,4 +1,4 @@
-# Stratagem - A Lightweight animation library - 0.1.0
+# Stratagem - A Lightweight animation library - 0.1.1
 
 Stratagem is a simple, lightweight animation library that consists of mixins that are designed to be easy to use and simple.
 The library consists of many animations, but none will be printed unless you use them. No duplicate code, use what you want and leave the rest.
