@@ -41,10 +41,10 @@ $fadeSelector: () !global;
 // Fade in Top
 $fadeInTopSelector: () !global;
 
-@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $translate-y: -200px) {
-  -webkit-transform: translateY($translate-y);
-  -moz-transform: translateY($translate-y);
-  transform: translateY($translate-y);
+@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $top: -200px) {
+  -webkit-transform: translateY($top);
+  -moz-transform: translateY($top);
+  transform: translateY($top);
   @include animation(fade-in-up, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInTopSelector: append($fadeInTopSelector, true) !global;
 }
