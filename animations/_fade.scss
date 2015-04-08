@@ -41,7 +41,10 @@ $fadeSelector: () !global;
 // Fade in Top
 $fadeInTopSelector: () !global;
 
-@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+@mixin fadeInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $translate-y: -200px) {
+  -webkit-transform: translateY($translate-y);
+  -moz-transform: translateY($translate-y);
+  transform: translateY($translate-y);
   @include animation(fade-in-up, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInTopSelector: append($fadeInTopSelector, true) !global;
 }
@@ -54,7 +57,6 @@ $fadeInTopSelector: () !global;
     @-webkit-keyframes fade-in-up {
       0% {
         opacity: 0;
-        -webkit-transform: translateY(-200px);
       }
 
       100% {
@@ -66,7 +68,6 @@ $fadeInTopSelector: () !global;
     @-moz-keyframes fade-in-up {
       0% {
         opacity: 0;
-        -moz-transform: translateY(-200px);
       }
 
       100% {
@@ -78,7 +79,6 @@ $fadeInTopSelector: () !global;
     @keyframes fade-in-up {
       0% {
         opacity: 0;
-        transform: translateY(-200px);
       }
 
       100% {
