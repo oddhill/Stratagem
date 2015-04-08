@@ -92,7 +92,10 @@ $fadeInTopSelector: () !global;
 // Fade in Bottom
 $fadeInBottomSelector: () !global;
 
-@mixin fadeInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+@mixin fadeInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $bottom: 200px) {
+  -webkit-transform: translateY($bottom);
+  -moz-transform: translateY($bottom);
+  transform: translateY($bottom);
   @include animation(fade-in-down, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInBottomSelector: append($fadeInBottomSelector, true) !global;
 }
@@ -105,7 +108,6 @@ $fadeInBottomSelector: () !global;
    @-webkit-keyframes fade-in-down {
       0% {
         opacity: 0;
-        -webkit-transform: translateY(200px);
       }
 
       100% {
@@ -117,7 +119,6 @@ $fadeInBottomSelector: () !global;
     @-moz-keyframes fade-in-down {
       0% {
         opacity: 0;
-        -moz-transform: translateY(200px);
       }
 
       100% {
@@ -129,7 +130,6 @@ $fadeInBottomSelector: () !global;
     @keyframes fade-in-down {
       0% {
         opacity: 0;
-        transform: translateY(200px);
       }
 
       100% {
@@ -143,7 +143,10 @@ $fadeInBottomSelector: () !global;
 // Fade in Left
 $fadeInLeftSelector: () !global;
 
-@mixin fadeInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+@mixin fadeInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $left: -200px) {
+  -webkit-transform: translateX($left);
+  -moz-transform: translateX($left);
+  transform: translateX($left);
   @include animation(fade-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInLeftSelector: append($fadeInLeftSelector, true) !global;
 }
@@ -156,7 +159,6 @@ $fadeInLeftSelector: () !global;
     @-webkit-keyframes fade-in-left {
       0% {
         opacity: 0;
-        -webkit-transform: translateX(-200px);
       }
 
       100% {
@@ -168,7 +170,6 @@ $fadeInLeftSelector: () !global;
     @-moz-keyframes fade-in-left {
       0% {
         opacity: 0;
-        -moz-transform: translateX(-200px);
       }
 
       100% {
@@ -180,7 +181,6 @@ $fadeInLeftSelector: () !global;
     @keyframes fade-in-left {
       0% {
         opacity: 0;
-        transform: translateX(-200px);
       }
 
       100% {
@@ -194,7 +194,10 @@ $fadeInLeftSelector: () !global;
 // Fade in right
 $fadeInRightSelector: () !global;
 
-@mixin fadeInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+@mixin fadeInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $right: 200px) {
+  -webkit-transform: translateX($right);
+  -moz-transform: translateX($right);
+  transform: translateX($right);
   @include animation(fade-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInRightSelector: append($fadeInRightSelector, true) !global;
 }
@@ -207,7 +210,6 @@ $fadeInRightSelector: () !global;
     @-webkit-keyframes fade-in-right {
       0% {
         opacity: 0;
-        -webkit-transform: translateX(200px);
       }
 
       100% {
@@ -219,7 +221,6 @@ $fadeInRightSelector: () !global;
     @-moz-keyframes fade-in-right {
       0% {
         opacity: 0;
-        -moz-transform: translateX(200px);
       }
 
       100% {
@@ -231,7 +232,6 @@ $fadeInRightSelector: () !global;
     @keyframes fade-in-right {
       0% {
         opacity: 0;
-        transform: translateX(200px);
       }
 
       100% {
