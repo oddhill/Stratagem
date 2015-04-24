@@ -1,0 +1,38 @@
+@mixin swingyIcon($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $openClass: '.open', $color: #fff) {
+  cursor: pointer;
+
+  .menu-icon,
+  &:before,
+  &:after  {
+    background: $color;
+    content:'';
+    display:block;
+    height:3px;
+    margin:6px 0;
+    width:100%;
+    border-radius: 4px;
+    @include animate($transition-time, $delay, $timing);
+  }
+
+  #{$openClass} & {
+
+    .menu-icon {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      opacity: 0;
+    }
+
+    &:after {
+      transform: translateY(-9px) rotate(225deg);
+      -webkit-transform: translateY(-9px) rotate(225deg);
+      -moz-transform: translateY(-9px) rotate(225deg);
+    }
+
+    &:before {
+      transform: translateY(9px) rotate(135deg);
+      -webkit-transform: translateY(9px) rotate(135deg);
+      -moz-transform: translateY(9px) rotate(135deg);
+    }
+  }
+}

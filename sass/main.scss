@@ -1,0 +1,425 @@
+// Import Bourbon mixin lib
+@import "../assets/bourbon/dist/bourbon";
+
+// Import our variables, mixins & helpers
+@import "variables", "mixins", "helpers";
+
+// Neat should be imported after variable, reset and mixin declaration.
+@import "../assets/neat/app/assets/stylesheets/neat";
+
+// Import neat helpers - this gives us visual grid which can be useful, also
+// gives us media mixin which is useful when making responsive layouts.
+@import "../assets/neat/app/assets/stylesheets/neat-helpers";
+
+@import "../assets/stratagem/stratagem";
+
+// General resets
+// Remove subpixels from webkit browsers and FF
+// Remove tap highlight color for webkit touch browsers.
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Set HTML to 62.5% to make it easier setting REM/EM values
+// Now it calculates from 10 instead of regular 16.
+// Example 1rem = 10px
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+}
+
+// Remove subpixels from webkit browsers and FF
+// Remove webkit standard input, form, select & button styling on smartdevices
+input,
+form,
+select,
+button {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: none;
+  border-radius: 0px;
+  border: 0px;
+  outline: none;
+}
+
+// Remove standard border on button & input on smart devices
+button,
+input[type=submit] {
+  border: 0px;
+}
+
+body {
+  background-color: #c56aff;
+  background-image: -webkit-linear-gradient(-130deg, #c56aff, #0389a3);
+  background-image: linear-gradient(-140deg,#c56aff, #0389a3);
+  background-size: cover;
+  margin: 0;
+  @include font-size(1.4);
+  font-family: 'Lato', sans-serif;
+  padding: 40px 0 0 0;
+
+  &:after {
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: url('/graphics/bg.png') repeat;
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
+
+@import "typography";
+
+main {
+  background: #fff;
+  @include clearfix();
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.inner,
+.wrapper {
+  @include outer-container();
+  padding: 0 25px;
+}
+
+.wrapper {
+  padding: 0 0 0 25px;
+}
+
+header {
+  height: 500px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+    width: 100%;
+  }
+
+  h1 {
+    color: $light;
+    text-shadow: 0 2px 2px #6C35E8;
+    width: 65%;
+    margin: 30px auto;
+  }
+}
+
+.info-third {
+  width: 33.333%;
+  float: left;
+  text-align: center;
+}
+
+.info-half {
+  @include span-columns(6 of 12);
+  float: left;
+  padding: 0 25px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.info-full {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.main-menu {
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  line-height: 40px;
+  padding: 0 25px;
+  z-index: 10;
+
+  li:first-child {
+    font-weight: bold;
+    padding: 0 15px 0 0;
+    margin: 0 15px 0 0;
+    border-right: 1px solid rgba(0,0,0,0.07);
+  }
+}
+
+.first,
+.second,
+.third {
+  text-align: center;
+  padding: 25px 0 50px 0;
+}
+
+.first {
+  background: $section-1;
+  padding: 50px 0;
+}
+
+.second {
+  background: $section-2;
+  border-top: 1px solid rgba(0,0,0,0.1);
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.third {
+  background: $section-3;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+
+  h2 {
+    margin-bottom: 25px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+nav {
+
+  li {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+}
+
+.features {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto 25px auto;
+  @include svg-bg(features);
+}
+
+.reduce {
+  height: 55px;
+  width: 85px;
+  margin: 0 auto 25px auto;
+  @include svg-bg(redunant);
+}
+
+#logo {
+  height: 115px;
+  width: 115px;
+  margin: 0 auto;
+  opacity: 0.9;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+a {
+  color: $dark;
+  text-decoration: none;
+
+  &:hover,
+  &.active {
+    text-decoration: underline;
+  }
+}
+
+.version {
+  clear: both;
+  display: block;
+  color: $light;
+  margin: 5px 0;
+}
+
+button {
+  background: none;
+  width: 250px;
+  background: $button;
+  height: 50px;
+  box-shadow: 0 2px 0 #7678dc;
+  border-radius: 5px;
+  cursor: pointer;
+  @include animate();
+  color: $light;
+  @include font-size(1.6);
+  font-weight: bold;
+
+  &:hover {
+    background: darken($button, 2%);
+    box-shadow: none;
+  }
+
+  &:active {
+    background: darken($button, 3%);
+    box-shadow: none;
+  }
+
+  a {
+    padding: 15px 0;
+    color: $light;
+    @include font-size(1.6);
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// Documenation
+.docu {
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  padding: 25px;
+
+  button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.documentation {
+  width: 20%;
+  float: left;
+  padding: 0 25px 25px 25px;
+
+  h3 {
+    color: $light;
+    margin: 10px 0 5px 0;;
+    font-weight: bold;
+  }
+
+  li {
+    float: none;
+    color: $light;
+    margin-left: 10px;
+  }
+
+  a {
+    color: #fff;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+.examples {
+  width: 100%;
+  float: none;
+  height: 250px;
+  background: rgba(0,0,0,0.05);
+
+  #logo {
+    margin: 65px auto;
+  }
+}
+
+.wrapper-docu {
+  overflow: hidden;
+  float: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.mountains {
+  background: url(../graphics/mountains.png) repeat-x;
+  height: 70px;
+  width: 100%;
+  margin: 25px 0 0 0;
+  clear: both;
+}
+
+// General table styling
+table {
+  width: 100% !important;
+  display: table;
+  text-align: left;
+  color: $dark;
+  margin: 15px 0 20px 0;
+  background: $light-hr;
+
+  caption {
+    text-align: left;
+    border-bottom: 1px solid darken($light-hr, 5%);
+    padding: 10px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  td {
+    border-right: 1px solid darken($light-hr, 5%);
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  thead {
+    border-bottom: 3px solid darken($light-hr, 5%);
+
+    th {
+      padding: 10px;
+      color: $dark;
+      font-weight: 600;
+    }
+  }
+
+  input[type=text] {
+    width: 100%;
+  }
+
+  tr {
+    border-bottom: 1px solid darken($light-hr, 5%);
+
+    &.odd {
+      background: #F7F7F7;
+    }
+
+    th {
+      padding: 10px;
+      border-right: 1px solid darken($light-hr, 5%);
+      border-bottom: 1px solid darken($light-hr, 5%);
+    }
+  }
+
+  td {
+    padding: 15px 10px;
+  }
+}
+
+.wrapper-button {
+  background: #f2f2f2;
+  padding: 10px;
+  width: 100%;
+  margin: 0 0 15px 0;
+}
+
+code {
+  font-size: 14px;
+  background: #f2f2f2;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin: 15px 0 20px 0;
+}
+
+@import "../assets/stratagem/stratagem-two";

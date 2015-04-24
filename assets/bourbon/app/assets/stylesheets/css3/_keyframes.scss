@@ -1,0 +1,23 @@
+// Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block’s content
+@mixin keyframes($name) {
+  $original-prefix-for-webkit:    map-get($prefixes, webkit);
+  $original-prefix-for-mozilla:   map-get($prefixes, moz);
+  $original-prefix-for-microsoft: map-get($prefixes, ms);
+  $original-prefix-for-opera:     map-get($prefixes, o);
+
+  @if map-get($prefixes, webkit) == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if map-get($prefixes, moz) == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

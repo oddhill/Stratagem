@@ -1,0 +1,163 @@
+// Slide in left
+$slideInLeftSelector: () !global;
+
+@mixin slideInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  @include animation(slide-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInLeftSelector: append($slideInLeftSelector, true) !global;
+}
+
+@mixin slideInLeftKey() {
+
+  @if length($slideInLeftSelector) >= 1 {
+
+    @-webkit-keyframes slide-in-left {
+      0% {
+        -webkit-transform: translateX(-100%);
+      }
+      100% {
+        -webkit-transform: translateX(0%);
+      }
+    }
+
+    @-moz-keyframes slide-in-left {
+      0% {
+        -moz-transform: translateX(-100%);
+      }
+      100% {
+        -moz-transform: translateX(0%);
+      }
+    }
+
+    @keyframes slide-in-left {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  }
+}
+
+// Slide in right
+$slideInRightSelector: () !global;
+
+@mixin slideInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  @include animation(slide-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInRightSelector: append($slideInRightSelector, true) !global;
+}
+
+@mixin slideInRightKey() {
+
+  @if length($slideInRightSelector) >= 1 {
+
+    @-webkit-keyframes slide-in-right {
+      0% {
+        -webkit-transform: translateX(100%);
+      }
+      100% {
+        -webkit-transform: translateX(0%);
+      }
+    }
+
+    @-moz-keyframes slide-in-right {
+      0% {
+        -moz-transform: translateX(100%);
+      }
+      100% {
+        -moz-transform: translateX(0%);
+      }
+    }
+
+    @keyframes slide-in-right {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  }
+}
+
+// Slide in top
+$slideInTopSelector: () !global;
+
+@mixin slideInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  @include animation(slide-in-top, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInTopSelector: append($slideInTopSelector, true) !global;
+}
+
+@mixin slideInTopKey() {
+
+  @if length($slideInTopSelector) >= 1 {
+
+    @-webkit-keyframes slide-in-top {
+      0% {
+       -webkit-transform: translateY(-100%);
+      }
+      100% {
+       -webkit-transform: translateY(0%);
+      }
+    }
+
+    @-moz-keyframes slide-in-top {
+      0% {
+       -moz-transform: translateY(-100%);
+      }
+      100% {
+       -moz-transform: translateY(0%);
+      }
+    }
+
+    @keyframes slide-in-top {
+      0% {
+       transform: translateY(-100%);
+      }
+      100% {
+       transform: translateY(0%);
+      }
+    }
+  }
+}
+
+// Slide in Bottom
+$slideInBottomSelector: () !global;
+
+@mixin slideInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  @include animation(slide-in-bottom, $transition-time, $delay, $timing, $iteration-count, $direction);
+  $slideInBottomSelector: append($slideInBottomSelector, true) !global;
+}
+
+@mixin slideInBottomKey() {
+
+  @if length($slideInBottomSelector) >= 1 {
+
+    @-webkit-keyframes slide-in-bottom {
+      0% {
+       -webkit-transform: translateY(100%);
+      }
+      100% {
+       -webkit-transform: translateY(0%);
+      }
+    }
+
+    @-moz-keyframes slide-in-bottom {
+      0% {
+       -moz-transform: translateY(100%);
+      }
+      100% {
+       -moz-transform: translateY(0%);
+      }
+    }
+
+    @keyframes slide-in-bottom {
+      0% {
+       transform: translateY(100%);
+      }
+      100% {
+       transform: translateY(0%);
+      }
+    }
+  }
+}

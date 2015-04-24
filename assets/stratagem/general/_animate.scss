@@ -1,0 +1,16 @@
+@mixin animate($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut) {
+  -webkit-transition: all $transition-time $delay $timing;
+  -moz-transition: all $transition-time $delay $timing;
+  -ms-transition: all $transition-time $delay $timing;
+  -o-transition: all $transition-time $delay $timing;
+  transition: all $transition-time $delay $timing;
+}
+
+@mixin animation ($name, $transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
+  -webkit-animation: $name $transition-time $delay $timing $iteration-count $direction;
+  -moz-animation:    $name $transition-time $delay $timing $iteration-count $direction;
+  -o-animation:      $name $transition-time $delay $timing $iteration-count $direction;
+  animation:         $name $transition-time $delay $timing $iteration-count $direction;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}

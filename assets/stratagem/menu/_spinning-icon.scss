@@ -1,0 +1,45 @@
+@mixin spinningIcon($transition-time: 1s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $openClass: '.open', $color: #fff) {
+  cursor: pointer;
+
+  .menu-icon,
+  &:before,
+  &:after  {
+    background: $color;
+    content:'';
+    display:block;
+    height:3px;
+    margin:6px 0;
+    width:100%;
+    border-radius: 4px;
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    @include animate($transition-time, $delay, $timing);
+  }
+
+  .menu-icon {
+    @include animate(0.3s, 0.7s, $timing);
+  }
+
+  #{$openClass} & {
+
+    .menu-icon {
+      opacity: 0;
+      @include animate(0.3s, 0s, $timing);
+    }
+
+    &:after {
+      transform: translateY(-9px) rotate(-500deg);
+      -webkit-transform: translateY(-9px) rotate(-500deg);
+      -moz-transform: translateY(-9px) rotate(-500deg);
+    }
+
+    &:before {
+      transform: translateY(9px) rotate(500deg);
+      -webkit-transform: translateY(9px) rotate(500deg);
+      -moz-transform: translateY(9px) rotate(500deg);
+    }
+  }
+}
