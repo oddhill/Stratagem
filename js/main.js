@@ -6,6 +6,10 @@ $(document).ready(function() {
   $('.line').click(function () {
     $('.wrapper-docu').toggleClass('open');
   });
+
+  $('.wrapper-button .regular').click(function () {
+    $('.wrapper-docu').toggleClass('active');
+  });
 });
 
 })(jQuery);

@@ -503,4 +503,68 @@ code {
   margin-top: -50px;
 }
 
+.active #logo {
+  @include fade();
+}
+
+.active #logo-2 {
+  @include fadeInTop();
+}
+
+.active #logo-3 {
+  @include fadeInBottom();
+}
+
+.active #logo-4 {
+  @include fadeInRight();
+}
+
+.active #logo-5 {
+  @include fadeInLeft();
+}
+
+.active #logo-6 {
+  @include hanging();
+}
+
+.active #logo-7 {
+  @include pulse();
+}
+
+.active #logo-8 {
+  @include spin(1s);
+}
+
+.active #logo-9 {
+  @include wiggle();
+}
+
+.active #logo-10 {
+  @include vanish();
+}
+
+.active #logo-11 {
+  @include tada();
+}
+
+.active #logo-12 {
+  @include rubberBand();
+}
+
+.active #logo-13 {
+  @include slideInLeft();
+}
+
+.active #logo-14 {
+  @include slideInRight();
+}
+
+.active #logo-15 {
+  @include slideInTop();
+}
+
+.active #logo-16 {
+  @include slideInBottom();
+}
+
 @import "../assets/stratagem/stratagem-two";
