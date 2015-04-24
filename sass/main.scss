@@ -422,4 +422,85 @@ code {
   margin: 15px 0 20px 0;
 }
 
+.swingy {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include swingyIcon();
+}
+
+.spinning {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include spinningIcon();
+}
+
+.rotate {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include rotateIcon();
+}
+
+.one-line {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include oneLineIcon();
+}
+
+.indent-icon {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include indentIcon();
+}
+
+.bush-icon {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include bushIcon();
+}
+
+.arrow-left-icon {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include arrowLeftIcon();
+}
+
+.arrow-right-icon {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include arrowRightIcon();
+}
+
+.arrow-bottom-icon {
+  width: 50px;
+  margin: 13% auto;
+  display: block;
+  @include arrowBottomIcon();
+}
+
+.circle-line {
+  @include circleLineLoader();
+  left: 50%;
+  position: absolute;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+}
+
+.circle-fade {
+  @include circleFadeLoader();
+  left: 50%;
+  position: absolute;
+  margin-left: -50px;
+  top: 50%;
+  margin-top: -50px;
+}
+
 @import "../assets/stratagem/stratagem-two";
