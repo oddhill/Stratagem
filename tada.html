@@ -6,7 +6,7 @@
     <title>Stratagem</title>
     <link href="favicon.ico" rel="shortcut icon">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
@@ -36,7 +36,7 @@
 
           <h3>Water animations</h3>
           <li><a href="fade.html">Fade</a></li>
-          <li><a class="active" href="fade-top.html">Fade in top</a></li>
+          <li><a href="fade-top.html">Fade in top</a></li>
           <li><a href="fade-bottom.html">Fade in bottom</a></li>
           <li><a href="fade-left.html">Fade in left</a></li>
           <li><a href="fade-right.html">Fade in right</a></li>
@@ -45,7 +45,7 @@
           <li><a href="spin.html">Spin</a></li>
           <li><a href="wiggle.html">Wiggle</a></li>
           <li><a href="vanishin.html">Vanish In</a></li>
-          <li><a href="tada.html">Tada</a></li>
+          <li><a class="active" href="tada.html">Tada</a></li>
           <li><a href="rubber.html">Rubber</a></li>
           <li><a href="slide-left.html">Slide in left</a></li>
           <li><a href="slide-right.html">Slide in right</a></li>
@@ -94,15 +94,15 @@
         </header>
 
         <article class="docu">
-          <h1>Fade Top</h1>
-          <p>Gives an object a fade in top effect. Can be done in reverse.</p>
+          <h1>Tada</h1>
+          <p>Gives an object a tada effect. Can be done in reverse.</p>
 
           <div class="wrapper-button">
             <button class="regular fade-example">Run example</button>
           </div>
 
           <h2>How to use</h2>
-          <code>@include fadeInTop();</code>
+          <code>@include tada();</code>
 
           <h2>Parameters</h2>
           <table>
@@ -146,13 +146,6 @@
               <td>If the animation should be done once, do it backwards, or both at the same time.</td>
               <td>Direction</td>
               <td>normal</td>
-            </tr>
-
-            <tr>
-              <td>$top</td>
-              <td>Change top value from the element should start.</td>
-              <td>TranslateY</td>
-              <td>-200px</td>
             </tr>
           </table>
         </article>
