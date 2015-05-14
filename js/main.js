@@ -8,7 +8,20 @@ $(document).ready(function() {
   });
 
   $('.wrapper-button .regular').click(function () {
-    $('.wrapper-docu').toggleClass('active');
+    $('body').toggleClass('');
+  });
+
+  $('body').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
+    $('body').removeClass('non-active-modal');
+  });
+
+  $('.innermodal a').click(function () {
+    $('body').addClass('non-active-modal');
+    $('body').removeClass('active-modal');
+  });
+
+  $('.run-modal-example').click(function () {
+    $('body').addClass('active-modal');
   });
 });
 

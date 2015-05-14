@@ -787,6 +787,93 @@ code {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards; }
 
+.attention-modal {
+  visibility: hidden;
+  background: #fff; }
+  .active-modal .attention-modal {
+    -webkit-animation: attentionModal 0.4s 0s ease-in-out 1 normal;
+    -moz-animation: attentionModal 0.4s 0s ease-in-out 1 normal;
+    -o-animation: attentionModal 0.4s 0s ease-in-out 1 normal;
+    animation: attentionModal 0.4s 0s ease-in-out 1 normal;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; }
+  .non-active-modal .attention-modal {
+    -webkit-animation: attentionModalReverse 0.3s 0s ease-in-out 1 normal;
+    -moz-animation: attentionModalReverse 0.3s 0s ease-in-out 1 normal;
+    -o-animation: attentionModalReverse 0.3s 0s ease-in-out 1 normal;
+    animation: attentionModalReverse 0.3s 0s ease-in-out 1 normal;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0; }
+  .attention-modal .innermodal {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+    .attention-modal .innermodal a {
+      cursor: pointer; }
+
+.fade-modal {
+  visibility: hidden;
+  background: #fff; }
+  .active-modal .fade-modal {
+    -webkit-animation: slideInLeftModal 0.4s 0s ease-in-out 1 normal;
+    -moz-animation: slideInLeftModal 0.4s 0s ease-in-out 1 normal;
+    -o-animation: slideInLeftModal 0.4s 0s ease-in-out 1 normal;
+    animation: slideInLeftModal 0.4s 0s ease-in-out 1 normal;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 1; }
+  .active-modal:after {
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    z-index: 0;
+    -webkit-animation: fade 0.3s 0s ease-in-out 1 normal;
+    -moz-animation: fade 0.3s 0s ease-in-out 1 normal;
+    -o-animation: fade 0.3s 0s ease-in-out 1 normal;
+    animation: fade 0.3s 0s ease-in-out 1 normal;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+  .non-active-modal .fade-modal {
+    -webkit-animation: slideInLeftModalReverse 0.3s 0s ease-in-out 1 normal;
+    -moz-animation: slideInLeftModalReverse 0.3s 0s ease-in-out 1 normal;
+    -o-animation: slideInLeftModalReverse 0.3s 0s ease-in-out 1 normal;
+    animation: slideInLeftModalReverse 0.3s 0s ease-in-out 1 normal;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+  .fade-modal .innermodal {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+    .fade-modal .innermodal a {
+      cursor: pointer; }
+
 @keyframes fade {
   0% {
     opacity: 0; }
@@ -1188,3 +1275,99 @@ code {
     transform: translateY(8%); }
   100% {
     transform: translateY(0%); } }
+@keyframes slideInLeftModal {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0; }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; } }
+@-webkit-keyframes slideInLeftModal {
+  0% {
+    -webkit-transform: translateX(-25%);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; } }
+@-moz-keyframes slideInLeftModal {
+  0% {
+    -moz-transform: translateX(-25%);
+    opacity: 0; }
+  100% {
+    -moz-transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; } }
+@keyframes slideInLeftModalReverse {
+  0% {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    transform: translateX(-15%);
+    opacity: 0; } }
+@-webkit-keyframes slideInLeftModalReverse {
+  0% {
+    -webkit-transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    -webkit-transform: translateX(-15%);
+    opacity: 0; } }
+@-moz-keyframes slideInLeftModalReverse {
+  0% {
+    -moz-transform: translateX(0%);
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    -moz-transform: translateX(-15%);
+    opacity: 0; } }
+@keyframes attentionModal {
+  0% {
+    transform: scale(0.7);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible; } }
+@-webkit-keyframes attentionModal {
+  0% {
+    -webkit-transform: scale(0.7);
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+    visibility: visible; } }
+@-moz-keyframes attentionModal {
+  0% {
+    -moz-transform: scale(0.7);
+    opacity: 0; }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 1;
+    visibility: visible; } }
+@keyframes attentionModalReverse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    transform: scale(0.7);
+    opacity: 0; } }
+@-webkit-keyframes attentionModalReverse {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    -webkit-transform: scale(0.7);
+    opacity: 0; } }
+@-moz-keyframes attentionModalReverse {
+  0% {
+    -moz-transform: scale(1);
+    opacity: 1;
+    visibility: visible; }
+  100% {
+    -moz-transform: scale(0.7);
+    opacity: 0; } }
