@@ -1,12 +1,32 @@
 $fadeModal: () !global;
 
-@mixin fadeModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $wrapper: 'main', $openClass: '.open', $closeClass: '.close') {
+@mixin fadeModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $wrapper: 'main', $openClass: '.open', $closeClass: '.close') {
   opacity: 0;
+
+  // Overlay
+  @at-root {
+
+    #{$openClass} {
+
+      &:after {
+        content: "";
+        background: $modal-bg;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        @include fade($transition-time);
+      }
+    }
+  }
 
   // When modal is active
   #{$openClass} & {
     @include fade($transition-time-close, $delay, $timing, $iteration-count, $direction: normal);
     z-index: 1;
+    visibility: visible;
   }
 
   // Close state
