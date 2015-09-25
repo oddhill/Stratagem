@@ -8,7 +8,7 @@ $(document).ready(function() {
   });
 
   $('.wrapper-button .regular').click(function () {
-    $('body').toggleClass('');
+    $('body').toggleClass('active');
   });
 
   $('body').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
