@@ -1,6 +1,6 @@
 @mixin rotateIcon($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $openClass: '.open', $color: #fff) {
   cursor: pointer;
-  @include animate($transition-time, $delay, $timing);
+  @include animate-object($transition-time, $delay, $timing);
 
   .menu-icon,
   &:before,

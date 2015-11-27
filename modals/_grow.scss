@@ -1,6 +1,6 @@
 $growModal: () !global;
 
-@mixin growModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin growModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {

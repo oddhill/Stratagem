@@ -1,6 +1,6 @@
 $slideInLeftModal: () !global;
 
-@mixin slideInLeftModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin slideInLeftModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {
@@ -14,12 +14,12 @@ $slideInLeftModal: () !global;
     #{$openClass} {
 
       &:after {
-        content: "";
+        content: '';
         background: $modal-bg;
         position: absolute;
         left: 0;
         right: 0;
-        top: 0px;
+        top: 0;
         bottom: 0;
         z-index: 0;
         @include fade();
@@ -40,47 +40,55 @@ $slideInLeftModal: () !global;
   @if length($slideInLeftModal) >= 1 {
 
     @keyframes slideInLeftModal {
+
       0% {
         transform: translateX(-25%);
         opacity: 0;
       }
+
       100% {
-        transform: translateX(0%);
+        transform: translateX(0);
         opacity: 1;
         visibility: visible;
       }
     }
 
     @-webkit-keyframes slideInLeftModal {
+
       0% {
         -webkit-transform: translateX(-25%);
         opacity: 0;
       }
+
       100% {
-        -webkit-transform: translateX(0%);
+        -webkit-transform: translateX(0);
         opacity: 1;
         visibility: visible;
       }
     }
 
     @-moz-keyframes slideInLeftModal {
+
       0% {
         -moz-transform: translateX(-25%);
         opacity: 0;
       }
+
       100% {
-        -moz-transform: translateX(0%);
+        -moz-transform: translateX(0);
         opacity: 1;
         visibility: visible;
       }
     }
 
     @keyframes slideInLeftModalReverse {
+
       0% {
         transform: translateX(0%);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         transform: translateX(-15%);
         opacity: 0;
@@ -88,11 +96,13 @@ $slideInLeftModal: () !global;
     }
 
     @-webkit-keyframes slideInLeftModalReverse {
+
       0% {
-        -webkit-transform: translateX(0%);
+        -webkit-transform: translateX(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: translateX(-15%);
         opacity: 0;
@@ -100,11 +110,13 @@ $slideInLeftModal: () !global;
     }
 
     @-moz-keyframes slideInLeftModalReverse {
+
       0% {
-        -moz-transform: translateX(0%);
+        -moz-transform: translateX(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -moz-transform: translateX(-15%);
         opacity: 0;

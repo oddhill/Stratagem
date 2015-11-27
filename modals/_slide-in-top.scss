@@ -1,6 +1,6 @@
 $slideInTopModal: () !global;
 
-@mixin slideInTopModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin slideInTopModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {
@@ -14,7 +14,7 @@ $slideInTopModal: () !global;
     #{$openClass} {
 
       &:after {
-        content: "";
+        content: '';
         background: $modal-bg;
         position: absolute;
         left: 0;
@@ -40,22 +40,26 @@ $slideInTopModal: () !global;
   @if length($slideInTopModal) >= 1 {
 
     @keyframes slideInTopModal {
+
       0% {
         transform: translateY(-25%);
         opacity: 0;
       }
+
       100% {
-        transform: translateY(0%);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
     }
 
     @-webkit-keyframes slideInTopModal {
+
       0% {
         -webkit-transform: translateY(-25%);
         opacity: 0;
       }
+
       100% {
         -webkit-transform: translateY(0%);
         opacity: 1;
@@ -64,23 +68,27 @@ $slideInTopModal: () !global;
     }
 
     @-moz-keyframes slideInTopModal {
+
       0% {
         -moz-transform: translateY(-25%);
         opacity: 0;
       }
+
       100% {
-        -moz-transform: translateY(0%);
+        -moz-transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
     }
 
     @keyframes slideInTopModalReverse {
+
       0% {
-        transform: translateY(0%);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         transform: translateY(-15%);
         opacity: 0;
@@ -88,11 +96,13 @@ $slideInTopModal: () !global;
     }
 
     @-webkit-keyframes slideInTopModalReverse {
+
       0% {
-        -webkit-transform: translateY(0%);
+        -webkit-transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: translateY(-15%);
         opacity: 0;
@@ -100,11 +110,13 @@ $slideInTopModal: () !global;
     }
 
     @-moz-keyframes slideInTopModalReverse {
+
       0% {
-        -moz-transform: translateY(0%);
+        -moz-transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -moz-transform: translateY(-15%);
         opacity: 0;

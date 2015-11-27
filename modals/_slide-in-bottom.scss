@@ -1,6 +1,6 @@
 $slideInBottomModal: () !global;
 
-@mixin slideInBottomModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin slideInBottomModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {
@@ -14,7 +14,7 @@ $slideInBottomModal: () !global;
     #{$openClass} {
 
       &:after {
-        content: "";
+        content: '';
         background: $modal-bg;
         position: absolute;
         left: 0;
@@ -40,6 +40,7 @@ $slideInBottomModal: () !global;
   @if length($slideInBottomModal) >= 1 {
 
     @keyframes slideInBottomModal {
+
       0% {
         -webkit-transform: translateY(-25%);
         -moz-transform: translateY(-25%);
@@ -47,11 +48,12 @@ $slideInBottomModal: () !global;
         transform: translateY(-25%);
         opacity: 0;
       }
+
       100% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
@@ -66,10 +68,10 @@ $slideInBottomModal: () !global;
         opacity: 0;
       }
       100% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
@@ -84,16 +86,17 @@ $slideInBottomModal: () !global;
         opacity: 0;
       }
       100% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
     }
 
     @keyframes slideInBottomModalReverse {
+
       0% {
         -webkit-transform: translateY(0%);
         -moz-transform: translateY(0%);
@@ -102,6 +105,7 @@ $slideInBottomModal: () !global;
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: translateY(15%);
         -moz-transform: translateY(15%);
@@ -112,14 +116,16 @@ $slideInBottomModal: () !global;
     }
 
     @-webkit-keyframes slideInBottomModalReverse {
+
       0% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-        transform: translateY(0%);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: translateY(15%);
         -moz-transform: translateY(15%);
@@ -130,14 +136,16 @@ $slideInBottomModal: () !global;
     }
 
     @-moz-keyframes slideInBottomModalReverse {
+
       0% {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateX(0%);
-        -ms-transform: translateX(0%);
-        transform: translateX(0%);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: translateY(15%);
         -moz-transform: translateY(15%);

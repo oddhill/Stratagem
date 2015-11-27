@@ -1,6 +1,6 @@
 $blurModal: () !global;
 
-@mixin blurModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $wrapper: 'main', $openClass: '.open', $closeClass: '.close') {
+@mixin blurModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $wrapper: 'main', $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {

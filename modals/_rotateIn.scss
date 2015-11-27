@@ -1,6 +1,6 @@
 $rotateInModal: () !global;
 
-@mixin rotateInModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin rotateInModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {
@@ -14,7 +14,7 @@ $rotateInModal: () !global;
     #{$openClass} {
 
       &:after {
-        content: "";
+        content: '';
         background: $modal-bg;
         position: absolute;
         left: 0;
@@ -40,10 +40,12 @@ $rotateInModal: () !global;
   @if length($rotateInModal) >= 1 {
 
     @keyframes rotateInModal {
+
       0% {
         transform: scale(0) rotate(720deg);
         opacity: 0;
       }
+
       100% {
         transform: scale(1) rotate(0deg);
         opacity: 1;
@@ -52,10 +54,12 @@ $rotateInModal: () !global;
     }
 
     @-webkit-keyframes rotateInModal {
+
       0% {
         -webkit-transform: scale(0) rotate(720deg);
         opacity: 0;
       }
+
       100% {
         -webkit-transform: scale(1) rotate(0deg);
         opacity: 1;
@@ -64,10 +68,12 @@ $rotateInModal: () !global;
     }
 
     @-moz-keyframes rotateInModal {
+
       0% {
         -moz-transform: scale(0) rotate(720deg);
         opacity: 0;
       }
+
       100% {
         -moz-transform: scale(1) rotate(0deg);
         opacity: 1;
@@ -76,11 +82,13 @@ $rotateInModal: () !global;
     }
 
     @keyframes rotateInModalReverse {
+
       0% {
         transform: scale(1) rotate(0deg);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         transform: scale(0) rotate(720deg);
         opacity: 0;
@@ -88,11 +96,13 @@ $rotateInModal: () !global;
     }
 
     @-webkit-keyframes rotateInModalReverse {
+
       0% {
         -webkit-transform: scale(1) rotate(0deg);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: scale(0) rotate(720deg);
         opacity: 0;
@@ -100,11 +110,13 @@ $rotateInModal: () !global;
     }
 
     @-moz-keyframes rotateInModalReverse {
+
       0% {
         -moz-transform: scale(1) rotate(0deg);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -moz-transform: scale(0) rotate(720deg);
         opacity: 0;

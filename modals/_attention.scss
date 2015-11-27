@@ -1,6 +1,6 @@
 $attentionModal: () !global;
 
-@mixin attentionModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin attentionModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {
@@ -31,10 +31,12 @@ $attentionModal: () !global;
   @if length($attentionModal) >= 1 {
 
     @keyframes attentionModal {
+
       0% {
-        transform: scale(0.7);
         opacity: 0;
+        transform: scale(.7);
       }
+
       100% {
         transform: scale(1);
         opacity: 1;
@@ -43,10 +45,12 @@ $attentionModal: () !global;
     }
 
     @-webkit-keyframes attentionModal {
+
       0% {
-        -webkit-transform: scale(0.7);
+        -webkit-transform: scale(.7);
         opacity: 0;
       }
+      
       100% {
         -webkit-transform: scale(1);
         opacity: 1;
@@ -55,10 +59,12 @@ $attentionModal: () !global;
     }
 
     @-moz-keyframes attentionModal {
+
       0% {
-        -moz-transform: scale(0.7);
+        -moz-transform: scale(.7);
         opacity: 0;
       }
+
       100% {
         -moz-transform: scale(1);
         opacity: 1;
@@ -67,37 +73,43 @@ $attentionModal: () !global;
     }
 
     @keyframes attentionModalReverse {
+
       0% {
         transform: scale(1);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
-        transform: scale(0.7);
+        transform: scale(.7);
         opacity: 0;
       }
     }
 
     @-webkit-keyframes attentionModalReverse {
+
       0% {
         -webkit-transform: scale(1);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
-        -webkit-transform: scale(0.7);
+        -webkit-transform: scale(.7);
         opacity: 0;
       }
     }
 
     @-moz-keyframes attentionModalReverse {
+
       0% {
         -moz-transform: scale(1);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
-        -moz-transform: scale(0.7);
+        -moz-transform: scale(.7);
         opacity: 0;
       }
     }

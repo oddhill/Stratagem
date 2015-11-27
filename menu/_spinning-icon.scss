@@ -16,18 +16,18 @@
 
   &:before,
   &:after {
-    @include animate($transition-time, $delay, $timing);
+    @include animate-object($transition-time, $delay, $timing);
   }
 
   .menu-icon {
-    @include animate(0.3s, 0.7s, $timing);
+    @include animate-object(0.3s, 0.7s, $timing);
   }
 
   #{$openClass} & {
 
     .menu-icon {
       opacity: 0;
-      @include animate(0.3s, 0s, $timing);
+      @include animate-object(0.3s, 0s, $timing);
     }
 
     &:after {

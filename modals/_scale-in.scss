@@ -1,6 +1,6 @@
 $scaleInModal: () !global;
 
-@mixin scaleInModal($transition-time: 0.3s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $openClass: '.open', $closeClass: '.close') {
+@mixin scaleInModal($transition-time: .3s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $openClass: '.open', $closeClass: '.close') {
 
   // When modal is active
   #{$openClass} & {
@@ -14,7 +14,7 @@ $scaleInModal: () !global;
     #{$openClass} {
 
       &:after {
-        content: "";
+        content: '';
         background: $modal-bg;
         position: absolute;
         left: 0;
@@ -40,10 +40,12 @@ $scaleInModal: () !global;
   @if length($scaleInModal) >= 1 {
 
     @keyframes scaleInModal {
+
       0% {
-        transform: scale(0.6);
+        transform: scale(.6);
         opacity: 0;
       }
+
       100% {
         transform: scale(1);
         opacity: 1;
@@ -52,10 +54,12 @@ $scaleInModal: () !global;
     }
 
     @-webkit-keyframes scaleInModal {
+
       0% {
-        -webkit-transform: scale(0.6);
+        -webkit-transform: scale(.6);
         opacity: 0;
       }
+
       100% {
         -webkit-transform: scale(1);
         opacity: 1;
@@ -64,10 +68,12 @@ $scaleInModal: () !global;
     }
 
     @-moz-keyframes scaleInModal {
+
       0% {
-        -moz-transform: scale(0.6);
+        -moz-transform: scale(.6);
         opacity: 0;
       }
+
       100% {
         -moz-transform: scale(1);
         opacity: 1;
@@ -76,11 +82,13 @@ $scaleInModal: () !global;
     }
 
     @keyframes scaleInModalReverse {
+
       0% {
         transform: scale(1);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         transform: scale(0);
         opacity: 0;
@@ -88,11 +96,13 @@ $scaleInModal: () !global;
     }
 
     @-webkit-keyframes scaleInModalReverse {
+
       0% {
         -webkit-transform: scale(1);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -webkit-transform: scale(0);
         opacity: 0;
@@ -100,11 +110,13 @@ $scaleInModal: () !global;
     }
 
     @-moz-keyframes scaleInModalReverse {
+
       0% {
         -moz-transform: scale(1);
         opacity: 1;
         visibility: visible;
       }
+
       100% {
         -moz-transform: scale(0);
         opacity: 0;

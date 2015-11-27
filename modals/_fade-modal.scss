@@ -1,6 +1,6 @@
 $fadeModal: () !global;
 
-@mixin fadeModal($transition-time: 0.4s, $transition-time-close: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0,0,0,0.3), $wrapper: 'main', $openClass: '.open', $closeClass: '.close') {
+@mixin fadeModal($transition-time: .4s, $transition-time-close: .3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal, $modal-bg: rgba(0, 0, 0, .3), $wrapper: 'main', $openClass: '.open', $closeClass: '.close') {
   opacity: 0;
 
   // Overlay
@@ -9,7 +9,7 @@ $fadeModal: () !global;
     #{$openClass} {
 
       &:after {
-        content: "";
+        content: '';
         background: $modal-bg;
         position: absolute;
         left: 0;
@@ -44,27 +44,33 @@ $fadeModal: () !global;
   @if length($fadeModal) >= 1 {
 
     @keyframes fadeReverse {
+
       0% {
         opacity: 100;
       }
+
       100% {
         opacity: 0;
       }
     }
 
     @-webkit-keyframes fadeReverse {
+
       0% {
         opacity: 100;
       }
+
       100% {
         opacity: 0;
       }
     }
 
     @-moz-keyframes fadeReverse {
+
       0% {
         opacity: 100;
       }
+
       100% {
         opacity: 0;
       }
