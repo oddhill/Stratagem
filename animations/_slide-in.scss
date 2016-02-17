@@ -2,7 +2,7 @@
 $slideInLeftSelector: () !global;
 
 @mixin slideInLeft($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(slide-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(slide-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInLeftSelector: append($slideInLeftSelector, true) !global;
 }
 
@@ -43,7 +43,7 @@ $slideInLeftSelector: () !global;
 $slideInRightSelector: () !global;
 
 @mixin slideInRight($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(slide-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(slide-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInRightSelector: append($slideInRightSelector, true) !global;
 }
 
@@ -84,7 +84,7 @@ $slideInRightSelector: () !global;
 $slideInTopSelector: () !global;
 
 @mixin slideInTop($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(slide-in-top, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(slide-in-top, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInTopSelector: append($slideInTopSelector, true) !global;
 }
 
@@ -125,7 +125,7 @@ $slideInTopSelector: () !global;
 $slideInBottomSelector: () !global;
 
 @mixin slideInBottom($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(slide-in-bottom, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(slide-in-bottom, $transition-time, $delay, $timing, $iteration-count, $direction);
   $slideInBottomSelector: append($slideInBottomSelector, true) !global;
 }
 

@@ -2,7 +2,7 @@
 $hangingSelector: () !global;
 
 @mixin hanging($transition-time: 1.5s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) {
-  @include animation(hanging, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(hanging, $transition-time, $delay, $timing, $iteration-count, $direction);
   $hangingSelector: append($hangingSelector, true) !global;
 }
 

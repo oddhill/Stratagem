@@ -2,7 +2,7 @@
 $spinSelector: () !global;
 
 @mixin spin($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) {
-  @include animation(spin, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(spin, $transition-time, $delay, $timing, $iteration-count, $direction);
   $spinSelector: append($spinSelector, true) !global;
 }
 

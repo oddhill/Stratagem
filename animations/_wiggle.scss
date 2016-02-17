@@ -1,7 +1,7 @@
 $wiggleSelector: () !global;
 
 @mixin wiggle($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(wiggle, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(wiggle, $transition-time, $delay, $timing, $iteration-count, $direction);
   $wiggleSelector: append($wiggleSelector, true) !global;
 }
 

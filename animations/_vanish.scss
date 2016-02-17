@@ -1,7 +1,7 @@
 $vanishSelector: () !global;
 
 @mixin vanish($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(vanish, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(vanish, $transition-time, $delay, $timing, $iteration-count, $direction);
   $vanishSelector: append($wiggleSelector, true) !global;
 }
 

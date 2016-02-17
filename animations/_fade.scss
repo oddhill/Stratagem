@@ -1,7 +1,7 @@
 $fadeSelector: () !global;
 
 @mixin fade($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(fade, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(fade, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeSelector: append($fadeSelector, true) !global;
 }
 
@@ -45,7 +45,7 @@ $fadeInTopSelector: () !global;
   -webkit-transform: translateY($top);
   -moz-transform: translateY($top);
   transform: translateY($top);
-  @include animation(fade-in-up, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(fade-in-up, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInTopSelector: append($fadeInTopSelector, true) !global;
 }
 
@@ -96,7 +96,7 @@ $fadeInBottomSelector: () !global;
   -webkit-transform: translateY($bottom);
   -moz-transform: translateY($bottom);
   transform: translateY($bottom);
-  @include animation(fade-in-down, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(fade-in-down, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInBottomSelector: append($fadeInBottomSelector, true) !global;
 }
 
@@ -147,7 +147,7 @@ $fadeInLeftSelector: () !global;
   -webkit-transform: translateX($left);
   -moz-transform: translateX($left);
   transform: translateX($left);
-  @include animation(fade-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(fade-in-left, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInLeftSelector: append($fadeInLeftSelector, true) !global;
 }
 
@@ -198,7 +198,7 @@ $fadeInRightSelector: () !global;
   -webkit-transform: translateX($right);
   -moz-transform: translateX($right);
   transform: translateX($right);
-  @include animation(fade-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(fade-in-right, $transition-time, $delay, $timing, $iteration-count, $direction);
   $fadeInRightSelector: append($fadeInRightSelector, true) !global;
 }
 

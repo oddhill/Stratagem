@@ -2,7 +2,7 @@
 $hatchSelector: () !global;
 
 @mixin hatch($transition-time: 1s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(hatch, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(hatch, $transition-time, $delay, $timing, $iteration-count, $direction);
   $hatchSelector: append($hatchSelector, true) !global;
 }
 

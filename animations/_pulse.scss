@@ -1,7 +1,7 @@
 $pulseSelector: () !global;
 
 @mixin pulse($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: infinite, $direction: normal) {
-  @include animation(pulse, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(pulse, $transition-time, $delay, $timing, $iteration-count, $direction);
   $pulseSelector: append($fadeSelector, true) !global;
 }
 

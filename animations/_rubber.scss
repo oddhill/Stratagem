@@ -2,7 +2,7 @@
 $rubberSelector: () !global;
 
 @mixin rubberBand($transition-time: 0.3s, $delay: 0s, $timing: $easeInOut, $iteration-count: 1, $direction: normal) {
-  @include animation(rubberBand, $transition-time, $delay, $timing, $iteration-count, $direction);
+  @include animationKeyframe(rubberBand, $transition-time, $delay, $timing, $iteration-count, $direction);
   $rubberSelector: append($rubberSelector, true) !global;
 }
 
