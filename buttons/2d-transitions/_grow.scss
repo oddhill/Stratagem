@@ -1,0 +1,16 @@
+@mixin grow-button($time: .5s, $scale: 1.1) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	transition-duration: $time;
+	transition-property: transform;
+
+	&:hover,
+	&:focus,
+	&:active {
+		transform: scale($scale);
+	}
+}

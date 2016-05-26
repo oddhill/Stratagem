@@ -1,0 +1,28 @@
+@mixin bubble-bottom-button($tip-width: 5px, $tip-height: 5px, $tip-color: #333){
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	position: relative;
+
+	&:before {
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		content: '';
+		border-style: solid;
+		transition-duration: .3s;
+		transition-property: transform;
+		left: calc(50% - #{$tip-width});
+		bottom: 0;
+		border-width: $tip-height $tip-width 0 $tip-width;
+		border-color: $tip-color transparent transparent transparent;
+	}
+
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		transform: translateY($tip-height);
+	}
+}

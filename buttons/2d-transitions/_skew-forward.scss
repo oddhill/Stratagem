@@ -1,0 +1,16 @@
+@mixin skew-forward-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	transition-duration: .5s;
+	transition-property: transform;
+	transform-origin: 0 100%;
+
+	&:hover,
+	&:focus,
+	&:active {
+		transform: skew(-10deg);
+	}
+}

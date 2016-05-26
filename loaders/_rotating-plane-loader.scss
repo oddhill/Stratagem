@@ -1,0 +1,20 @@
+@mixin rotateLoader($width: 40px, $height: 40px, $bg: #333) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  @include animation(sk-rotatePlane, '1s infinite ease-in-out');
+}
+
+@mixin sk-rotatePlane() {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}

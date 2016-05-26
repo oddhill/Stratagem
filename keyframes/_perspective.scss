@@ -1,0 +1,95 @@
+@mixin perspectiveDown() {
+  0% {
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(0deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(-180deg);
+  }
+}
+
+@mixin perspectiveLeft() {
+  0% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(-180deg);
+  }
+}
+
+@mixin perspectiveRight() {
+  0% {
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(0deg);
+  }
+
+  100% {
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(180deg);
+  }
+}
+
+@mixin perspectiveUp() {
+  0% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(180deg);
+  }
+}
+
+@mixin perspectiveDownRetourn() {
+  0% {
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(-180deg);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(0deg);
+  }
+}
+
+@mixin perspectiveLeftRetourn() {
+  0% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(-180deg);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@mixin perspectiveRightRetourn() {
+  0% {
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(180deg);
+  }
+
+  100% {
+    transform-origin: 100% 0;
+    transform: perspective(800px) rotateY(0deg);
+  }
+}
+
+@mixin perspectiveUpRetourn() {
+  0% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(180deg);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateX(0deg);
+  }
+}

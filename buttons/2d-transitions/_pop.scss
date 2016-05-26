@@ -1,0 +1,22 @@
+@mixin pop-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include animation('pop-anim');
+		animation-duration: .5s;
+		animation-timing-function: linear;
+		animation-iteration-count: 1;
+	}
+}
+
+@mixin pop-anim {
+	50% {
+		transform: scale(1.2);
+	}
+}

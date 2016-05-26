@@ -1,0 +1,23 @@
+@mixin pulse-grow {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include animation('pulse-grow-anim');
+		animation-duration: .5s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+}
+
+@mixin pulse-grow-anim {
+	to {
+		transform: scale(1.1);
+	}
+}

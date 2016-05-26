@@ -1,0 +1,18 @@
+@mixin pulseLoader($width: 40px, $height: 40px, $bg: #333) {
+  width: $width;
+  height: $height;
+  background-color: $bg;
+  border-radius: 100%;
+  @include animation(sk-pulseScaleOut, '1s infinite ease-in-out');
+}
+
+@mixin sk-pulseScaleOut() {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

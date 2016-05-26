@@ -1,0 +1,37 @@
+@mixin float-shadow-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	position: relative;
+	transition-duration: .5s;
+	transition-property: transform;
+
+	&:before {
+	  pointer-events: none;
+	  position: absolute;
+	  z-index: -1;
+	  content: '';
+	  top: 100%;
+	  left: 5%;
+	  height: 10px;
+	  width: 90%;
+	  opacity: 0;
+	  background: -webkit-radial-gradient(center, ellipse, rgba(0,0,0,.35) 0%, rgba(0, 0, 0, 0) 80%);
+	  background: radial-gradient(ellipse at center, rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 80%); /* W3C */
+		transition-duration: .5s;
+		transition-property: transform, opacity;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		transform: translateY(-5px); /* move the element up by 5px */
+
+		&:before {
+			opacity: 1;
+			transform: translateY(5px); /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+		}
+	}
+}

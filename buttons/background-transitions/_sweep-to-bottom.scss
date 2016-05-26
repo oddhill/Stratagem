@@ -1,0 +1,36 @@
+@mixin sweep-bottom-button($active-color: #333, $text: #fff) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	position: relative;
+	transition-property: color;
+	transition-duration: .3s;
+
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $active-color;
+		transform: scaleY(0);
+		transform-origin: 50% 0;
+		transition-property: transform;
+		transition-duration: .3s;
+		transition-timing-function: ease-out;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $text;
+
+		&:before {
+			transform: scaleY(1);
+		}
+	}
+}

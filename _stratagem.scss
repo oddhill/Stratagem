@@ -1,0 +1,305 @@
+// https://github.com/daneden/animate.css
+// Animations: Copyright (c) 2016 Daniel Eden
+@import 'keyframes/fade';
+@import 'keyframes/zooming';
+@import 'keyframes/rotate';
+@import 'keyframes/slide';
+@import 'keyframes/bounce';
+@import 'keyframes/flip';
+@import 'keyframes/flash';
+@import 'keyframes/headshake';
+@import 'keyframes/jello';
+@import 'keyframes/pulse';
+@import 'keyframes/rubberband';
+@import 'keyframes/shake';
+@import 'keyframes/swing';
+@import 'keyframes/tada';
+@import 'keyframes/wobble';
+@import 'keyframes/lightspeed';
+
+// https://github.com/miniMAC/magic
+// Animations: Copyright (c) 2016 miniMac
+@import 'keyframes/magic';
+@import 'keyframes/open';
+@import 'keyframes/perspective';
+@import 'keyframes/puff';
+@import 'keyframes/boing';
+@import 'keyframes/bomb';
+@import 'keyframes/foolish';
+@import 'keyframes/hole';
+@import 'keyframes/space';
+@import 'keyframes/swap';
+@import 'keyframes/swash';
+@import 'keyframes/tin';
+@import 'keyframes/twister';
+@import 'keyframes/vanish';
+
+// http://tobiasahlin.com/spinkit/
+// Animations: Copyright (c) 2016 Tobias Ahlin
+@import 'loaders/pulse-loader';
+@import 'loaders/rotating-plane-loader';
+@import 'loaders/double-bounce';
+@import 'loaders/cube-loader';
+@import 'loaders/chase-loader';
+
+// http://ianlunn.github.io/Hover/
+// Animations: Copyright (c) 2016 Ian Lunn
+@import 'buttons/2d-transitions/bob';
+@import 'buttons/2d-transitions/bounce-in';
+@import 'buttons/2d-transitions/bounce-out';
+@import 'buttons/2d-transitions/buzz-out';
+@import 'buttons/2d-transitions/buzz';
+@import 'buttons/2d-transitions/float';
+@import 'buttons/2d-transitions/grow-rotate';
+@import 'buttons/2d-transitions/grow';
+@import 'buttons/2d-transitions/hang';
+@import 'buttons/2d-transitions/pop';
+@import 'buttons/2d-transitions/pulse-grow';
+@import 'buttons/2d-transitions/pulse-shrink';
+@import 'buttons/2d-transitions/pulse';
+@import 'buttons/2d-transitions/push';
+@import 'buttons/2d-transitions/rotate';
+@import 'buttons/2d-transitions/shrink';
+@import 'buttons/2d-transitions/sink';
+@import 'buttons/2d-transitions/skew-backward';
+@import 'buttons/2d-transitions/skew-forward';
+@import 'buttons/2d-transitions/skew';
+@import 'buttons/2d-transitions/wobble-bottom';
+@import 'buttons/2d-transitions/wobble-horizontal';
+@import 'buttons/2d-transitions/wobble-skew';
+@import 'buttons/2d-transitions/wobble-to-bottom-right';
+@import 'buttons/2d-transitions/wobble-to-top-right';
+@import 'buttons/2d-transitions/wobble-top';
+@import 'buttons/2d-transitions/wobble-vertical';
+
+@import 'buttons/border-transitions/border-fade';
+@import 'buttons/border-transitions/hollow';
+@import 'buttons/border-transitions/outline-in';
+@import 'buttons/border-transitions/outline-out';
+@import 'buttons/border-transitions/overline-from-center';
+@import 'buttons/border-transitions/overline-from-left';
+@import 'buttons/border-transitions/overline-from-right';
+@import 'buttons/border-transitions/overline-reveal';
+@import 'buttons/border-transitions/reveal';
+@import 'buttons/border-transitions/round-corners';
+@import 'buttons/border-transitions/trim';
+@import 'buttons/border-transitions/underline-from-center';
+@import 'buttons/border-transitions/underline-from-left';
+@import 'buttons/border-transitions/underline-from-right';
+@import 'buttons/border-transitions/underline-reveal';
+
+
+@import 'buttons/background-transitions/bounce-to-bottom';
+@import 'buttons/background-transitions/bounce-to-left';
+@import 'buttons/background-transitions/bounce-to-right';
+@import 'buttons/background-transitions/bounce-to-top';
+@import 'buttons/background-transitions/fade';
+@import 'buttons/background-transitions/radial-in';
+@import 'buttons/background-transitions/radial-out';
+@import 'buttons/background-transitions/rectangle-in';
+@import 'buttons/background-transitions/rectangle-out';
+@import 'buttons/background-transitions/shutter-in-horizontal';
+@import 'buttons/background-transitions/shutter-in-vertical';
+@import 'buttons/background-transitions/shutter-out-horizontal';
+@import 'buttons/background-transitions/shutter-out-vertical';
+@import 'buttons/background-transitions/sweep-to-bottom';
+@import 'buttons/background-transitions/sweep-to-left';
+@import 'buttons/background-transitions/sweep-to-right';
+@import 'buttons/background-transitions/sweep-to-top';
+
+@import 'buttons/curls/curl-bottom-left';
+@import 'buttons/curls/curl-bottom-right';
+@import 'buttons/curls/curl-top-left';
+@import 'buttons/curls/curl-top-right';
+
+@import 'buttons/shadow-and-glow-transitions/box-shadow-inset';
+@import 'buttons/shadow-and-glow-transitions/box-shadow-outset';
+@import 'buttons/shadow-and-glow-transitions/float-shadow';
+@import 'buttons/shadow-and-glow-transitions/glow';
+@import 'buttons/shadow-and-glow-transitions/grow-shadow';
+@import 'buttons/shadow-and-glow-transitions/shadow-radial';
+@import 'buttons/shadow-and-glow-transitions/shadow';
+
+@import 'buttons/speech-bubbles/bubble-bottom';
+@import 'buttons/speech-bubbles/bubble-float-bottom';
+@import 'buttons/speech-bubbles/bubble-float-left';
+@import 'buttons/speech-bubbles/bubble-float-right';
+@import 'buttons/speech-bubbles/bubble-float-top';
+@import 'buttons/speech-bubbles/bubble-left';
+@import 'buttons/speech-bubbles/bubble-right';
+@import 'buttons/speech-bubbles/bubble-top';
+
+
+// Keep track of included keyframes
+$animate-keyframes: ();
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @if ($name == 'fadeIn') { @include fadeIn(); }
+    @else if ($name == 'fadeInDown') { @include fadeInDown(); }
+    @else if ($name == 'fadeInDownBig') { @include fadeInDownBig(); }
+    @else if ($name == 'fadeInLeft') { @include fadeInLeft(); }
+    @else if ($name == 'fadeInLeftBig') { @include fadeInLeftBig(); }
+    @else if ($name == 'fadeInRight') { @include fadeInRight(); }
+    @else if ($name == 'fadeInRightBig') { @include fadeInRightBig(); }
+    @else if ($name == 'fadeInUp') { @include fadeInUp(); }
+    @else if ($name == 'fadeInUpBig') { @include fadeInUpBig(); }
+    @else if ($name == 'fadeOut') { @include fadeOut(); }
+    @else if ($name == 'fadeOutDown') { @include fadeOutDown(); }
+    @else if ($name == 'fadeOutDownBig') { @include fadeOutDownBig(); }
+    @else if ($name == 'fadeOutLeft') { @include fadeOutLeft(); }
+    @else if ($name == 'fadeOutLeftBig') { @include fadeOutLeftBig(); }
+    @else if ($name == 'fadeOutRight') { @include fadeOutRight(); }
+    @else if ($name == 'fadeOutRightBig') { @include fadeOutRightBig(); }
+    @else if ($name == 'fadeOutUp') { @include fadeOutUp(); }
+    @else if ($name == 'fadeOutUpBig') { @include fadeOutUpBig(); }
+
+    @else if ($name == 'zoomIn') { @include zoomIn(); }
+    @else if ($name == 'zoomInDown') { @include zoomInDown(); }
+    @else if ($name == 'zoomInLeft') { @include zoomInLeft(); }
+    @else if ($name == 'zoomInRight') { @include zoomInRight(); }
+    @else if ($name == 'zoomInUp') { @include zoomInUp(); }
+    @else if ($name == 'zoomOut') { @include zoomOut(); }
+    @else if ($name == 'zoomOutDown') { @include zoomOutDown(); }
+    @else if ($name == 'zoomOutLeft') { @include zoomOutLeft(); }
+    @else if ($name == 'zoomOutRight') { @include zoomOutRight(); }
+    @else if ($name == 'zoomOutUp') { @include zoomOutUp(); }
+
+    @else if ($name == 'rotateIn') { @include rotateIn(); }
+    @else if ($name == 'rotateInDownLeft') { @include rotateInDownLeft(); }
+    @else if ($name == 'rotateInDownRight') { @include rotateInDownRight(); }
+    @else if ($name == 'rotateInUpLeft') { @include rotateInUpLeft(); }
+    @else if ($name == 'rotateInUpRight') { @include rotateInUpRight(); }
+    @else if ($name == 'rotateOut') { @include rotateOut(); }
+    @else if ($name == 'rotateOutDownLeft') { @include rotateOutDownLeft(); }
+    @else if ($name == 'rotateOutDownRight') { @include rotateOutDownRight(); }
+    @else if ($name == 'rotateOutUpLeft') { @include rotateOutUpLeft(); }
+    @else if ($name == 'rotateOutUpRight') { @include rotateOutUpRight(); }
+
+    @else if ($name == 'slideInDown') { @include slideInDown(); }
+    @else if ($name == 'slideInLeft') { @include slideInLeft(); }
+    @else if ($name == 'slideInRight') { @include slideInRight(); }
+    @else if ($name == 'slideInUp') { @include slideInUp(); }
+    @else if ($name == 'slideOutDown') { @include slideOutDown(); }
+    @else if ($name == 'slideOutLeft') { @include slideOutLeft(); }
+    @else if ($name == 'slideOutRight') { @include slideOutRight(); }
+    @else if ($name == 'slideOutUp') { @include slideOutUp(); }
+
+    @else if ($name == 'bounceIn') { @include bounceIn(); }
+    @else if ($name == 'bounceInDown') { @include bounceInDown(); }
+    @else if ($name == 'bounceInLeft') { @include bounceInLeft(); }
+    @else if ($name == 'bounceInRight') { @include bounceInRight(); }
+    @else if ($name == 'bounceInUp') { @include bounceInUp(); }
+    @else if ($name == 'bounceOut') { @include bounceOut(); }
+    @else if ($name == 'bounceOutDown') { @include bounceOutDown(); }
+    @else if ($name == 'bounceOutLeft') { @include bounceOutLeft(); }
+    @else if ($name == 'bounceOutRight') { @include bounceOutRight(); }
+    @else if ($name == 'bounceOutUp') { @include bounceOutUp(); }
+
+    @else if ($name == 'flip') { @include flip(); }
+    @else if ($name == 'flipInX') { @include flipInX(); }
+    @else if ($name == 'flipInY') { @include flipInY(); }
+    @else if ($name == 'flipOutX') { @include flipOutX(); }
+    @else if ($name == 'flipOutY') { @include flipOutY(); }
+
+    @else if ($name == 'headShake') { @include headShake(); }
+    @else if ($name == 'jello') { @include jello(); }
+    @else if ($name == 'lightSpeedOut') { @include lightSpeedOut(); }
+    @else if ($name == 'lightSpeedIn') { @include lightSpeedIn(); }
+    @else if ($name == 'pulse') { @include pulse(); }
+    @else if ($name == 'rubberBand') { @include rubberBand(); }
+    @else if ($name == 'shake') { @include shake(); }
+    @else if ($name == 'swing') { @include swing(); }
+    @else if ($name == 'tada') { @include tada(); }
+    @else if ($name == 'wobble') { @include wobble(); }
+
+    @else if ($name == 'boingInUp') { @include boingInUp(); }
+    @else if ($name == 'boingOutDown') { @include boingOutDown(); }
+    @else if ($name == 'bombRightOut') { @include bombRightOut(); }
+    @else if ($name == 'bombLeftOut') { @include bombLeftOut(); }
+    @else if ($name == 'flash') { @include flash(); }
+    @else if ($name == 'tinRightOut') { @include tinRightOut(); }
+    @else if ($name == 'tinLeftOut') { @include tinLeftOut(); }
+    @else if ($name == 'tinUpOut') { @include tinUpOut(); }
+    @else if ($name == 'tinDownOut') { @include tinDownOut(); }
+    @else if ($name == 'tinRightIn') { @include tinRightIn(); }
+    @else if ($name == 'tinLeftIn') { @include tinLeftIn(); }
+    @else if ($name == 'tinUpIn') { @include tinUpIn(); }
+    @else if ($name == 'tinDownIn') { @include tinDownIn(); }
+    @else if ($name == 'twisterInDown') { @include twisterInDown(); }
+    @else if ($name == 'twisterInUp') { @include twisterInUp(); }
+    @else if ($name == 'swashIn') { @include swashIn(); }
+    @else if ($name == 'swashOut') { @include swashOut(); }
+    @else if ($name == 'vanishIn') { @include vanishIn(); }
+    @else if ($name == 'vanishOut') { @include vanishOut(); }
+    @else if ($name == 'openDownLeft') { @include openDownLeft(); }
+    @else if ($name == 'openDownRight') { @include openDownRight(); }
+    @else if ($name == 'openUpLeft') { @include openUpLeft(); }
+    @else if ($name == 'openUpRight') { @include openUpRight(); }
+    @else if ($name == 'openDownLeftRetourn') { @include openDownLeftRetourn(); }
+    @else if ($name == 'openDownRightRetourn') { @include openDownRightRetourn(); }
+    @else if ($name == 'openUpLeftRetourn') { @include openUpLeftRetourn(); }
+    @else if ($name == 'openUpRightRetourn') { @include openUpRightRetourn(); }
+    @else if ($name == 'openDownLeftOut') { @include openDownLeftOut(); }
+    @else if ($name == 'openDownRightOut') { @include openDownRightOut(); }
+    @else if ($name == 'openUpLeftOut') { @include openUpLeftOut(); }
+    @else if ($name == 'openUpRightOut') { @include openUpRightOut(); }
+    @else if ($name == 'perspectiveDown') { @include perspectiveDown(); }
+    @else if ($name == 'perspectiveLeft') { @include perspectiveLeft(); }
+    @else if ($name == 'perspectiveRight') { @include perspectiveRight(); }
+    @else if ($name == 'perspectiveUp') { @include perspectiveUp(); }
+    @else if ($name == 'perspectiveDownRetourn') { @include perspectiveDownRetourn(); }
+    @else if ($name == 'perspectiveLeftRetourn') { @include perspectiveLeftRetourn(); }
+    @else if ($name == 'perspectiveRightRetourn') { @include perspectiveRightRetourn(); }
+    @else if ($name == 'perspectiveUpRetourn') { @include perspectiveUpRetourn(); }
+    @else if ($name == 'puffIn') { @include puffIn(); }
+    @else if ($name == 'puffOut') { @include puffOut(); }
+    @else if ($name == 'magic') { @include magic(); }
+    @else if ($name == 'foolishOut') { @include foolishOut(); }
+    @else if ($name == 'foolishIn') { @include foolishIn(); }
+    @else if ($name == 'jello') { @include jello(); }
+    @else if ($name == 'wobble') { @include wobble(); }
+    @else if ($name == 'spaceOutUp') { @include spaceOutUp(); }
+    @else if ($name == 'spaceOutRight') { @include spaceOutRight(); }
+    @else if ($name == 'spaceOutDown') { @include spaceOutDown(); }
+    @else if ($name == 'spaceOutLeft') { @include spaceOutLeft(); }
+    @else if ($name == 'spaceInUp') { @include spaceInUp(); }
+    @else if ($name == 'spaceInRight') { @include spaceInRight(); }
+    @else if ($name == 'spaceInDown') { @include spaceInDown(); }
+    @else if ($name == 'spaceInLeft') { @include spaceInLeft(); }
+    @else if ($name == 'swap') { @include swap(); }
+    @else if ($name == 'holeOut') { @include holeOut(); }
+    @else if ($name == 'holeIn') { @include holeIn(); }
+
+    @else if($name == 'sk-pulseScaleOut') { @include sk-pulseScaleOut(); }
+    @else if($name == 'sk-rotatePlane') { @include sk-rotatePlane(); }
+    @else if($name == 'sk-doubleBounce') { @include sk-doubleBounce(); }
+    @else if($name == 'sk-wanderingCube') { @include sk-wanderingCube(); }
+    @else if($name == 'sk-chasingDotsRotate') { @include sk-wanderingCube(); }
+    @else if($name == 'sk-chasingDotsBounce') { @include sk-wanderingCube(); }
+
+    @else if($name == 'bob-anim') { @include bob-anim(); }
+    @else if($name == 'buzz-out-anim') { @include buzz-out-anim(); }
+    @else if($name == 'hang-anim') { @include buzz-out-anim(); }
+    @else if($name == 'pop-anim') { @include pop-anim(); }
+    @else if($name == 'pulse-grow-anim') { @include pulse-grow-anim(); }
+    @else if($name == 'pulse-shrink-anim') { @include pulse-shrink-anim(); }
+    @else if($name == 'pulse-anim') { @include pulse-anim(); }
+    @else if($name == 'push-anim') { @include push-anim(); }
+    @else if($name == 'wobble-bottom-anim') { @include wobble-bottom-anim(); }
+    @else if($name == 'wobble-horizontal-anim') { @include wobble-horizontal-anim(); }
+    @else if($name == 'wobble-skew-anim') { @include wobble-skew-anim(); }
+    @else if($name == 'wobble-bottom-right-anim') { @include wobble-bottom-right-anim(); }
+    @else if($name == 'wobble-top-right-anim') { @include wobble-top-right-anim(); }
+    @else if($name == 'wobble-top-anim') { @include wobble-top-anim(); }
+    @else if($name == 'wobble-vertical-anim') { @include wobble-vertical-anim(); }
+  }
+}
+
+@mixin animation($name, $opts: '') {
+  @if not (map-has-key($animate-keyframes, $name)) {
+    @include keyframes($name);
+    $animate-keyframes: map-merge($animate-keyframes, ($name: '')) !global;
+  }
+  animation: #{$name} #{$opts};
+}

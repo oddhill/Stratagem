@@ -1,0 +1,17 @@
+@mixin fade-button($active-color: #333, $text: #fff) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	overflow: hidden;
+	transition-duration: .3s;
+	transition-property: color, background-color;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: $active-color;
+		color: $text;
+	}
+}

@@ -1,0 +1,13 @@
+@mixin magic() {
+  0% {
+    opacity: 1;
+    transform: scale(1, 1) rotate(0deg);
+    transform-origin: 100% 200%;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0, 0) rotate(270deg);
+    transform-origin: 200% 500%;
+  }
+}
