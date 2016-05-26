@@ -1,0 +1,20 @@
+// Our grid variables
+$column: golden-ratio(20px, 3);
+$gutter: golden-ratio(20px, 1);
+$max-width: 1180px;
+
+// Base font-size and line-height
+$base-font-size: 1.6;
+$base-line-height: 1.5;
+
+$light: #fff;
+$light-hr: #f2f2f2;
+$dark: #472a93;
+$button: #88a4ff;
+$text: #6541d5;
+$shadow: rgba(0, 0, 0, .6);
+
+$btn: #3e1caa;
+$btn-two: #663aae;
+
+$breakpoint-small: max-width 600px;

@@ -1,0 +1,25 @@
+@mixin bob-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include animation('bob-anim', '1s infinite ease-out forwards normal');
+	}
+}
+
+@mixin bob-anim() {
+  0% {
+    transform: translateY(0);
+	}
+  50% {
+    transform: translateY(-4px);
+	}
+  100% {
+    transform: translateY(0);
+	}
+}

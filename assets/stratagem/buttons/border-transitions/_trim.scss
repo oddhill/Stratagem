@@ -1,0 +1,27 @@
+@mixin trim-button($outer-border-width: 4px, $inner-border-width: 4px, $border-color: #333) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		border: $border-color solid $inner-border-width;
+		top: $outer-border-width;
+		left: $outer-border-width;
+		right: $outer-border-width;
+		bottom: $outer-border-width;
+		opacity: 0;
+		transition-duration: .3s;
+		transition-property: opacity;
+	}
+
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		opacity: 1;
+	}
+}

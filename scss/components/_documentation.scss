@@ -1,0 +1,10 @@
+.btn-documentation {
+  @include grow-button($scale: 1.05);
+  background: url('/graphics/hr.png'), url('/graphics/hr.png');
+  background-blend-mode: overlay;
+  width: 525px;
+  height: 340px;
+  background-size: 100%;
+  display: block;
+  margin: 0 auto;
+}

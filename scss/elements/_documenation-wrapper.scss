@@ -1,0 +1,83 @@
+.documenation-wrapper {
+  width: 100%;
+  clear: both;
+  padding: 30px 0 0;
+  height: 310px;
+  background: $light-hr;
+  margin: 0 0 (40px + 50px);
+  visibility: visible;
+
+  @include media($breakpoint-small) {
+    display: none;
+  }
+
+  .firefox &,
+  .safari & {
+    display: none;
+  }
+
+  &.hide {
+    @include animation('fadeOut', '.3s .3s forwards');
+  }
+
+  a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9;
+  }
+}
+
+.inner-doc-wrapper {
+  padding: 0 25px;
+
+  h1,
+  h4 {
+    text-shadow: none;
+  }
+
+  code {
+    margin-bottom: 15px;
+  }
+
+  h4 {
+    margin: 0 0 15px;
+  }
+
+  .documentation-node {
+    @include clearfix();
+    padding-bottom: 25px;
+    border-bottom: 1px solid darken($light-hr, 5%);
+    margin-bottom: 25px;
+  }
+
+  .demo-wrapper {
+    float: left;
+  }
+
+  h3 {
+    border-left: 3px solid $btn;
+    padding-left: 10px;
+  }
+}
+
+.documenation-wrapper-background {
+  height: 310px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  margin-top: -30px;
+
+  &::after {
+    content: '';
+    height: 310px;
+    background: $light-hr;
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    z-index: -1;
+    top: 0;
+  }
+}

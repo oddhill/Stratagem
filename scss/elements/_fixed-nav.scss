@@ -1,0 +1,32 @@
+.fixed-nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  top: 0;
+  z-index: 10;
+  background: url('/graphics/nav.png') repeat;
+  background-size: cover;
+  overflow-y: auto;
+  padding: 5px 20px 10px 20px;
+
+  @include media($breakpoint-small) {
+    display: none;
+  }
+
+  li {
+    list-style: none;
+    margin-left: 15px;
+  }
+
+  h4 {
+    text-shadow: none;
+    margin: 10px 0 0;
+  }
+
+  a {
+    @include underline-from-center-button($btn, 1px);
+    color: $btn;
+    margin-bottom: 10px;
+  }
+}

@@ -1,12 +1,41 @@
 {
   "name": "oddbaby",
-  "version": "0.0.1",
+  "version": "4.0.4",
+  "description": "A starter theme for Drupal theming.",
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-contrib-jshint": "latest",
-    "grunt-contrib-sass": "latest",
-    "grunt-contrib-watch": "latest",
-    "jshint-stylish": "latest",
-    "grunt-svg2png": "latest"
+    "babel-eslint": "^4.1.3",
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^11.2.0",
+    "browserify-shim": "^3.8.10",
+    "eslint": "^1.7.3",
+    "eslint-config-airbnb": "^0.1.0",
+    "gulp": "^3.9.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-eslint": "^1.0.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.3",
+    "gulp-svg2png": "^0.3.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd node_modules && ln -nsf ../js/lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oddhill/oddbaby.git"
+  },
+  "author": "Frank Columbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oddhill/oddbaby/issues"
+  },
+  "homepage": "https://github.com/oddhill/oddbaby",
+  "dependencies": {
+    "enquire.js": "^2.1.1"
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
   }
 }

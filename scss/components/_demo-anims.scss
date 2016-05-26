@@ -1,0 +1,1183 @@
+.bob-button {
+  @include bob-button();
+}
+
+.bounce-in-button {
+  @include bounce-in-button();
+}
+
+.bounce-out-button {
+  @include bounce-out-button();
+}
+
+.buzz-out-button {
+  @include buzz-out-button();
+}
+
+.float-button {
+  @include float-button();
+}
+
+.grow-rotate-button {
+  @include grow-rotate-button();
+}
+
+.grow-button {
+  @include grow-button();
+}
+
+.hang-button {
+  @include hang-button();
+}
+
+.pop-button {
+  @include pop-button();
+}
+
+.pulse-grow {
+  @include pulse-grow();
+}
+
+.pulse-shrink {
+  @include pulse-shrink();
+}
+
+.pulse-button {
+  @include pulse-button();
+}
+
+.push-button {
+  @include push-button();
+}
+
+.rotate-button {
+  @include rotate-button();
+}
+
+.shrink-button {
+  @include shrink-button();
+}
+
+.sink-button {
+  @include sink-button();
+}
+
+.skew-backward-button {
+  @include skew-backward-button();
+}
+
+.skew-forward-button {
+  @include skew-forward-button();
+}
+
+.skew-button {
+  @include skew-button();
+}
+
+.wobble-bottom-button {
+  @include wobble-bottom-button();
+}
+
+.wobble-horizontal-button {
+  @include wobble-horizontal-button();
+}
+
+.wobble-skew-button {
+  @include wobble-skew-button();
+}
+
+.wobble-bottom-right-button {
+  @include wobble-bottom-right-button();
+}
+
+.wobble-top-right-button {
+  @include wobble-top-right-button();
+}
+
+.wobble-top-button {
+  @include wobble-top-button();
+}
+
+.wobble-vertical {
+  @include wobble-vertical();
+}
+
+.bounce-to-bottom-button {
+  @include bounce-to-bottom-button();
+}
+
+.bounce-to-left-button {
+  @include bounce-to-left-button();
+}
+
+.bounce-to-right-button {
+  @include bounce-to-right-button();
+}
+
+.bounce-to-top-button {
+  @include bounce-to-top-button();
+}
+
+.fade-button {
+  @include fade-button();
+}
+
+.radial-in-button {
+  @include radial-in-button();
+}
+
+.radial-out-button {
+  @include radial-out-button();
+}
+
+.rectangle-in-button {
+  @include rectangle-in-button();
+}
+
+.rectangle-out-button {
+  @include rectangle-out-button();
+}
+
+.shutter-in-horizontal-button {
+  @include shutter-in-horizontal-button();
+}
+
+.shutter-in-vertical-button {
+  @include shutter-in-vertical-button();
+}
+
+.shutter-out-horizontal-button {
+  @include shutter-out-horizontal-button();
+}
+
+.shutter-out-vertical-button {
+  @include shutter-out-vertical-button();
+}
+
+.sweep-bottom-button {
+  @include sweep-bottom-button();
+}
+
+.sweep-left-button {
+  @include sweep-left-button();
+}
+
+.sweep-right-button {
+  @include sweep-right-button();
+}
+
+.sweep-top-button {
+  @include sweep-top-button();
+}
+
+.border-fade-button {
+  @include border-fade-button();
+  background-color: transparent;
+  color: $text;
+}
+
+.outline-in-button {
+  @include outline-in-button();
+}
+
+.outline-out-button {
+  @include outline-out-button();
+}
+
+.overline-from-center-button {
+  @include overline-from-center-button(rgba(255,255,255, .6));
+}
+
+.overline-from-left-button {
+  @include overline-from-left-button(rgba(255,255,255, .6));
+}
+
+.overline-from-right-button {
+  @include overline-from-right-button(rgba(255,255,255, .6));
+}
+
+.overline-reveal-button {
+  @include overline-reveal-button(rgba(255,255,255, .6));
+}
+
+.reveal-button {
+  @include reveal-button(rgba(255,255,255, .6));
+}
+
+.round-corners-button {
+  @include round-corners-button(10px);
+}
+
+.trim-button {
+  @include trim-button();
+}
+
+.underline-from-center-reveal-button {
+  @include underline-from-center-button(rgba(255,255,255, .6));
+}
+
+.underline-from-left-button {
+  @include underline-from-left-button(rgba(255,255,255, .6));
+}
+
+.underline-from-right-button {
+  @include underline-from-right-button(rgba(255,255,255, .6));
+}
+
+.underline-reveal-button {
+  @include underline-reveal-button(rgba(255,255,255, .6));
+}
+
+.curl-bottom-left {
+  @include curl-bottom-left();
+}
+
+.curl-bottom-right {
+  @include curl-bottom-right();
+}
+
+.curl-top-left {
+  @include curl-top-left();
+}
+
+.curl-top-right {
+  @include curl-top-right();
+}
+
+.box-shadow-inset-button {
+  @include box-shadow-inset-button();
+}
+
+.box-shadow-outset-button {
+  @include box-shadow-outset-button();
+}
+
+.float-shadow-button {
+  @include float-shadow-button();
+}
+
+.glow-button {
+  @include float-shadow-button();
+}
+
+.grow-shadow-button {
+  @include grow-shadow-button();
+}
+
+.shadow-radial-button {
+  @include shadow-radial-button();
+}
+
+.shadow-button {
+  @include shadow-button();
+}
+
+.bubble-bottom-button {
+  @include bubble-bottom-button($tip-color: $btn);
+}
+
+.bubble-float-bottom-button {
+  @include bubble-float-bottom-button($tip-color: $btn);
+}
+
+.bubble-float-left-button {
+  @include bubble-float-left-button($tip-color: $btn);
+}
+
+.bubble-float-right-button {
+  @include bubble-float-right-button($tip-color: $btn);
+}
+
+.bubble-float-top-button {
+  @include bubble-float-top-button($tip-color: $btn);
+}
+
+.bubble-left-button {
+  @include bubble-left-button($tip-color: $btn);
+}
+
+.bubble-right-button {
+  @include bubble-right-button($tip-color: $btn);
+}
+
+.bubble-top-button {
+  @include bubble-top-button($tip-color: $btn);
+}
+
+// Water animations
+
+.demo-wrapper img {
+  cursor: pointer;
+}
+
+#boingInUp .demo-wrapper:hover {
+
+  .boingInUp {
+    @include animation('boingInUp', '.5s');
+  }
+}
+
+#boingOutDown .demo-wrapper:hover {
+
+  .boingOutDown {
+    @include animation('boingOutDown', '.5s');
+  }
+}
+
+#bombRightOut .demo-wrapper:hover {
+
+  .bombRightOut {
+    @include animation('bombRightOut', '.7s');
+  }
+}
+
+#bombLeftOut .demo-wrapper:hover {
+
+  .bombLeftOut {
+    @include animation('bombLeftOut', '.7s');
+  }
+}
+
+#bounceIn .demo-wrapper:hover {
+
+  .bounceIn {
+    @include animation('bounceIn', '.7s');
+  }
+}
+
+#bounceInDown .demo-wrapper:hover {
+
+  .bounceInDown {
+    @include animation('bounceInDown', '.7s');
+  }
+}
+
+#bounceInLeft .demo-wrapper:hover {
+
+  .bounceInLeft {
+    @include animation('bounceInLeft', '.7s');
+  }
+}
+
+
+#bounceInRight .demo-wrapper:hover {
+
+  .bounceInRight {
+    @include animation('bounceInRight', '.7s');
+  }
+}
+
+
+#bounceInUp .demo-wrapper:hover {
+
+  .bounceInUp {
+    @include animation('bounceInUp', '.7s');
+  }
+}
+
+#bounceOut .demo-wrapper:hover {
+
+  .bounceOut {
+    @include animation('bounceOut', '.7s');
+  }
+}
+
+#bounceOutDown .demo-wrapper:hover {
+
+  .bounceOutDown {
+    @include animation('bounceOutDown', '.7s');
+  }
+}
+
+#bounceOutLeft .demo-wrapper:hover {
+
+  .bounceOutLeft {
+    @include animation('bounceOutLeft', '.7s');
+  }
+}
+
+#bounceOutRight .demo-wrapper:hover {
+
+  .bounceOutRight {
+    @include animation('bounceOutRight', '.7s');
+  }
+}
+
+#bounceOutUp .demo-wrapper:hover {
+
+  .bounceOutUp {
+    @include animation('bounceOutUp', '.7s');
+  }
+}
+
+#fadeIn .demo-wrapper:hover {
+
+  .fadeIn {
+    @include animation('fadeIn', '.7s');
+  }
+}
+
+#fadeInDown .demo-wrapper:hover {
+
+  .fadeInDown {
+    @include animation('fadeInDown', '.7s');
+  }
+}
+
+#fadeInDownBig .demo-wrapper:hover {
+
+  .fadeInDownBig {
+    @include animation('fadeInDownBig', '.7s');
+  }
+}
+
+#fadeInLeft .demo-wrapper:hover {
+
+  .fadeInLeft {
+    @include animation('fadeInLeft', '.7s');
+  }
+}
+
+#fadeInLeftBig .demo-wrapper:hover {
+
+  .fadeInLeftBig {
+    @include animation('fadeInLeftBig', '.7s');
+  }
+}
+
+#fadeInRight .demo-wrapper:hover {
+
+  .fadeInRight {
+    @include animation('fadeInRight', '.7s');
+  }
+}
+
+#fadeInRightBig .demo-wrapper:hover {
+
+  .fadeInRightBig {
+    @include animation('fadeInRightBig', '.7s');
+  }
+}
+
+#fadeInUp .demo-wrapper:hover {
+
+  .fadeInUp {
+    @include animation('fadeInUp', '.7s');
+  }
+}
+
+#fadeInUpBig .demo-wrapper:hover {
+
+  .fadeInUpBig {
+    @include animation('fadeInUpBig', '.7s');
+  }
+}
+
+
+#fadeOut .demo-wrapper:hover {
+
+  .fadeOut {
+    @include animation('fadeOut', '.7s');
+  }
+}
+
+#fadeOutDown .demo-wrapper:hover {
+
+  .fadeOutDown {
+    @include animation('fadeOutDown', '.7s');
+  }
+}
+
+#fadeOutDownBig .demo-wrapper:hover {
+
+  .fadeOutDownBig {
+    @include animation('fadeOutDownBig', '.7s');
+  }
+}
+
+#fadeOutLeft .demo-wrapper:hover {
+
+  .fadeOutLeft {
+    @include animation('fadeOutLeft', '.7s');
+  }
+}
+
+#fadeOutLeftBig .demo-wrapper:hover {
+
+  .fadeOutLeftBig {
+    @include animation('fadeOutLeftBig', '.7s');
+  }
+}
+
+#fadeOutRight .demo-wrapper:hover {
+
+  .fadeOutRight {
+    @include animation('fadeOutRight', '.7s');
+  }
+}
+
+#fadeOutRightBig .demo-wrapper:hover {
+
+  .fadeOutRightBig {
+    @include animation('fadeOutRightBig', '.7s');
+  }
+}
+
+#fadeOutUp .demo-wrapper:hover {
+
+  .fadeOutUp {
+    @include animation('fadeOutUp', '.7s');
+  }
+}
+
+#fadeOutUpBig .demo-wrapper:hover {
+
+  .fadeOutUpBig {
+    @include animation('fadeOutUpBig', '.7s');
+  }
+}
+
+#flash .demo-wrapper:hover {
+
+  .flash {
+    @include animation('flash', '.7s');
+  }
+}
+
+#flip .demo-wrapper:hover {
+
+  .flip {
+    @include animation('flip', '.7s');
+  }
+}
+
+#flipInX .demo-wrapper:hover {
+
+  .flipInX {
+    @include animation('flipInX', '.7s');
+  }
+}
+
+#flipInY .demo-wrapper:hover {
+
+  .flipInY {
+    @include animation('flipInY', '.7s');
+  }
+}
+
+#flipOutX .demo-wrapper:hover {
+
+  .flipOutX {
+    @include animation('flipOutX', '.7s');
+  }
+}
+
+#foolishIn .demo-wrapper:hover {
+
+  .foolishIn {
+    @include animation('foolishIn', '.7s');
+  }
+}
+
+#headShake .demo-wrapper:hover {
+
+  .headShake {
+    @include animation('headShake', '.7s');
+  }
+}
+
+#holeIn .demo-wrapper:hover {
+
+  .holeIn {
+    @include animation('holeIn', '.7s');
+  }
+}
+
+#holeOut .demo-wrapper:hover {
+
+  .holeOut {
+    @include animation('holeOut', '.7s');
+  }
+}
+
+#jello .demo-wrapper:hover {
+
+  .jello {
+    @include animation('jello', '.7s');
+  }
+}
+
+#lightSpeedOut .demo-wrapper:hover {
+
+  .lightSpeedOut {
+    @include animation('lightSpeedOut', '.7s');
+  }
+}
+
+#lightSpeedIn .demo-wrapper:hover {
+
+  .lightSpeedIn {
+    @include animation('lightSpeedIn', '.7s');
+  }
+}
+
+#magic .demo-wrapper:hover {
+
+  .magic {
+    @include animation('magic', '.7s');
+  }
+}
+
+#openDownLeft .demo-wrapper:hover {
+
+  .openDownLeft {
+    @include animation('openDownLeft', '.7s');
+  }
+}
+
+#openDownRight .demo-wrapper:hover {
+
+  .openDownRight {
+    @include animation('openDownRight', '.7s');
+  }
+}
+
+#openUpLeft .demo-wrapper:hover {
+
+  .openUpLeft {
+    @include animation('openUpLeft', '.7s');
+  }
+}
+
+#openUpRight .demo-wrapper:hover {
+
+  .openUpRight {
+    @include animation('openUpRight', '.7s');
+  }
+}
+
+#openDownLeftRetourn .demo-wrapper:hover {
+
+  .openDownLeftRetourn {
+    @include animation('openDownLeftRetourn', '.7s');
+  }
+}
+
+#openDownRightRetourn .demo-wrapper:hover {
+
+  .openDownRightRetourn {
+    @include animation('openDownRightRetourn', '.7s');
+  }
+}
+
+#openUpLeftRetourn .demo-wrapper:hover {
+
+  .openUpLeftRetourn {
+    @include animation('openUpLeftRetourn', '.7s');
+  }
+}
+
+#openUpRightRetourn .demo-wrapper:hover {
+
+  .openUpRightRetourn {
+    @include animation('openUpRightRetourn', '.7s');
+  }
+}
+
+
+#openDownLeftOut .demo-wrapper:hover {
+
+  .openDownLeftOut {
+    @include animation('openDownLeftOut', '.7s');
+  }
+}
+
+#openDownRightOut .demo-wrapper:hover {
+
+  .openDownRightOut {
+    @include animation('openDownRightOut', '.7s');
+  }
+}
+
+#openUpLeftOut .demo-wrapper:hover {
+
+  .openUpLeftOut {
+    @include animation('openUpLeftOut', '.7s');
+  }
+}
+
+#openUpRightOut .demo-wrapper:hover {
+
+  .openUpRightOut {
+    @include animation('openUpRightOut', '.7s');
+  }
+}
+
+#perspectiveDown .demo-wrapper:hover {
+
+  .perspectiveDown {
+    @include animation('perspectiveDown', '.7s');
+  }
+}
+
+#perspectiveLeft .demo-wrapper:hover {
+
+  .perspectiveLeft {
+    @include animation('perspectiveLeft', '.7s');
+  }
+}
+
+#perspectiveRight .demo-wrapper:hover {
+
+  .perspectiveRight {
+    @include animation('perspectiveRight', '.7s');
+  }
+}
+
+#perspectiveUp .demo-wrapper:hover {
+
+  .perspectiveUp {
+    @include animation('perspectiveUp', '.7s');
+  }
+}
+
+#perspectiveDownRetourn .demo-wrapper:hover {
+
+  .perspectiveDownRetourn {
+    @include animation('perspectiveDownRetourn', '.7s');
+  }
+}
+
+#perspectiveLeftRetourn .demo-wrapper:hover {
+
+  .perspectiveLeftRetourn {
+    @include animation('perspectiveLeftRetourn', '.7s');
+  }
+}
+
+#perspectiveRightRetourn .demo-wrapper:hover {
+
+  .perspectiveRightRetourn {
+    @include animation('perspectiveRightRetourn', '.7s');
+  }
+}
+
+#perspectiveUpRetourn .demo-wrapper:hover {
+
+  .perspectiveUpRetourn {
+    @include animation('perspectiveUpRetourn', '.7s');
+  }
+}
+
+#puffIn .demo-wrapper:hover {
+
+  .puffIn {
+    @include animation('puffIn', '.7s');
+  }
+}
+
+#puffOut .demo-wrapper:hover {
+
+  .puffOut {
+    @include animation('puffOut', '.7s');
+  }
+}
+
+#pulse .demo-wrapper:hover {
+
+  .pulse {
+    @include animation('pulse', '.7s');
+  }
+}
+
+#rotateIn .demo-wrapper:hover {
+
+  .rotateIn {
+    @include animation('rotateIn', '.7s');
+  }
+}
+
+#rotateInDownLeft .demo-wrapper:hover {
+
+  .rotateInDownLeft {
+    @include animation('rotateInDownLeft', '.7s');
+  }
+}
+
+#rotateInDownRight .demo-wrapper:hover {
+
+  .rotateInDownRight {
+    @include animation('rotateInDownRight', '.7s');
+  }
+}
+
+#rotateInUpLeft .demo-wrapper:hover {
+
+  .rotateInUpLeft {
+    @include animation('rotateInUpLeft', '.7s');
+  }
+}
+
+#rotateInUpRight .demo-wrapper:hover {
+
+  .rotateInUpRight {
+    @include animation('rotateInUpRight', '.7s');
+  }
+}
+
+#rotateOut .demo-wrapper:hover {
+
+  .rotateOut {
+    @include animation('rotateOut', '.7s');
+  }
+}
+
+#rotateOutDownLeft .demo-wrapper:hover {
+
+  .rotateOutDownLeft {
+    @include animation('rotateOutDownLeft', '.7s');
+  }
+}
+
+#rotateOutDownRight .demo-wrapper:hover {
+
+  .rotateOutDownRight {
+    @include animation('rotateOutDownRight', '.7s');
+  }
+}
+
+#rotateOutUpLeft .demo-wrapper:hover {
+
+  .rotateOutUpLeft {
+    @include animation('rotateOutUpLeft', '.7s');
+  }
+}
+
+#rotateOutUpRight .demo-wrapper:hover {
+
+  .rotateOutUpRight {
+    @include animation('rotateOutUpRight', '.7s');
+  }
+}
+
+#rubberBand .demo-wrapper:hover {
+
+  .rubberBand {
+    @include animation('rubberBand', '.7s');
+  }
+}
+
+#shake .demo-wrapper:hover {
+
+  .shake {
+    @include animation('shake', '.7s');
+  }
+}
+
+#slideInDown .demo-wrapper:hover {
+
+  .slideInDown {
+    @include animation('slideInDown', '.7s');
+  }
+}
+
+#slideInLeft .demo-wrapper:hover {
+
+  .slideInLeft {
+    @include animation('slideInLeft', '.7s');
+  }
+}
+
+#slideInRight .demo-wrapper:hover {
+
+  .slideInRight {
+    @include animation('slideInRight', '.7s');
+  }
+}
+
+#slideInUp .demo-wrapper:hover {
+
+  .slideInUp {
+    @include animation('slideInUp', '.7s');
+  }
+}
+
+#slideOutDown .demo-wrapper:hover {
+
+  .slideOutDown {
+    @include animation('slideOutDown', '.7s');
+  }
+}
+
+#slideOutLeft .demo-wrapper:hover {
+
+  .slideOutLeft {
+    @include animation('slideOutLeft', '.7s');
+  }
+}
+
+#slideOutRight .demo-wrapper:hover {
+
+  .slideOutRight {
+    @include animation('slideOutRight', '.7s');
+  }
+}
+
+#slideOutUp .demo-wrapper:hover {
+
+  .slideOutUp {
+    @include animation('slideOutUp', '.7s');
+  }
+}
+
+#spaceOutUp .demo-wrapper:hover {
+
+  .spaceOutUp {
+    @include animation('spaceOutUp', '.7s');
+  }
+}
+
+#spaceOutRight .demo-wrapper:hover {
+
+  .spaceOutRight {
+    @include animation('spaceOutRight', '.7s');
+  }
+}
+
+#spaceOutLeft .demo-wrapper:hover {
+
+  .spaceOutLeft {
+    @include animation('spaceOutLeft', '.7s');
+  }
+}
+
+#spaceOutDown .demo-wrapper:hover {
+
+  .spaceOutDown {
+    @include animation('spaceOutDown', '.7s');
+  }
+}
+
+#spaceInUp .demo-wrapper:hover {
+
+  .spaceInUp {
+    @include animation('spaceInUp', '.7s');
+  }
+}
+
+#spaceInRight .demo-wrapper:hover {
+
+  .spaceInRight {
+    @include animation('spaceInRight', '.7s');
+  }
+}
+
+#spaceInLeft .demo-wrapper:hover {
+
+  .spaceInLeft {
+    @include animation('spaceInLeft', '.7s');
+  }
+}
+
+#spaceInDown .demo-wrapper:hover {
+
+  .spaceInDown {
+    @include animation('spaceInDown', '.7s');
+  }
+}
+
+#swap .demo-wrapper:hover {
+
+  .swap {
+    @include animation('swap', '.7s');
+  }
+}
+
+#swashIn .demo-wrapper:hover {
+
+  .swashIn {
+    @include animation('swashIn', '.7s');
+  }
+}
+
+#swashOut .demo-wrapper:hover {
+
+  .swashOut {
+    @include animation('swashOut', '.7s');
+  }
+}
+
+#swing .demo-wrapper:hover {
+
+  .swing {
+    @include animation('swing', '.7s');
+  }
+}
+
+#tada .demo-wrapper:hover {
+
+  .tada {
+    @include animation('tada', '.7s');
+  }
+}
+
+#tinRightOut .demo-wrapper:hover {
+
+  .tinRightOut {
+    @include animation('tinRightOut', '.7s');
+  }
+}
+
+#tinLeftOut .demo-wrapper:hover {
+
+  .tinLeftOut {
+    @include animation('tinLeftOut', '.7s');
+  }
+}
+
+#tinUpOut .demo-wrapper:hover {
+
+  .tinUpOut {
+    @include animation('tinUpOut', '.7s');
+  }
+}
+
+#tinDownOut .demo-wrapper:hover {
+
+  .tinDownOut {
+    @include animation('tinDownOut', '.7s');
+  }
+}
+
+#tinRightIn .demo-wrapper:hover {
+
+  .tinRightIn {
+    @include animation('tinRightIn', '.7s');
+  }
+}
+
+#tinLeftIn .demo-wrapper:hover {
+
+  .tinLeftIn {
+    @include animation('tinLeftIn', '.7s');
+  }
+}
+
+#tinUpIn .demo-wrapper:hover {
+
+  .tinUpIn {
+    @include animation('tinUpIn', '.7s');
+  }
+}
+
+#tinDownIn .demo-wrapper:hover {
+
+  .tinDownIn {
+    @include animation('tinDownIn', '.7s');
+  }
+}
+
+#twisterInDown .demo-wrapper:hover {
+
+  .twisterInDown {
+    @include animation('twisterInDown', '.7s');
+  }
+}
+
+#twisterInUp .demo-wrapper:hover {
+
+  .twisterInUp {
+    @include animation('twisterInUp', '.7s');
+  }
+}
+
+#vanishIn .demo-wrapper:hover {
+
+  .vanishIn {
+    @include animation('vanishIn', '.7s');
+  }
+}
+
+#vanishOut .demo-wrapper:hover {
+
+  .vanishOut {
+    @include animation('vanishOut', '.7s');
+  }
+}
+
+#wobble .demo-wrapper:hover {
+
+  .wobble {
+    @include animation('wobble', '.7s');
+  }
+}
+
+#zoomIn .demo-wrapper:hover {
+
+  .zoomIn {
+    @include animation('zoomIn', '.7s');
+  }
+}
+
+#zoomInDown .demo-wrapper:hover {
+
+  .zoomInDown {
+    @include animation('zoomInDown', '.7s');
+  }
+}
+
+#zoomInLeft .demo-wrapper:hover {
+
+  .zoomInLeft {
+    @include animation('zoomInLeft', '.7s');
+  }
+}
+
+#zoomInRight .demo-wrapper:hover {
+
+  .zoomInRight {
+    @include animation('zoomInRight', '.7s');
+  }
+}
+
+#zoomInUp .demo-wrapper:hover {
+
+  .zoomInUp {
+    @include animation('zoomInUp', '.7s');
+  }
+}
+
+#zoomOut .demo-wrapper:hover {
+
+  .zoomOut {
+    @include animation('zoomOut', '.7s');
+  }
+}
+
+#zoomOutDown .demo-wrapper:hover {
+
+  .zoomOutDown {
+    @include animation('zoomOutDown', '.7s');
+  }
+}
+
+#zoomOutLeft .demo-wrapper:hover {
+
+  .zoomOutLeft {
+    @include animation('zoomOutLeft', '.7s');
+  }
+}
+
+#zoomOutRight .demo-wrapper:hover {
+
+  .zoomOutRight {
+    @include animation('zoomOutRight', '.7s');
+  }
+}
+
+#zoomOutUp .demo-wrapper:hover {
+
+  .zoomOutUp {
+    @include animation('zoomOutUp', '.7s');
+  }
+}

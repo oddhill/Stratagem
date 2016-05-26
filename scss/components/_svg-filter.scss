@@ -1,0 +1,139 @@
+.svg-filters {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+%button {
+  -webkit-font-smoothing: antialiased;
+  background-color: red;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.1em;
+  color: white;
+  padding: 20px 40px;
+  text-transform: uppercase;
+  @include transition(background-color 0.1s ease-out);
+  cursor: pointer;
+
+  &:hover {
+    background-color: yellow;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+    color: #fff;
+  }
+}
+
+.button,
+.button__bg {
+  .safari & {
+    -webkit-filter: none!important;
+    filter: none!important;
+  }
+}
+
+.button--4 {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  display: block;
+  border-radius: none;
+  width: 300px;
+  height: 300px;
+  line-height: 80px;
+  padding: 0;
+  @extend %button;
+  background: none;
+
+  &:hover {
+    background: none;
+
+    .documentation-graphic {
+      @include transform(scale(1.1));
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active .button__bg {
+    transform: scale(0.8);
+  }
+
+  .button__bg {
+    @include linear-gradient(#E158F1, #1209CB);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 90px solid transparent!important; // this makes the area of effect of the filter bigger. This doesn't change anything on Firefox.
+    -webkit-filter: url("#filter-goo-4");
+    filter: url("../#filter-goo-4");
+    @extend %button;
+    padding: 0;
+    border-radius: 100%;
+    @include transform(translateZ(0));
+    background: none;
+    font-weight: bold;
+    z-index: -2;
+    @include transition(all 0.1s ease-out);
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  .blob {
+    @include linear-gradient(#E158F1, #1209CB);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 0.3;
+    @include transition(background 0.1s ease-out);
+    z-index: -1;
+    pointer-events: none;
+
+    &:first-child {
+      opacity: 1;
+    }
+
+    &:nth-child(n+2) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.documentation-graphic {
+  @include font-size(6.4, 1.4065);
+  font-family: 'Ubuntu';
+  text-transform: capitalize;
+  border: 5px solid #EE80FF;
+  color: #EE80FF;
+  background-size: cover;
+  width: 525px;
+  height: 105px;
+  display: block;
+  margin-left: -120px;
+  transition: .6s;
+
+  .hide & {
+    @include animation('fadeOut', '.3s forwards');
+  }
+}

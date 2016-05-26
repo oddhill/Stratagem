@@ -1,0 +1,3863 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Stratagem</title>
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:600,400,300,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="fixed-nav">
+      <h4><a href="#water-animations">Water animations</a></h4>
+      <li><a href="#boingInUp">boingInUp</a></li>
+      <li><a href="#boingOutDown">boingOutDown</a></li>
+      <li><a href="#bombRightOut">bombRightOut</a></li>
+      <li><a href="#bombLeftOut">bombLeftOut</a></li>
+      <li><a href="#bounceIn">bounceIn</a></li>
+      <li><a href="#bounceInDown">bounceInDown</a></li>
+      <li><a href="#bounceInLeft">bounceInLeft</a></li>
+      <li><a href="#bounceInRight">bounceInRight</a></li>
+      <li><a href="#bounceInUp">bounceInUp</a></li>
+      <li><a href="#bounceOut">bounceOut</a></li>
+      <li><a href="#fadeIn">fadeIn</a></li>
+      <li><a href="#fadeInDown">fadeInDown</a></li>
+      <li><a href="#fadeInDownBig">fadeInDownBig</a></li>
+      <li><a href="#fadeInLeft">fadeInLeft</a></li>
+      <li><a href="#fadeInLeftBig">fadeInLeftBig</a></li>
+      <li><a href="#fadeInRightBig">fadeInRightBig</a></li>
+      <li><a href="#fadeInUp">fadeInUp</a></li>
+      <li><a href="#fadeInUpBig">fadeInUpBig</a></li>
+      <li><a href="#fadeOut">fadeOut</a></li>
+      <li><a href="#fadeOutDown">fadeOutDown</a></li>
+      <li><a href="#fadeOutDownBig">fadeOutDownBig</a></li>
+      <li><a href="#fadeOutLeft">fadeOutLeft</a></li>
+      <li><a href="#fadeOutLeftBig">fadeOutLeftBig</a></li>
+      <li><a href="#fadeOutRight">fadeOutRight</a></li>
+      <li><a href="#fadeOutRightBig">fadeOutRightBig</a></li>
+      <li><a href="#fadeOutUp">fadeOutUp</a></li>
+      <li><a href="#fadeOutUpBig">fadeOutUpBig</a></li>
+      <li><a href="#flash">flash</a></li>
+      <li><a href="#flip">flip</a></li>
+      <li><a href="#flipInX">flipInX</a></li>
+      <li><a href="#flipInY">flipInY</a></li>
+      <li><a href="#flipOutX">flipOutX</a></li>
+      <li><a href="#flipOutY">flipOutY</a></li>
+      <li><a href="#headShake">headShake</a></li>
+      <li><a href="#holeIn">holeIn</a></li>
+      <li><a href="#holeOut">holeOut</a></li>
+      <li><a href="#jello">jello</a></li>
+      <li><a href="#lightSpeedOut">lightSpeedOut</a></li>
+      <li><a href="#lightSpeedIn">lightSpeedIn</a></li>
+      <li><a href="#magic">magic</a></li>
+      <li><a href="#openDownLeft">openDownLeft</a></li>
+      <li><a href="#openDownRight">openDownRight</a></li>
+      <li><a href="#openUpLeft">openUpLeft</a></li>
+      <li><a href="#openUpRight">openUpRight</a></li>
+      <li><a href="#openDownLeftRetourn">openDownLeftRetourn</a></li>
+      <li><a href="#openDownRightRetourn">openDownRightRetourn</a></li>
+      <li><a href="#openUpLeftRetourn">openUpLeftRetourn</a></li>
+      <li><a href="#openUpRightRetourn">openUpRightRetourn</a></li>
+      <li><a href="#openDownLeftOut">openDownLeftOut</a></li>
+      <li><a href="#openDownRightOut">openDownRightOut</a></li>
+      <li><a href="#openUpLeftOut">openUpLeftOut</a></li>
+      <li><a href="#openUpRightOut">openUpRightOut</a></li>
+      <li><a href="#perspectiveDown">perspectiveDown</a></li>
+      <li><a href="#perspectiveLeft">perspectiveLeft</a></li>
+      <li><a href="#perspectiveRight">perspectiveRight</a></li>
+      <li><a href="#perspectiveUp">perspectiveUp</a></li>
+      <li><a href="#perspectiveDownRetourn">perspectiveDownRetourn</a></li>
+      <li><a href="#perspectiveLeftRetourn">perspectiveLeftRetourn</a></li>
+      <li><a href="#perspectiveUpRetourn">perspectiveUpRetourn</a></li>
+      <li><a href="#puffOut">puffOut</a></li>
+      <li><a href="#pulse">pulse</a></li>
+      <li><a href="#rotateIn">rotateIn</a></li>
+      <li><a href="#rotateInDownLeft">rotateInDownLeft</a></li>
+      <li><a href="#rotateInDownRight">rotateInDownRight</a></li>
+      <li><a href="#rotateInUpLeft">rotateInUpLeft</a></li>
+      <li><a href="#rotateInUpRight">rotateInUpRight</a></li>
+      <li><a href="#rotateOut">rotateOut</a></li>
+      <li><a href="#rotateOutDownLeft">rotateOutDownLeft</a></li>
+      <li><a href="#rotateOutDownRight">rotateOutDownRight</a></li>
+      <li><a href="#rotateOutUpLeft">rotateOutUpLeft</a></li>
+      <li><a href="#rotateOutUpRight">rotateOutUpRight</a></li>
+      <li><a href="#rubberBand">rubberBand</a></li>
+      <li><a href="#shake">shake</a></li>
+      <li><a href="#slideInDown">slideInDown</a></li>
+      <li><a href="#slideInLeft">slideInLeft</a></li>
+      <li><a href="#slideInRight">slideInRight</a></li>
+      <li><a href="#slideInUp">slideInUp</a></li>
+      <li><a href="#slideOutDown">slideOutDown</a></li>
+      <li><a href="#slideOutLeft">slideOutLeft</a></li>
+      <li><a href="#slideOutRight">slideOutRight</a></li>
+      <li><a href="#slideOutUp">slideOutUp</a></li>
+      <li><a href="#spaceOutUp">spaceOutUp</a></li>
+      <li><a href="#spaceOutRight">spaceOutRight</a></li>
+      <li><a href="#spaceOutDown">spaceOutDown</a></li>
+      <li><a href="#spaceOutLeft">spaceOutLeft</a></li>
+      <li><a href="#spaceInUp">spaceInUp</a></li>
+      <li><a href="#spaceInRight">spaceInRight</a></li>
+      <li><a href="#spaceInDown">spaceInDown</a></li>
+      <li><a href="#spaceInLeft">spaceInLeft</a></li>
+      <li><a href="#swap">swap</a></li>
+      <li><a href="#swashIn">swashIn</a></li>
+      <li><a href="#swashOut">swashOut</a></li>
+      <li><a href="#swing">swing</a></li>
+      <li><a href="#tada">tada</a></li>
+      <li><a href="#tinRightOut">tinRightOut</a></li>
+      <li><a href="#tinLeftOut">tinLeftOut</a></li>
+      <li><a href="#tinUpOut">tinUpOut</a></li>
+      <li><a href="#tinDownOut">tinDownOut</a></li>
+      <li><a href="#tinRightIn">tinRightIn</a></li>
+      <li><a href="#tinLeftIn">tinLeftIn</a></li>
+      <li><a href="#tinUpIn">tinUpIn</a></li>
+      <li><a href="#tinDownIn">tinDownIn</a></li>
+      <li><a href="#twisterInDown">twisterInDown</a></li>
+      <li><a href="#twisterInUp">twisterInUp</a></li>
+      <li><a href="#vanishIn">vanishIn</a></li>
+      <li><a href="#vanishOut">vanishOut</a></li>
+      <li><a href="#wobble">wobble</a></li>
+      <li><a href="#zoomIn">zoomIn</a></li>
+      <li><a href="#zoomInDown">zoomInDown</a></li>
+      <li><a href="#zoomInLeft">zoomInLeft</a></li>
+      <li><a href="#zoomInRight">zoomInRight</a></li>
+      <li><a href="#zoomInUp">zoomInUp</a></li>
+      <li><a href="#zoomOut">zoomOut</a></li>
+      <li><a href="#zoomOutDown">zoomOutDown</a></li>
+      <li><a href="#zoomOutLeft">zoomOutLeft</a></li>
+      <li><a href="#zoomOutRight">zoomOutRight</a></li>
+      <li><a href="#zoomOutUp">zoomOutUp</a></li>
+
+      <h4><a href="#buttons">Buttons</a></h4>
+      <li><a href="#bob-button">bob-button</a></li>
+      <li><a href="#bounce-in-button">bounce-in-button</a></li>
+      <li><a href="#bounce-out-button">bounce-out-button</a></li>
+      <li><a href="#buzz-out-button">buzz-out-button</a></li>
+      <li><a href="#float-button">float-button</a></li>
+      <li><a href="#grow-rotate-button">grow-rotate-button</a></li>
+      <li><a href="#grow-button">grow-button</a></li>
+      <li><a href="#hang-button">hang-button</a></li>
+      <li><a href="#pop-button">pop-button</a></li>
+      <li><a href="#pulse-grow">pulse-grow</a></li>
+      <li><a href="#pulse-shrink">pulse-shrink</a></li>
+      <li><a href="#pulse-button">pulse-button</a></li>
+      <li><a href="#push-button">push-button</a></li>
+      <li><a href="#rotate-button">rotate-button</a></li>
+      <li><a href="#sink-button">sink-button</a></li>
+      <li><a href="#skew-backward-button">skew-backward-button</a></li>
+      <li><a href="#skew-forward-button">skew-forward-button</a></li>
+      <li><a href="#skew-button">skew-button</a></li>
+      <li><a href="#wobble-bottom-button">wobble-bottom-button</a></li>
+      <li><a href="#wobble-horizontal-button">wobble-horizontal-button</a></li>
+      <li><a href="#wobble-skew-button">wobble-skew-button</a></li>
+      <li><a href="#wobble-bottom-right-button">wobble-bottom-right-button</a></li>
+      <li><a href="#wobble-top-right-button">wobble-top-right-button</a></li>
+      <li><a href="#wobble-top-button">wobble-top-button</a></li>
+      <li><a href="#wobble-vertical">wobble-vertical</a></li>
+      <li><a href="#bounce-to-bottom-button">bounce-to-bottom-button</a></li>
+      <li><a href="#bounce-to-left-button">bounce-to-left-button</a></li>
+      <li><a href="#bounce-to-right-button">bounce-to-right-button</a></li>
+      <li><a href="#bounce-to-top-button">bounce-to-top-button</a></li>
+      <li><a href="#fade-button">fade-button</a></li>
+      <li><a href="#radial-in-button">radial-in-button</a></li>
+      <li><a href="#radial-out-button">radial-out-button</a></li>
+      <li><a href="#rectangle-in-button">rectangle-in-button</a></li>
+      <li><a href="#rectangle-out-button">rectangle-out-button</a></li>
+      <li><a href="#shutter-in-horizontal-button">shutter-in-horizontal-button</a></li>
+      <li><a href="#shutter-in-vertical-button">shutter-in-vertical-button</a></li>
+      <li><a href="#shutter-out-horizontal-button">shutter-out-horizontal-button</a></li>
+      <li><a href="#shutter-out-vertical-button">shutter-out-vertical-button</a></li>
+      <li><a href="#sweep-bottom-button">sweep-bottom-button</a></li>
+      <li><a href="#sweep-left-button">sweep-left-button</a></li>
+      <li><a href="#sweep-right-button">sweep-right-button</a></li>
+      <li><a href="#sweep-top-button">sweep-top-button</a></li>
+      <li><a href="#border-fade-button">border-fade-button</a></li>
+      <li><a href="#outline-in-button">outline-in-button</a></li>
+      <li><a href="#outline-out-button">outline-out-button</a></li>
+      <li><a href="#overline-from-center-button">overline-from-center-button</a></li>
+      <li><a href="#overline-from-left-button">overline-from-left-button</a></li>
+      <li><a href="#overline-from-right-button">overline-from-right-button</a></li>
+      <li><a href="#overline-reveal-button">overline-reveal-button</a></li>
+      <li><a href="#reveal-button">reveal-button</a></li>
+      <li><a href="#round-corners-button">round-corners-button</a></li>
+      <li><a href="#trim-button">trim-button</a></li>
+      <li><a href="#underline-from-center-button">underline-from-center-button</a></li>
+      <li><a href="#underline-from-left-button">underline-from-left-button</a></li>
+      <li><a href="#underline-from-right-button">underline-from-right-button</a></li>
+      <li><a href="#underline-reveal-button">underline-reveal-button</a></li>
+      <li><a href="#curl-bottom-left">curl-bottom-left</a></li>
+      <li><a href="#curl-bottom-right">curl-bottom-right</a></li>
+      <li><a href="#curl-top-left">curl-top-left</a></li>
+      <li><a href="#curl-top-right">curl-top-right</a></li>
+      <li><a href="#box-shadow-inset-button">box-shadow-inset-button</a></li>
+      <li><a href="#float-shadow-button">float-shadow-button</a></li>
+      <li><a href="#glow-button">glow-button</a></li>
+      <li><a href="#grow-shadow-button">grow-shadow-button</a></li>
+      <li><a href="#shadow-radial-button">shadow-radial-button</a></li>
+      <li><a href="#shadow-button">shadow-button</a></li>
+      <li><a href="#bubble-bottom-button">bubble-bottom-button</a></li>
+      <li><a href="#bubble-float-bottom-button">bubble-float-bottom-button</a></li>
+      <li><a href="#bubble-float-left-button">bubble-float-left-button</a></li>
+      <li><a href="#bubble-float-right-button">bubble-float-right-button</a></li>
+      <li><a href="#bubble-float-top-button">bubble-float-top-button</a></li>
+      <li><a href="#bubble-left-button">bubble-left-button</a></li>
+      <li><a href="#bubble-right-button">bubble-right-button</a></li>
+      <li><a href="#bubble-top-button">bubble-top-button</a></li>
+    </nav>
+
+    <main role="main" class="main documentation-outer">
+      <section class="inner-doc-wrapper">
+        <h1 id="water-animations">Water animations</h1>
+
+        <!-- general-usage -->
+        <article id="general-usage" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>General-usage</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeIn', '.5s');
+          </code>
+          <h4>Compiles to in CSS:</h4>
+          <code>
+            animation: fadeIn .5s;
+          </code>
+        </article>
+
+        <!-- boingInUp -->
+        <article id="boingInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>boingInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('boingInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="boingInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- boingOutDown -->
+        <article id="boingOutDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>boingOutDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('boingOutDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="boingOutDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bombRightOut -->
+        <article id="bombRightOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bombRightOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bombRightOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bombRightOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bombLeftOut -->
+        <article id="bombLeftOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bombLeftOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bombLeftOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bombLeftOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceIn -->
+        <article id="bounceIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceInDown -->
+        <article id="bounceInDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceInDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceInDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceInDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceInLeft -->
+        <article id="bounceInLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceInLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceInLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceInLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceInRight -->
+        <article id="bounceInRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceInRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceInRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceInRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceInUp -->
+        <article id="bounceInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceOut -->
+        <article id="bounceOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceOutDown -->
+        <article id="bounceOutDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceOutDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceOutDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceOutDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceOutLeft -->
+        <article id="bounceOutLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceOutLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceOutLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceOutLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceOutRight -->
+        <article id="bounceOutRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceOutRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceOutRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceOutRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- bounceOutUp -->
+        <article id="bounceOutUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>bounceOutUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('bounceOutUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="bounceOutUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeIn -->
+        <article id="fadeIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInDown -->
+        <article id="fadeInDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInDownBig -->
+        <article id="fadeInDownBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInDownBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInDownBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInDownBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInLeft -->
+        <article id="fadeInLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInLeftBig -->
+        <article id="fadeInLeftBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInLeftBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInLeftBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInLeftBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInRight -->
+        <article id="fadeInRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInRightBig -->
+        <article id="fadeInRightBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInRightBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInRightBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInRightBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInUp -->
+        <article id="fadeInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeInUpBig -->
+        <article id="fadeInUpBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeInUpBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeInUpBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeInUpBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOut -->
+        <article id="fadeOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutDown -->
+        <article id="fadeOutDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutDownBig -->
+        <article id="fadeOutDownBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutDownBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutDownBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutDownBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutLeft -->
+        <article id="fadeOutLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutLeftBig -->
+        <article id="fadeOutLeftBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutLeftBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutLeftBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutLeftBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutRight -->
+        <article id="fadeOutRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutRightBig -->
+        <article id="fadeOutRightBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutRightBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutRightBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutRightBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutUp -->
+        <article id="fadeOutUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- fadeOutUpBig -->
+        <article id="fadeOutUpBig" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>fadeOutUpBig</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('fadeOutUpBig', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="fadeOutUpBig" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- flash -->
+        <article id="flash" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>flash</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('flash', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="flash" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- flip -->
+        <article id="flip" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>flip</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('flip', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="flip" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- flipInX -->
+        <article id="flipInX" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>flipInX</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('flipInX', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="flipInX" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- flipInY -->
+        <article id="flipInY" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>flipInY</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('flipInY', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="flipInY" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- flipOutX -->
+        <article id="flipOutX" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>flipOutX</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('flipOutX', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="flipOutX" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- flipOutY -->
+        <article id="flipOutY" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>flipOutY</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('flipOutY', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="flipOutY" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- foolishOut -->
+        <article id="foolishOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>foolishOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('foolishOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="foolishOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- foolishIn -->
+        <article id="foolishIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>foolishIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('foolishIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="foolishIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- headShake -->
+        <article id="headShake" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>headShake</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('headShake', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="headShake" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- holeIn -->
+        <article id="holeIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>holeIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('holeIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="holeIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- holeOut -->
+        <article id="holeOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>holeOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('holeOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="holeOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- jello -->
+        <article id="jello" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>jello</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('jello', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="jello" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- lightSpeedOut -->
+        <article id="lightSpeedOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>lightSpeedOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('lightSpeedOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="lightSpeedOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- lightSpeedIn -->
+        <article id="lightSpeedIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>lightSpeedIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('lightSpeedIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="lightSpeedIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- magic -->
+        <article id="magic" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>magic</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('magic', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="magic" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openDownLeft -->
+        <article id="openDownLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openDownLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openDownLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openDownLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openDownRight -->
+        <article id="openDownRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openDownRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openDownRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openDownRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+
+        <!-- openUpLeft -->
+        <article id="openUpLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openUpLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openUpLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openUpLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openUpRight -->
+        <article id="openUpRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openUpRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openUpRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openUpRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openDownLeftRetourn -->
+        <article id="openDownLeftRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openDownLeftRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openDownLeftRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openDownLeftRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openDownRightRetourn -->
+        <article id="openDownRightRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openDownRightRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openDownRightRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openDownRightRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+
+        <!-- openUpLeftRetourn -->
+        <article id="openUpLeftRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openUpLeftRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openUpLeftRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openUpLeftRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+
+        <!-- openUpRightRetourn -->
+        <article id="openUpRightRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openUpRightRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openUpRightRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openUpRightRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openDownLeftOut -->
+        <article id="openDownLeftOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openDownLeftOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openDownLeftOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openDownLeftOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openDownRightOut -->
+        <article id="openDownRightOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openDownRightOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openDownRightOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openDownRightOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openUpLeftOut -->
+        <article id="openUpLeftOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openUpLeftOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openUpLeftOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openUpLeftOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- openUpRightOut -->
+        <article id="openUpRightOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>openUpRightOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('openUpRightOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="openUpRightOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveDown -->
+        <article id="perspectiveDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveLeft -->
+        <article id="perspectiveLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveRight -->
+        <article id="perspectiveRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveUp -->
+        <article id="perspectiveUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveDownRetourn -->
+        <article id="perspectiveDownRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveDownRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveDownRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveDownRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveLeftRetourn -->
+        <article id="perspectiveLeftRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveLeftRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveLeftRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveLeftRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveRightRetourn -->
+        <article id="perspectiveRightRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveRightRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveRightRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveRightRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- perspectiveUpRetourn -->
+        <article id="perspectiveUpRetourn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>perspectiveUpRetourn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('perspectiveUpRetourn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="perspectiveUpRetourn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- puffIn -->
+        <article id="puffIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>puffIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('puffIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="puffIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- puffOut -->
+        <article id="puffOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>puffOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('puffOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="puffOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- pulse -->
+        <article id="pulse" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>pulse</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('pulse', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="pulse" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateIn -->
+        <article id="rotateIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateInDownLeft -->
+        <article id="rotateInDownLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateInDownLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateInDownLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateInDownLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateInDownRight -->
+        <article id="rotateInDownRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateInDownRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateInDownRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateInDownRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateInUpLeft -->
+        <article id="rotateInUpLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateInUpLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateInUpLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateInUpLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateInUpRight -->
+        <article id="rotateInUpRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateInUpRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateInUpRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateInUpRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateOut -->
+        <article id="rotateOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateOutDownLeft -->
+        <article id="rotateOutDownLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateOutDownLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateOutDownLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateOutDownLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateOutDownRight -->
+        <article id="rotateOutDownRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateOutDownRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateOutDownRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateOutDownRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateOutUpLeft -->
+        <article id="rotateOutUpLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateOutUpLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateOutUpLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateOutUpLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rotateOutUpRight -->
+        <article id="rotateOutUpRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rotateOutUpRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rotateOutUpRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rotateOutUpRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- rubberBand -->
+        <article id="rubberBand" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>rubberBand</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('rubberBand', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="rubberBand" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- shake -->
+        <article id="shake" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>shake</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('shake', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="shake" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideInDown -->
+        <article id="slideInDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideInDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideInDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideInDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideInLeft -->
+        <article id="slideInLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideInLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideInLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideInLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideInRight -->
+        <article id="slideInRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideInRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideInRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideInRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideInUp -->
+        <article id="slideInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideOutDown -->
+        <article id="slideOutDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideOutDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideOutDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideOutDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideOutLeft -->
+        <article id="slideOutLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideOutLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideOutLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideOutLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideOutRight -->
+        <article id="slideOutRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideOutRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideOutRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideOutRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- slideOutUp -->
+        <article id="slideOutUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>slideOutUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('slideOutUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="slideOutUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceOutUp -->
+        <article id="spaceOutUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceOutUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceOutUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceOutUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceOutRight -->
+        <article id="spaceOutRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceOutRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceOutRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceOutRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceOutDown -->
+        <article id="spaceOutDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceOutDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceOutDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceOutDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceOutLeft -->
+        <article id="spaceOutLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceOutLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceOutLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceOutLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceInUp -->
+        <article id="spaceInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceInRight -->
+        <article id="spaceInRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceInRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceInRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceInRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceInDown -->
+        <article id="spaceInDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceInDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceInDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceInDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- spaceInLeft -->
+        <article id="spaceInLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>spaceInLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('spaceInLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="spaceInLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- swap -->
+        <article id="swap" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>swap</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('swap', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="swap" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- swashIn -->
+        <article id="swashIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>swashIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('swashIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="swashIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- swashOut -->
+        <article id="swashOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>swashOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('swashOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="swashOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- swing -->
+        <article id="swing" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>swing</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('swing', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="swing" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tada -->
+        <article id="tada" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tada</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tada', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tada" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinRightOut -->
+        <article id="tinRightOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinRightOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinRightOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinRightOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinLeftOut -->
+        <article id="tinLeftOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinLeftOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinLeftOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinLeftOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinUpOut -->
+        <article id="tinUpOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinUpOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinUpOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinUpOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinDownOut -->
+        <article id="tinDownOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinDownOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinDownOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinDownOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinRightIn -->
+        <article id="tinRightIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinRightIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinRightIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinRightIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinLeftIn -->
+        <article id="tinLeftIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinLeftIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinLeftIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinLeftIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinUpIn -->
+        <article id="tinUpIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinUpIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinUpIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinUpIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- tinDownIn -->
+        <article id="tinDownIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>tinDownIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('tinDownIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="tinDownIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- twisterInDown -->
+        <article id="twisterInDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>twisterInDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('twisterInDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="twisterInDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- twisterInUp -->
+        <article id="twisterInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>twisterInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('twisterInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="twisterInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- vanishIn -->
+        <article id="vanishIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>vanishIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('vanishIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="vanishIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- vanishOut -->
+        <article id="vanishOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>vanishOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('vanishOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="vanishOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- wobble -->
+        <article id="wobble" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>wobble</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('wobble', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="wobble" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomIn -->
+        <article id="zoomIn" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomIn</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomIn', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomIn" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomInDown -->
+        <article id="zoomInDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomInDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomInDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomInDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomInLeft -->
+        <article id="zoomInLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomInLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomInLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomInLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomInRight -->
+        <article id="zoomInRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomInRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomInRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomInRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomInUp -->
+        <article id="zoomInUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomInUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomInUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomInUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomOut -->
+        <article id="zoomOut" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomOut</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomOut', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomOut" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomOutDown -->
+        <article id="zoomOutDown" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomOutDown</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomOutDown', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomOutDown" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomOutLeft -->
+        <article id="zoomOutLeft" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomOutLeft</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomOutLeft', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomOutLeft" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomOutRight -->
+        <article id="zoomOutRight" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomOutRight</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomOutRight', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomOutRight" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <!-- zoomOutUp -->
+        <article id="zoomOutUp" class="documentation-node">
+          <header class="title-bar">
+
+            <h3>zoomOutUp</h3>
+          </header>
+
+          <p>First put in $name(animation-name), $opts(options)</p>
+
+          <code>
+            @include animation('zoomOutUp', '.5s');
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <img class="zoomOutUp" src="/graphics/logo-demo.svg" alt="logo-demo">
+          </div>
+        </article>
+
+        <h1 id="buttons">Buttons</h1>
+
+        <!-- bob-button -->
+        <article id="bob-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bob-button</h3>
+          </header>
+
+          <code>
+            @include bob-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bob-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bounce-in-button -->
+        <article id="bounce-in-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bounce-in-button</h3>
+          </header>
+
+          <code>
+            @include bounce-in-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bounce-in-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bounce-out-button -->
+        <article id="bounce-out-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bounce-out-button</h3>
+          </header>
+
+          <code>
+            @include bounce-out-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bounce-out-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- buzz-out-button -->
+        <article id="buzz-out-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>buzz-out-button</h3>
+          </header>
+
+          <code>
+            @include buzz-out-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo buzz-out-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- float-button -->
+        <article id="float-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>float-button</h3>
+          </header>
+
+          <code>
+            @include float-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo float-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- grow-rotate-button -->
+        <article id="grow-rotate-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>grow-rotate-button</h3>
+          </header>
+
+          <code>
+            @include grow-rotate-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo grow-rotate-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- grow-button -->
+        <article id="grow-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>grow-button</h3>
+          </header>
+          <p>$time: .5s, $scale: 1.1</p>
+          <code>
+            @include grow-button($time, $scale);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo grow-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- hang-button -->
+        <article id="hang-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>hang-button</h3>
+          </header>
+
+          <code>
+            @include hang-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo hang-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- pop-button -->
+        <article id="pop-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>pop-button</h3>
+          </header>
+
+          <code>
+            @include pop-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo pop-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- pulse-grow -->
+        <article id="pulse-grow" class="documentation-node">
+          <header class="title-bar">
+            <h3>pulse-grow</h3>
+          </header>
+
+          <code>
+            @include pulse-grow();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo pulse-grow">Demo button</button>
+          </div>
+        </article>
+
+        <!-- pulse-shrink -->
+        <article id="pulse-shrink" class="documentation-node">
+          <header class="title-bar">
+            <h3>pulse-shrink</h3>
+          </header>
+
+          <code>
+            @include pulse-shrink();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo pulse-shrink">Demo button</button>
+          </div>
+        </article>
+
+        <!-- pulse-button -->
+        <article id="pulse-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>pulse-button</h3>
+          </header>
+
+          <code>
+            @include pulse-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo pulse-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- push-button -->
+        <article id="push-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>push-button</h3>
+          </header>
+
+          <code>
+            @include push-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo push-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- rotate-button -->
+        <article id="rotate-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>rotate-button</h3>
+          </header>
+
+          <code>
+            @include rotate-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo rotate-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shrink-button -->
+        <article id="shrink-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shrink-button</h3>
+          </header>
+
+          <code>
+            @include shrink-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shrink-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- sink-button -->
+        <article id="sink-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>sink-button</h3>
+          </header>
+
+          <code>
+            @include sink-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo sink-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- skew-backward-button -->
+        <article id="skew-backward-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>skew-backward-button</h3>
+          </header>
+
+          <code>
+            @include skew-backward-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo skew-backward-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- skew-forward-button -->
+        <article id="skew-forward-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>skew-forward-button</h3>
+          </header>
+
+          <code>
+            @include skew-forward-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo skew-forward-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- skew-button -->
+        <article id="skew-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>skew-button</h3>
+          </header>
+
+          <code>
+            @include skew-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo skew-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-bottom-button -->
+        <article id="wobble-bottom-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-bottom-button</h3>
+          </header>
+
+          <code>
+            @include wobble-bottom-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-bottom-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-horizontal-button -->
+        <article id="wobble-horizontal-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-horizontal-button</h3>
+          </header>
+
+          <code>
+            @include wobble-horizontal-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-horizontal-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-skew-button -->
+        <article id="wobble-skew-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-skew-button</h3>
+          </header>
+
+          <code>
+            @include wobble-skew-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-skew-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-bottom-right-button -->
+        <article id="wobble-bottom-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-bottom-right-button</h3>
+          </header>
+
+          <code>
+            @include wobble-bottom-right-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-bottom-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-top-right-button -->
+        <article id="wobble-top-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-top-right-button</h3>
+          </header>
+
+          <code>
+            @include wobble-top-right-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-top-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-top-button -->
+        <article id="wobble-top-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-top-button</h3>
+          </header>
+
+          <code>
+            @include wobble-top-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-top-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- wobble-vertical -->
+        <article id="wobble-vertical" class="documentation-node">
+          <header class="title-bar">
+            <h3>wobble-vertical</h3>
+          </header>
+
+          <code>
+            @include wobble-vertical();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo wobble-vertical">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bounce-to-bottom-button -->
+        <article id="bounce-to-bottom-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bounce-to-bottom-button</h3>
+          </header>
+          <p>Default values: $active-color: #333, $text: #fff</p>
+          <code>
+            @include bounce-to-bottom-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bounce-to-bottom-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bounce-to-left-button -->
+        <article id="bounce-to-left-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bounce-to-left-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include bounce-to-left-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bounce-to-left-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bounce-to-right-button -->
+        <article id="bounce-to-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bounce-to-right-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include bounce-to-right-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bounce-to-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bounce-to-top-button -->
+        <article id="bounce-to-top-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bounce-to-top-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include bounce-to-top-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bounce-to-top-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- fade-button -->
+        <article id="fade-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>fade-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include fade-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo fade-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- radial-in-button -->
+        <article id="radial-in-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>radial-in-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include radial-in-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo radial-in-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- radial-out-button -->
+        <article id="radial-out-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>radial-out-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include radial-out-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo radial-out-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- rectangle-in-button -->
+        <article id="rectangle-in-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>rectangle-in-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include rectangle-in-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo rectangle-in-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- rectangle-out-button -->
+        <article id="rectangle-out-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>rectangle-out-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include rectangle-out-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo rectangle-out-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shutter-in-horizontal-button -->
+        <article id="shutter-in-horizontal-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shutter-in-horizontal-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include shutter-in-horizontal-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shutter-in-horizontal-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shutter-in-vertical-button -->
+        <article id="shutter-in-vertical-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shutter-in-vertical-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include shutter-in-vertical-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shutter-in-vertical-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shutter-out-horizontal-button -->
+        <article id="shutter-out-horizontal-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shutter-out-horizontal-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include shutter-out-horizontal-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shutter-out-horizontal-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shutter-out-vertical-button -->
+        <article id="shutter-out-vertical-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shutter-out-vertical-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include shutter-out-vertical-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shutter-out-vertical-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- sweep-bottom-button -->
+        <article id="sweep-bottom-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>sweep-bottom-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include sweep-bottom-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo sweep-bottom-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- sweep-left-button -->
+        <article id="sweep-left-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>sweep-left-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include sweep-left-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo sweep-left-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- sweep-right-button -->
+        <article id="sweep-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>sweep-right-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include sweep-right-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo sweep-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- sweep-top-button -->
+        <article id="sweep-top-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>sweep-top-button</h3>
+          </header>
+          <p>$active-color: #333, $text: #fff</p>
+          <code>
+            @include sweep-top-button($active-color $text);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo sweep-top-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- border-fade-button -->
+        <article id="border-fade-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>border-fade-button</h3>
+          </header>
+          <p>$border-width: 4px, $line-color: #999, $active-line-color: #333</p>
+          <code>
+            @include border-fade-button($border-width $line-color $active-line-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo border-fade-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- outline-in-button -->
+        <article id="outline-in-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>outline-in-button</h3>
+          </header>
+          <p>$outer-border-width: 4px, $inner-border-width: 4px, $active-color: #333</p>
+          <code>
+            @include outline-in-button($outer-border-width $inner-border-width $active-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo outline-in-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- outline-out-button -->
+        <article id="outline-out-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>outline-out-button</h3>
+          </header>
+          <p>$outer-border-width: 4px, $inner-border-width: 4px, $active-color: #333</p>
+          <code>
+            @include outline-out-button($outer-border-width $inner-border-width $active-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo outline-out-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- overline-from-center-button -->
+        <article id="overline-from-center-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>overline-from-center-button</h3>
+          </header>
+          <p>$active-color: #333</p>
+          <code>
+            @include overline-from-center-button($active-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo overline-from-center-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- overline-from-left-button -->
+        <article id="overline-from-left-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>overline-from-left-button</h3>
+          </header>
+          <p>$active-color: #333</p>
+          <code>
+            @include overline-from-left-button($active-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo overline-from-left-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- overline-from-right-button -->
+        <article id="overline-from-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>overline-from-right-button</h3>
+          </header>
+          <p>$active-color: #333</p>
+          <code>
+            @include overline-from-right-button($active-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo overline-from-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- overline-reveal-button -->
+        <article id="overline-reveal-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>overline-reveal-button</h3>
+          </header>
+          <p>$active-color: #333</p>
+          <code>
+            @include overline-reveal-button($active-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo overline-reveal-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- reveal-button -->
+        <article id="reveal-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>reveal-button</h3>
+          </header>
+          <p>$active-color: #333, $border-width: 4px</p>
+          <code>
+            @include reveal-button($active-color $border-width);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo reveal-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- round-corners-button -->
+        <article id="round-corners-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>round-corners-button</h3>
+          </header>
+          <p>$radius: 5px</p>
+          <code>
+            @include round-corners-button($radius);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo round-corners-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- trim-button -->
+        <article id="trim-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>trim-button</h3>
+          </header>
+          <p>$outer-border-width: 4px, $inner-border-width: 4px, $border-color: #333</p>
+          <code>
+            @include trim-button($outer-border-width $inner-border-width $border-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo trim-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- underline-from-center-button -->
+        <article id="underline-from-center-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>underline-from-center-button</h3>
+          </header>
+          <p>$active-color: #333, $border-height: 4px</p>
+          <code>
+            @include underline-from-center-button($active-color $border-height);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo underline-from-center-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- underline-from-left-button -->
+        <article id="underline-from-left-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>underline-from-left-button</h3>
+          </header>
+          <p>$active-color: #333, $border-height: 4px</p>
+          <code>
+            @include underline-from-left-button($active-color $border-height);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo underline-from-left-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- underline-from-right-button -->
+        <article id="underline-from-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>underline-from-right-button</h3>
+          </header>
+          <p>$active-color: #333, $border-height: 4px</p>
+          <code>
+            @include underline-from-right-button($active-color $border-height);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo underline-from-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- underline-reveal-button -->
+        <article id="underline-reveal-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>underline-reveal-button</h3>
+          </header>
+          <p>$active-color: #333, $border-height: 4px</p>
+          <code>
+            @include underline-reveal-button($active-color $border-height);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo underline-reveal-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- curl-bottom-left -->
+        <article id="curl-bottom-left" class="documentation-node">
+          <header class="title-bar">
+            <h3>curl-bottom-left</h3>
+          </header>
+          <p>$curlWidth: 25px, $curlHeight: 25px, $revealAreaColor: #fff, $curlLineColor: #aaa, $curlTransitionColor: #ccc, $curlLastColor: #fff</p>
+          <code>
+            @include curl-bottom-left($curlWidth $curlHeight $revealAreaColor $curlLineColor $curlTransitionColor $curlLastColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo curl-bottom-left">Demo button</button>
+          </div>
+        </article>
+
+        <!-- curl-bottom-right -->
+        <article id="curl-bottom-right" class="documentation-node">
+          <header class="title-bar">
+            <h3>curl-bottom-right</h3>
+          </header>
+          <p>$curlWidth: 25px, $curlHeight: 25px, $revealAreaColor: #fff, $curlLineColor: #aaa, $curlTransitionColor: #ccc, $curlLastColor: #fff</p>
+          <code>
+            @include curl-bottom-right($curlWidth $curlHeight $revealAreaColor $curlLineColor $curlTransitionColor $curlLastColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo curl-bottom-right">Demo button</button>
+          </div>
+        </article>
+
+        <!-- curl-top-left -->
+        <article id="curl-top-left" class="documentation-node">
+          <header class="title-bar">
+            <h3>curl-top-left</h3>
+          </header>
+          <p>$curlWidth: 25px, $curlHeight: 25px, $revealAreaColor: #fff, $curlLineColor: #aaa, $curlTransitionColor: #ccc, $curlLastColor: #fff</p>
+          <code>
+            @include curl-top-left($curlWidth $curlHeight $revealAreaColor $curlLineColor $curlTransitionColor $curlLastColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo curl-top-left">Demo button</button>
+          </div>
+        </article>
+
+        <!-- curl-top-right -->
+        <article id="curl-top-right" class="documentation-node">
+          <header class="title-bar">
+            <h3>curl-top-right</h3>
+          </header>
+          <p>$curlWidth: 25px, $curlHeight: 25px, $revealAreaColor: #fff, $curlLineColor: #aaa, $curlTransitionColor: #ccc, $curlLastColor: #fff</p>
+          <code>
+            @include curl-top-right($curlWidth $curlHeight $revealAreaColor $curlLineColor $curlTransitionColor $curlLastColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo curl-top-right">Demo button</button>
+          </div>
+        </article>
+
+        <!-- box-shadow-inset-button -->
+        <article id="box-shadow-inset-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>box-shadow-inset-button</h3>
+          </header>
+          <p>$shadowColor: rgba(0, 0, 0, .4)</p>
+          <code>
+            @include box-shadow-inset-button($shadowColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo box-shadow-inset-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- box-shadow-outset-button -->
+        <article id="box-shadow-outset-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>box-shadow-outset-button</h3>
+          </header>
+          <p>$shadowColor: rgba(0, 0, 0, .4)</p>
+          <code>
+            @include box-shadow-outset-button($shadowColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo box-shadow-outset-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- float-shadow-button -->
+        <article id="float-shadow-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>float-shadow-button</h3>
+          </header>
+          <code>
+            @include float-shadow-button();
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo float-shadow-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- glow-button -->
+        <article id="glow-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>glow-button</h3>
+          </header>
+          <p>$shadowColor: rgba(0, 0, 0, .4)</p>
+          <code>
+            @include glow-button($shadowColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo glow-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- grow-shadow-button -->
+        <article id="grow-shadow-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>grow-shadow-button</h3>
+          </header>
+          <p>$shadowColor: rgba(0, 0, 0, .4)</p>
+          <code>
+            @include grow-shadow-button($shadowColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo grow-shadow-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shadow-radial-button -->
+        <article id="shadow-radial-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shadow-radial-button</h3>
+          </header>
+          <p>$shadowColor: rgba(0, 0, 0, .4)</p>
+          <code>
+            @include shadow-radial-button($shadowColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shadow-radial-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- shadow-button -->
+        <article id="shadow-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>shadow-button</h3>
+          </header>
+
+          <code>
+            @include shadow-button($shadowColor);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo shadow-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-bottom-button -->
+        <article id="bubble-bottom-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-bottom-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-bottom-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-bottom-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-float-bottom-button -->
+        <article id="bubble-float-bottom-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-float-bottom-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-float-bottom-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-float-bottom-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-float-left-button -->
+        <article id="bubble-float-left-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-float-left-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-float-left-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-float-left-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-float-right-button -->
+        <article id="bubble-float-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-float-right-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-float-right-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-float-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-float-top-button -->
+        <article id="bubble-float-top-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-float-top-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-float-top-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-float-top-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-left-button -->
+        <article id="bubble-left-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-left-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-left-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-left-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-right-button -->
+        <article id="bubble-right-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-right-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-right-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-right-button">Demo button</button>
+          </div>
+        </article>
+
+        <!-- bubble-top-button -->
+        <article id="bubble-top-button" class="documentation-node">
+          <header class="title-bar">
+            <h3>bubble-top-button</h3>
+          </header>
+          <p>$tip-width: 5px, $tip-height: 5px, $tip-color: #333</p>
+
+          <code>
+            @include bubble-top-button($tip-width $tip-height $tip-color);
+          </code>
+
+          <div class="demo-wrapper">
+            <h4>Demo</h4>
+            <button class="btn-demo bubble-top-button">Demo button</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

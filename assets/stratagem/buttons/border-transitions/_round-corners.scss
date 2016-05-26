@@ -1,0 +1,15 @@
+@mixin round-corners-button($radius: 5px) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	transition-duration: .3s;
+	transition-property: border-radius;
+
+	&:hover,
+	&:focus,
+	&:active {
+		border-radius: $radius;
+	}
+}

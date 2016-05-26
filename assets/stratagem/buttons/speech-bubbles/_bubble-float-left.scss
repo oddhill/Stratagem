@@ -1,0 +1,33 @@
+@mixin bubble-float-left-button($tip-width: 5px, $tip-height: 5px, $tip-color: #333) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	position: relative;
+	transition-duration: .3s;
+	transition-property: transform;
+
+	&:before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		top: calc(50% - #{$tip-height});
+		left: 0;
+		border-style: solid;
+		border-width: $tip-height $tip-width $tip-height 0;
+		border-color: transparent $tip-color transparent transparent;
+		transition-duration: .3s;
+		transition-property: transform;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		transform: translateX($tip-width);
+
+		&:before {
+			transform: translateX(-($tip-width));
+		}
+	}
+}

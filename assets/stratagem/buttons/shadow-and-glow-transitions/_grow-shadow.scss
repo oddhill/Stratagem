@@ -1,0 +1,16 @@
+@mixin grow-shadow-button($shadowColor: rgba(0, 0, 0, .4)) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	transition-duration: .5s;
+	transition-property: box-shadow, transform;
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+		transform: scale(1.1);
+	}
+}

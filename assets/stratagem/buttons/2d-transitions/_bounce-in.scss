@@ -1,0 +1,15 @@
+@mixin bounce-in-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	transition-duration: .5s;
+
+	&:hover,
+	&:focus,
+	&:active {
+		transform: scale(1.2);
+		transition-timing-function: cubic-bezier(.47,2.02,.31,-0.36);
+	}
+}

@@ -1,0 +1,15 @@
+@mixin glow-button($shadowColor: rgba(0, 0, 0, .4)) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	transition-duration: .5s;
+	transition-property: box-shadow;
+
+	&:hover,
+	&:focus,
+	&:active {
+		box-shadow: 0 0 8px $shadowColor;
+	}
+}

@@ -1,0 +1,87 @@
+
+.header {
+  height: 100vh;
+  background-image: url('/graphics/bg.jpg');
+  background-size: cover;
+  isolation: isolate;
+}
+
+.header-inner {
+  opacity: 0;
+  @include animation('fadeIn', '1s .6s forwards');
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  color: $light;
+  mix-blend-mode: overlay;
+  font-size: 30px;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.logotype {
+  margin: 0;
+
+  img {
+    filter: drop-shadow(0 0 30px $shadow);
+
+    @include media($breakpoint-small) {
+      width: 110px;
+    }
+  }
+}
+
+.main-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-image: url('/graphics/bg-header.png'), url('/graphics/bg-header.png');
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: $light;
+  padding: 20px;
+  z-index: 10;
+
+  p {
+    float: left;
+    color: $light;
+    margin: 0;
+    line-height: 21px;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .inner {
+    float: right;
+  }
+
+  a {
+    @include underline-from-center-button($light, 2px);
+    text-decoration: none;
+    color: $light;
+  }
+}
+
+.arrow-down-graphic {
+  @include svg-bg(arrow);
+  @include animation('swing', '1s infinite');
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  width: 16px;
+  height: 10px;
+  display: block;
+  margin: 0 auto;
+}

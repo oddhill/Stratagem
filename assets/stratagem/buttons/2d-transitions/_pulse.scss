@@ -1,0 +1,31 @@
+@mixin pulse-anim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(.95);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@mixin pulse-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	content: '';
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include animation('pulse-anim');
+		animation-duration: 1s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+}

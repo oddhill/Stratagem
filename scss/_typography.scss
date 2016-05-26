@@ -1,0 +1,101 @@
+h1,
+.title {
+  @include font-size(6.4, 1.3);
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 50px rgba(0, 0, 0, .4);
+
+  @include media($breakpoint-small) {
+    @include font-size(3.4, 1.3);
+  }
+}
+
+h2 {
+  font-weight: 100;
+  @include font-size(4.8, 1.2);
+  margin: 0;
+  letter-spacing: 2px;
+
+  @include media($breakpoint-small) {
+    @include font-size(2.8, 1.3);
+  }
+}
+
+h3 {
+  @include font-size(2.8, 1.3);
+  font-weight: 100;
+  margin: 5px 0 25px;
+
+  @include media($breakpoint-small) {
+    @include font-size(2, 1.3);
+  }
+}
+
+h4 {
+  @include font-size(2.4, 1.3);
+  margin: 10px 0 0;
+  text-shadow: 0 0 20px rgba(0, 0, 0, .6);
+
+  @include media($breakpoint-small) {
+    @include font-size(2, 1.3);
+  }
+}
+
+h5 {
+  font-weight: 100;
+}
+
+p {
+  line-height: 28px;
+  font-weight: 100;
+  letter-spacing: .5px;
+}
+
+.code-description {
+  margin-bottom: 10px;
+}
+
+.intro {
+  margin-bottom: 50px;
+
+  @include media($breakpoint-small) {
+    margin-bottom: 15px;
+  }
+}
+
+h6 {
+
+}
+
+em,
+i {
+
+}
+
+strong,
+b {
+
+}
+
+a {
+  text-decoration: none;
+  color: $light;
+}
+
+u {
+
+}
+
+ul {
+
+	li {
+
+	}
+}
+
+ol {
+
+	li {
+
+	}
+}

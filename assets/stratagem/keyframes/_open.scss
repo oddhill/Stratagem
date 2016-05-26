@@ -1,0 +1,175 @@
+@mixin openDownLeft() {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform-origin: bottom left;
+    transform: rotate(-110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openDownRight() {
+  0% {
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform-origin: bottom right;
+    transform: rotate(110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openUpLeft() {
+  0% {
+    transform-origin: top left;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform-origin: top left;
+    transform: rotate(110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openUpRight() {
+  0% {
+    transform-origin: top right;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform-origin: top right;
+    transform: rotate(-110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openDownLeftRetourn() {
+  0% {
+    transform-origin: bottom left;
+    transform: rotate(-110deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform-origin: bottom left;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@mixin openDownRightRetourn() {
+  0% {
+    transform-origin: bottom right;
+    transform: rotate(110deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@mixin openUpLeftRetourn() {
+  0% {
+    transform-origin: top left;
+    transform: rotate(110deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform-origin: top left;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@mixin openUpRightRetourn() {
+  0% {
+    transform-origin: top right;
+    transform: rotate(-110deg);
+    animation-timing-function: ease-in-out;
+  }
+
+  100% {
+    transform-origin: top right;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+@mixin openDownLeftOut() {
+  0% {
+    opacity: 1;
+    transform-origin: bottom left;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: bottom left;
+    transform: rotate(-110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openDownRightOut() {
+  0% {
+    opacity: 1;
+    transform-origin: bottom right;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: bottom right;
+    transform: rotate(110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openUpLeftOut() {
+  0% {
+    opacity: 1;
+    transform-origin: top left;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: top left;
+    transform: rotate(110deg);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@mixin openUpRightOut() {
+  0% {
+    opacity: 1;
+    transform-origin: top right;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: top right;
+    transform: rotate(-110deg);
+    animation-timing-function: ease-in-out;
+  }
+}

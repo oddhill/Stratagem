@@ -1,0 +1,10 @@
+.number {
+  @include font-size(7.2, 1);
+  font-weight: 600;
+  @include shift(-1);
+  position: absolute;
+
+  @include media($breakpoint-small) {
+    display: none;
+  }
+}

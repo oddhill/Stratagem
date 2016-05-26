@@ -1,0 +1,20 @@
+.intro-text {
+  @include span-columns(6 of 12);
+  @include shift(3);
+  text-align: center;
+  margin-bottom: 50px;
+
+  @include media($breakpoint-small) {
+    @include span-columns(12 of 12);
+    @include shift(0);
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin: 0 0 20px 40px;
+
+    @include media($breakpoint-small) {
+      margin: 0;
+    }
+  }
+}

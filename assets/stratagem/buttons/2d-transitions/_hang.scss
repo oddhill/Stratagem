@@ -1,0 +1,31 @@
+@mixin hang-button {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include animation('hang-anim');
+		animation-duration: .3s;
+		animation-delay: 0s;
+		animation-timing-function: ease-out;
+		animation-iteration-count: 1;
+		animation-fill-mode: forwards;
+		animation-direction: normal;
+	}
+}
+
+@mixin hang-anim {
+	0% {
+		transform: translateY(8px);
+	}
+	50% {
+		transform: translateY(4px);
+	}
+	100% {
+		transform: translateY(8px);
+	}
+}

@@ -1,0 +1,29 @@
+@mixin outline-out-button($outer-border-width: 4px, $inner-border-width: 4px, $active-color: #333) {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		border: $active-color solid $outer-border-width;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transition-duration: .3s;
+		transition-property: "top, right, bottom, left";
+	}
+
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		top: -($outer-border-width + $inner-border-width);
+		right: -($outer-border-width + $inner-border-width);
+		bottom: -($outer-border-width + $inner-border-width);
+		left: -($outer-border-width + $inner-border-width);
+	}
+}

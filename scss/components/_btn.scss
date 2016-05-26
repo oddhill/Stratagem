@@ -1,0 +1,49 @@
+.btn {
+  @include linear-gradient($btn, $btn-two);
+  @include font-size(1.6, 1);
+  @include bob-button();
+  letter-spacing: .75px;
+  padding: 18px 30px;
+  font-weight: 500;
+  display: inline-block;
+  color: $light;
+  text-decoration: none;
+
+  // Background for btn comp
+  &::before {
+    content: '';
+    mix-blend-mode: overlay;
+    background: url('/graphics/btn.png');
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  // Arrow left
+  &-arrow-left {
+    padding: 18px 20px 18px 30px;
+
+    &::after {
+      @include svg-bg(arrow-right);
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 13px;
+      margin: 0 0 -1px 10px;
+    }
+  }
+}
+
+.btn-demo {
+  background-color: $btn;
+  @include font-size(1.6, 1);
+  letter-spacing: .75px;
+  cursor: pointer;
+  padding: 20px;
+  font-weight: 500;
+  display: inline-block;
+  color: $light;
+  text-decoration: none;
+}

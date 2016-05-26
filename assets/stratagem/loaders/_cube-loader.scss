@@ -1,0 +1,47 @@
+@mixin cubeLoader($width: 40px, $height: 40px, $bg: #333) {
+  width: $width;
+  height: $height;
+  position: relative;
+
+  &:after {
+    animation-delay: -1.8s / 2;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    background-color: $bg;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    @include animation(sk-wanderingCube, '1.8s infinite both ease-in-out');
+  }
+
+  &:after {
+    @include animation(sk-wanderingCube, '1.8s .3s infinite both ease-in-out');
+  }
+}
+
+@mixin sk-wanderingCube() {
+  $cubeDistance: 30px;
+  0% {
+    transform: rotate(0deg);
+  } 25% {
+    transform: translateX($cubeDistance) rotate(-90deg) scale(0.5);
+  } 50% {
+    /* Hack to make FF rotate in the right direction */
+    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-179deg);
+  } 50.1% {
+    transform: translateX($cubeDistance) translateY($cubeDistance) rotate(-180deg);
+  } 75% {
+    transform: translateX(0) translateY($cubeDistance) rotate(-270deg) scale(0.5);
+  } 100% {
+    transform: rotate(-360deg);
+  }
+}
