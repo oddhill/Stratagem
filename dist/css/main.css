@@ -4098,6 +4098,11 @@ code {
       margin-left: 0%; }
       .small-inner:last-child {
         margin-right: 0; } }
+  .small-inner h2:first-child {
+    margin-bottom: 40px; }
+    @media screen and (max-width: 600px) {
+      .small-inner h2:first-child {
+        margin-bottom: 20px; } }
 
 .main {
   max-width: 1180px;

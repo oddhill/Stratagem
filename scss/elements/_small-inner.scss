@@ -7,4 +7,12 @@
     @include span-columns(12 of 12);
     @include shift(0);
   }
+
+  h2:first-child {
+    margin-bottom: 40px;
+
+    @include media($breakpoint-small) {
+      margin-bottom: 20px;
+    }
+  }
 }
