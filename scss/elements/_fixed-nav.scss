@@ -30,12 +30,3 @@
     margin-bottom: 10px;
   }
 }
-
-.fixed-nav-menu-wrapper {
-  height: 0;
-  overflow: hidden;
-
-  &.active {
-    height: auto;
-  }
-}

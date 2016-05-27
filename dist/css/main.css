@@ -3938,12 +3938,6 @@ code {
       left: 0;
       right: 0; }
 
-.fixed-nav-menu-wrapper {
-  height: 0;
-  overflow: hidden; }
-  .fixed-nav-menu-wrapper.active {
-    height: auto; }
-
 .footer {
   background-image: url("/graphics/bg.jpg");
   background-size: cover;
