@@ -3902,7 +3902,7 @@ code {
   background: url("/graphics/nav.png") repeat;
   background-size: cover;
   overflow-y: auto;
-  padding: 5px 20px 10px 20px; }
+  padding: 20px 15px; }
   @media screen and (max-width: 600px) {
     .fixed-nav {
       display: none; } }
@@ -3911,7 +3911,7 @@ code {
     margin-left: 15px; }
   .fixed-nav h4 {
     text-shadow: none;
-    margin: 10px 0 0; }
+    margin: 0; }
   .fixed-nav a {
     box-shadow: 0 0 1px transparent;
     backface-visibility: hidden;
@@ -3937,6 +3937,12 @@ code {
     .fixed-nav a:hover:before, .fixed-nav a:focus:before, .fixed-nav a:active:before, .fixed-nav a.active:before {
       left: 0;
       right: 0; }
+
+.fixed-nav-menu-wrapper {
+  height: 0;
+  overflow: hidden; }
+  .fixed-nav-menu-wrapper.active {
+    height: auto; }
 
 .footer {
   background-image: url("/graphics/bg.jpg");

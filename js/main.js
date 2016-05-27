@@ -9,9 +9,15 @@ $(document).ready(function() {
   //set transitionBackground dimentions
   setLayerDimensions();
 
-  $('.fixed-nav a').click(function(){
+  $('.fixed-nav a').click(function(event){
     $('a').removeClass("active");
     $(this).addClass("active");
+
+    // Add active class to documentation wrappers fixed nav
+    var activeLink = $(this).attr("href");
+
+    $('.fixed-nav-menu-wrapper').removeClass('active');
+    $(activeLink).addClass('active');
   });
 });
 
