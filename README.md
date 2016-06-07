@@ -21,6 +21,12 @@ Install using Bower
 bower install stratagem
 ```
 
+Install using NPM
+
+```
+npm install Stratagem
+```
+
 In your main import file (main.scss perhaps?) before importing your variables, helpers etc.
 ```
 @import {filepath}/stratagem;
