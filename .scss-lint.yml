@@ -59,7 +59,8 @@ linters:
     force_nesting: true
 
   NameFormat:
-    enabled: false
+    enabled: true
+    convention: hyphenated_lowercase
 
   PlaceholderInExtend:
     enabled: true
@@ -70,6 +71,10 @@ linters:
   PropertySpelling:
     enabled: true
     extra_properties: []
+
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_BEM
 
   SelectorDepth:
     enabled: true

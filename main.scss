@@ -1,0 +1,33 @@
+@import 'stratagem';
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  background-color: #3e1caa;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 30px;
+  letter-spacing: .75px;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: 500;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  outline: 0;
+
+
+
+
+
+
+
+
+
+
+
+  @include loader-slide-left(30px, 55px);
+}
