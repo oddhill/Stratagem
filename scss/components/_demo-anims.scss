@@ -304,6 +304,50 @@
   @include bubble-top-button($tip-color: $btn);
 }
 
+.loader-slide-right {
+  @include loader-slide-right($size: 30px);
+}
+
+.loader-slide-left {
+  @include loader-slide-left($size: 30px);
+}
+
+.loader-slide-up {
+  @include loader-slide-up($size: 30px);
+}
+
+.loader-slide-down {
+  @include loader-slide-down($size: 30px);
+}
+
+.loader-right {
+  @include loader-right($size: 30px);
+}
+
+.loader-left {
+  @include loader-left($size: 30px);
+}
+
+.loader-top {
+  @include loader-top($size: 30px);
+}
+
+.loader-bottom {
+  @include loader-bottom($size: 30px);
+}
+
+.loader-contract {
+  @include loader-contract($size: 30px);
+}
+
+.loader-contract-overlay {
+  @include loader-contract-overlay($size: 30px);
+}
+
+.loader-over {
+  @include loader-over($size: 30px);
+}
+
 // Water animations
 
 .demo-wrapper img {

@@ -1,0 +1,10 @@
+@mixin circleLineLoader($transition-time: 1s, $delay: 0s, $timing: linear, $iteration-count: infinite, $direction: normal, $loader-color: rgba(255, 255, 255, 1)) {
+  @include spin($transition-time, $delay, $timing, $iteration-count, $direction);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 2px solid rgba(255, 255, 255, .3);
+  border-right: 2px solid rgba(255, 255, 255, .3);
+  border-bottom: 2px solid rgba(255, 255, 255, .3);
+  border-left: 2px solid $loader-color;
+}

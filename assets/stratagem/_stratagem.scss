@@ -129,6 +129,18 @@
 @import 'buttons/speech-bubbles/bubble-right';
 @import 'buttons/speech-bubbles/bubble-top';
 
+// Hakim ladda - semi copyright
+@import 'buttons/loaders/loader-right';
+@import 'buttons/loaders/loader-top';
+@import 'buttons/loaders/loader-left';
+@import 'buttons/loaders/loader-bottom';
+@import 'buttons/loaders/loader-contract';
+@import 'buttons/loaders/loader-contract-overlay';
+@import 'buttons/loaders/loader-over';
+@import 'buttons/loaders/loader-slide-down';
+@import 'buttons/loaders/loader-slide-up';
+@import 'buttons/loaders/loader-slide-right';
+@import 'buttons/loaders/loader-slide-left';
 
 // Keep track of included keyframes
 $animate-keyframes: ();

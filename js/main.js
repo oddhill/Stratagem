@@ -13,6 +13,10 @@ $(document).ready(function() {
     $('a').removeClass("active");
     $(this).addClass("active");
   });
+
+  $('.loader-button').click(function() {
+    $(this).find('button').toggleClass('loading');
+  });
 });
 
 $(window).on('resize', function(){
