@@ -310,7 +310,9 @@ $animate-keyframes: ();
 
 @mixin animation($name, $opts: '') {
   @if not (map-has-key($animate-keyframes, $name)) {
-    @include keyframes($name);
+    @at-root (without: media) {
+      @include keyframes($name);
+    }
     $animate-keyframes: map-merge($animate-keyframes, ($name: '')) !global;
   }
   animation: #{$name} #{$opts};
